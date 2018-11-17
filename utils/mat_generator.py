@@ -1,0 +1,80 @@
+import numpy as np
+import os
+import librosa
+from scipy import io as sio
+
+'''
+modality_index = 0
+vocal_channel_index = 1
+emotion_index = 2
+intensity_index = 3
+statement_index = 4
+repetition_index = 5
+actor_index = 6
+'''
+
+
+def read_wav_files(path):
+    cate = [path + folder for folder in os.listdir(path) if os.path.isdir(path + folder)]
+    audio_list = []
+    sr_list = []
+    audio_length_list = []
+    meta_info_lists = [[], [], [], [], [], [], []]
+    separator = '-'
+
+    max_length = 0
+    for idx, folder in enumerate(cate):
+        print('reading the audios:%s' % folder)
+        count = 0
+        for file_name in os.listdir(folder):
+            if not os.path.isfile(os.path.join(folder, file_name)):
+                continue
+            file_path = os.path.join(folder, file_name)
+            count += 1
+            audio, sr_audio = librosa.load(file_path, sr=None)
+            audio_list.append(audio)
+            sr_list.append(sr_audio)
+            audio_length_list.append(len(audio))
+            if len(audio) > max_length:
+                max_length = len(audio)
+
+            for i in range(len(meta_info_lists)):
+                file_name_prefix = file_name.split('.')[0]
+                meta_info = str(file_name_prefix).split(separator)[i]
+                meta_info_lists[i].append(meta_info)
+            if count % 10 == 0:
+                print("\rreading {0}/{1}".format(count, len(os.listdir(folder))), end='')
+        print('\r', end='')
+    for meta_info_list in meta_info_lists:
+        assert len(meta_info_list) == len(audio_list)
+
+    # make same length in matrix
+    for i in range(len(audio_list)):
+        audio_list[i] = np.append(audio_list[i], [[0] * (max_length - audio_length_list[i])])
+    return np.asarray(audio_list, np.float32), np.asarray(audio_list, int), np.asarray(meta_info_lists, int)
+
+
+def normalize_features(data, v_max=1.0, v_min=0.0):
+    data_array = np.asarray(data, np.float32)
+    mins = np.min(data_array, axis=0)
+    maxs = np.max(data_array, axis=0)
+    rng = maxs - mins
+    result = v_max - ((v_max - v_min) * (maxs - data_array) / rng)
+    return result
+
+
+if __name__ == '__main__':
+    raw_file_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
+    np.seterr(all='ignore')
+    raw_mat, sample_rates, meta_info_labels = read_wav_files(raw_file_path)
+
+    sio.savemat(raw_file_path + 'raw.mat', mdict={'feature_matrix': raw_mat,
+                                                  'sample_rate': sample_rates,
+                                                  'modality_label': meta_info_labels[0],
+                                                  'vocal_channel_label': meta_info_labels[1],
+                                                  'emotion_label': meta_info_labels[2],
+                                                  'intensity_label': meta_info_labels[3],
+                                                  'statement_label': meta_info_labels[4],
+                                                  'repetition_label': meta_info_labels[5],
+                                                  'actor_label': meta_info_labels[6],
+                                                  })
