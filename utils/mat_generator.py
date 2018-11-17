@@ -32,6 +32,7 @@ def read_wav_files(path):
             file_path = os.path.join(folder, file_name)
             count += 1
             audio, sr_audio = librosa.load(file_path, sr=None)
+            # audio = np.trim_zeros(audio)
             audio_list.append(audio)
             sr_list.append(sr_audio)
             audio_length_list.append(len(audio))
@@ -51,7 +52,7 @@ def read_wav_files(path):
     # make same length in matrix
     for i in range(len(audio_list)):
         audio_list[i] = np.append(audio_list[i], [[0] * (max_length - audio_length_list[i])])
-    return np.asarray(audio_list, np.float32), np.asarray(audio_list, int), np.asarray(meta_info_lists, int)
+    return np.asarray(audio_list, np.float32), np.asarray(sr_list, int), np.asarray(meta_info_lists, int)
 
 
 def normalize_features(data, v_max=1.0, v_min=0.0):
