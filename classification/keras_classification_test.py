@@ -16,9 +16,26 @@ class AccuracyHistory(keras.callbacks.Callback):
         self.acc.append(logs.get('acc'))
 
 
+def train_test_rep_split(_x, _y, _rep):
+    _train_x = []
+    _train_y = []
+    _test_x = []
+    _test_y = []
+    assert len(_x) == len(_y) == len(_rep)
+    for i in range(len(_x)):
+        if _rep[i] == 1:
+            _train_x.append(_x[i])
+            _train_y.append(_y[i])
+        else:
+            _test_x.append(_x[i])
+            _test_y.append(_y[i])
+    assert len(_train_x) == len(_train_y) == len(_test_x) == len(_test_y)
+    return np.array(_train_x), np.array(_test_x), np.array(_train_y), np.array(_test_y)
+
+
 w = 526
 h = 26
-c = 1
+c = 2
 train_image_count = 100000
 input_shape = (w, h, c)
 learning_rate = 0.001
@@ -35,35 +52,37 @@ model.add(Conv2D(32,
                  strides=(1, 1),
                  activation='relu',
                  input_shape=input_shape))
-model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(MaxPooling2D(pool_size=(4, 2), strides=(2, 2)))
 
 # Layer 2
 model.add(Conv2D(64, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(MaxPooling2D(pool_size=(4, 2)))
 
 # Layer 3
 model.add(Conv2D(128, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 1)))
+model.add(MaxPooling2D(pool_size=(4, 1)))
 
 # Layer 4
 model.add(Conv2D(256, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 1)))
+model.add(MaxPooling2D(pool_size=(4, 1)))
 
 # flatten
 model.add(Flatten(input_shape=input_shape))
 
 # fc layers
-model.add(Dense(128, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
+model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(64, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(category_count, activation='softmax', kernel_regularizer=regularizers.l2(regularization_rate)))
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_path = root_path + 'logfbank.mat'
+mat_path = root_path + 'mfcc_logfbank_26.mat'
 digits = io.loadmat(mat_path)
-X, y, z, sr, lengths = digits.get('feature_matrix'), digits.get('emotion_label')[0], digits.get('intensity_label')[0], \
-                       digits.get('sample_rate')[0], digits.get('actual_length')[0]  # X: nxm: n=1440//sample, m=feature
-X = np.expand_dims(X,3)
+X, y, z, sr, lengths, rep = digits.get('feature_matrix'), digits.get('emotion_label')[0], \
+                            digits.get('intensity_label')[0], digits.get('sample_rate')[0], \
+                            digits.get('actual_length')[0], digits.get('repetition_label')[0]
+# X: nxm: n=1440//sample, m=feature
+# X = np.expand_dims(X,3)
 y = y - 1
 # X = X[:, ::100]
 
@@ -71,7 +90,8 @@ y = y - 1
 # for i in range(len(X)):
 
 # n_samples, n_features = X.shape
-train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.2, random_state=777)
+# train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
+train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
 
 x_train = train_data
 y_train = train_label
