@@ -150,8 +150,8 @@ model.fit(x_train, y_train,
           verbose=2,
           validation_data=(x_val, y_val),
           callbacks=[history])
-model.save_weights('../weights/' + '/model_weight.h5')
-model.save('../weights/' + '/model.h5')
+model.save_weights(root_path + '/model_weight.h5')
+model.save(root_path + '/model.h5')
 score = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
