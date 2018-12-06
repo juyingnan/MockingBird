@@ -6,7 +6,8 @@ from scipy import io as sio
 '''
 modality_index = 0:         01 = full-AV, 02 = video-only, 03 = audio-only
 vocal_channel_index = 1:    01 = speech, 02 = song
-emotion_index = 2:          01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised
+emotion_index = 2:          01 = neutral, 02 = calm, 03 = happy, 04 = sad, 
+                            05 = angry, 06 = fearful, 07 = disgust, 08 = surprised
 intensity_index = 3:        01 = normal, 02 = strong
 statement_index = 4:        01 = "Kids are talking by the door", 02 = "Dogs are sitting by the door"
 repetition_index = 5:       01 = 1st repetition, 02 = 2nd repetition
@@ -14,7 +15,7 @@ actor_index = 6:            01 to 24. Odd numbered actors are male, even numbere
 '''
 
 
-def read_wav_files(path):
+def read_wav_files(path, is_normalized=False):
     cate = [path + folder for folder in os.listdir(path) if os.path.isdir(path + folder)]
     audio_list = []
     sr_list = []
@@ -33,7 +34,11 @@ def read_wav_files(path):
             count += 1
             audio, sr_audio = librosa.load(file_path, sr=None)
             # audio = np.trim_zeros(audio)
-            audio_list.append(audio)
+            if is_normalized:
+                # audio_list.append(audio / np.linalg.norm(audio))
+                audio_list.append(2 * (audio - np.min(audio)) / np.ptp(audio) - 1)
+            else:
+                audio_list.append(audio)
             sr_list.append(sr_audio)
             audio_length_list.append(len(audio))
             if len(audio) > max_length:
@@ -52,7 +57,9 @@ def read_wav_files(path):
     # make same length in matrix
     for i in range(len(audio_list)):
         audio_list[i] = np.append(audio_list[i], [[0] * (max_length - audio_length_list[i])])
-    return np.asarray(audio_list, np.float32), np.asarray(sr_list, int), np.asarray(audio_length_list, int), np.asarray(
+
+    audio_array = np.asarray(audio_list, np.float32)
+    return audio_array, np.asarray(sr_list, int), np.asarray(audio_length_list, int), np.asarray(
         meta_info_lists, int)
 
 
@@ -68,16 +75,16 @@ def normalize_features(data, v_max=1.0, v_min=0.0):
 if __name__ == '__main__':
     raw_file_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
     np.seterr(all='ignore')
-    raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path)
+    raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, is_normalized=True)
 
-    sio.savemat(raw_file_path + 'raw.mat', mdict={'feature_matrix': raw_mat,
-                                                  'sample_rate': sample_rates,
-                                                  'actual_length': lengths,
-                                                  'modality_label': meta_info_labels[0],
-                                                  'vocal_channel_label': meta_info_labels[1],
-                                                  'emotion_label': meta_info_labels[2],
-                                                  'intensity_label': meta_info_labels[3],
-                                                  'statement_label': meta_info_labels[4],
-                                                  'repetition_label': meta_info_labels[5],
-                                                  'actor_label': meta_info_labels[6],
-                                                  })
+    sio.savemat(raw_file_path + 'raw_norm2.mat', mdict={'feature_matrix': raw_mat,
+                                                       'sample_rate': sample_rates,
+                                                       'actual_length': lengths,
+                                                       'modality_label': meta_info_labels[0],
+                                                       'vocal_channel_label': meta_info_labels[1],
+                                                       'emotion_label': meta_info_labels[2],
+                                                       'intensity_label': meta_info_labels[3],
+                                                       'statement_label': meta_info_labels[4],
+                                                       'repetition_label': meta_info_labels[5],
+                                                       'actor_label': meta_info_labels[6],
+                                                       })
