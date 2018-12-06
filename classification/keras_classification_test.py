@@ -16,20 +16,34 @@ class AccuracyHistory(keras.callbacks.Callback):
         self.acc.append(logs.get('acc'))
 
 
-def train_test_rep_split(_x, _y, _rep):
+def train_test_rep_split(_x, _y, _rep, rate=0.0):
     _train_x = []
     _train_y = []
     _test_x = []
     _test_y = []
+    index = int(len(_x) * rate)
     assert len(_x) == len(_y) == len(_rep)
     for i in range(len(_x)):
-        if _rep[i] == 1:
-            _train_x.append(_x[i])
-            _train_y.append(_y[i])
-        else:
+        if i <= index and _rep[i] == 2:
             _test_x.append(_x[i])
             _test_y.append(_y[i])
-    assert len(_train_x) == len(_train_y) == len(_test_x) == len(_test_y)
+        else:
+            _train_x.append(_x[i])
+            _train_y.append(_y[i])
+    assert len(_train_x) == len(_train_y)
+    assert len(_test_x) == len(_test_y)
+    return np.array(_train_x), np.array(_test_x), np.array(_train_y), np.array(_test_y)
+
+
+def train_test_rep_split2(_x, _y, rate=0.2):
+    assert len(_x) == len(_y)
+    index = int(len(_x) * rate)
+    _train_x = _x[index:]
+    _train_y = _y[index:]
+    _test_x = _x[:index]
+    _test_y = _y[:index]
+    assert len(_train_x) == len(_train_y)
+    assert len(_test_x) == len(_test_y)
     return np.array(_train_x), np.array(_test_x), np.array(_train_y), np.array(_test_y)
 
 
@@ -91,7 +105,8 @@ y = y - 1
 
 # n_samples, n_features = X.shape
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
-train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
+# train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
+train_data, test_data, train_label, test_label = train_test_rep_split2(X, y, 0.2)
 
 x_train = train_data
 y_train = train_label
