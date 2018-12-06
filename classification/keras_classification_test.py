@@ -106,7 +106,7 @@ y = y - 1
 # n_samples, n_features = X.shape
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
 # train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
-train_data, test_data, train_label, test_label = train_test_rep_split2(X, y, 0.2)
+train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep, 0.4)
 
 x_train = train_data
 y_train = train_label
