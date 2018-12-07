@@ -1,6 +1,5 @@
 import numpy as np
 from scipy import io
-from sklearn.model_selection import train_test_split
 from tensorflow import keras
 from tensorflow.python.keras import regularizers
 from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
@@ -16,35 +15,75 @@ class AccuracyHistory(keras.callbacks.Callback):
         self.acc.append(logs.get('acc'))
 
 
-def train_test_rep_split(_x, _y, _rep, rate=0.0):
+def train_test_rep_split(raw_data, rate=1.0):
+    x, y, z, sr, lengths, rep = get_data(raw_data)
+
     _train_x = []
     _train_y = []
     _test_x = []
     _test_y = []
-    index = int(len(_x) * rate)
-    assert len(_x) == len(_y) == len(_rep)
-    for i in range(len(_x)):
-        if i <= index and _rep[i] == 2:
-            _test_x.append(_x[i])
-            _test_y.append(_y[i])
+    index = int(len(x) * rate)
+    assert len(x) == len(y) == len(rep)
+    for i in range(len(x)):
+        if i <= index and rep[i] == 2:
+            _test_x.append(x[i])
+            _test_y.append(y[i])
         else:
-            _train_x.append(_x[i])
-            _train_y.append(_y[i])
+            _train_x.append(x[i])
+            _train_y.append(y[i])
     assert len(_train_x) == len(_train_y)
     assert len(_test_x) == len(_test_y)
-    return np.array(_train_x), np.array(_test_x), np.array(_train_y), np.array(_test_y)
+    return np.array(_train_x), np.array(_train_y), np.array(_test_x), np.array(_test_y)
 
 
-def train_test_rep_split2(_x, _y, rate=0.2):
-    assert len(_x) == len(_y)
-    index = int(len(_x) * rate)
-    _train_x = _x[index:]
-    _train_y = _y[index:]
-    _test_x = _x[:index]
-    _test_y = _y[:index]
+def get_data(raw_data):
+    x, y, z, sr, lengths, rep = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
+                                raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
+                                raw_data.get('actual_length')[0], raw_data.get('repetition_label')[0]
+    y = y - 1
+    return x, y, z, sr, lengths, rep
+
+
+def train_test_rep_split2(raw_data, rate=0.2):
+    x, y, z, sr, lengths, rep = get_data(raw_data)
+
+    assert len(x) == len(y)
+    index = int(len(x) * rate)
+    _train_x = x[index:]
+    _train_y = y[index:]
+    _test_x = x[:index]
+    _test_y = y[:index]
     assert len(_train_x) == len(_train_y)
     assert len(_test_x) == len(_test_y)
-    return np.array(_train_x), np.array(_test_x), np.array(_train_y), np.array(_test_y)
+    return np.array(_train_x), np.array(_train_y), np.array(_test_x), np.array(_test_y)
+
+
+def train_test_rep_split3(raw_data, rate=1.0):
+    x, y, z, sr, lengths, rep = get_data(raw_data)
+    _train_x = []
+    _train_y = []
+    _test_x = []
+    _test_y = []
+    _normal_test_sets = [[], [], [], [], [], [], [], []]
+    _strong_test_sets = [[], [], [], [], [], [], [], []]
+    index = int(len(x) * rate)
+    assert len(x) == len(y) == len(rep)
+    for i in range(len(x)):
+        if i <= index and rep[i] == 2:
+            _test_x.append(x[i])
+            _test_y.append(y[i])
+            # intensity
+            if z[i] == 1:
+                _normal_test_sets[y[i]].append(x[i])
+            else:
+                _strong_test_sets[y[i]].append(x[i])
+        else:
+            _train_x.append(x[i])
+            _train_y.append(y[i])
+    assert len(_train_x) == len(_train_y)
+    assert len(_test_x) == len(_test_y)
+    return np.array(_train_x), np.array(_train_y), np.array(_test_x), \
+           np.array(_test_y), _normal_test_sets, _strong_test_sets
 
 
 w = 526
@@ -92,12 +131,9 @@ model.add(Dense(category_count, activation='softmax', kernel_regularizer=regular
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 mat_path = root_path + 'mfcc_logfbank_26.mat'
 digits = io.loadmat(mat_path)
-X, y, z, sr, lengths, rep = digits.get('feature_matrix'), digits.get('emotion_label')[0], \
-                            digits.get('intensity_label')[0], digits.get('sample_rate')[0], \
-                            digits.get('actual_length')[0], digits.get('repetition_label')[0]
+
 # X: nxm: n=1440//sample, m=feature
 # X = np.expand_dims(X,3)
-y = y - 1
 # X = X[:, ::100]
 
 # select intensy
@@ -106,7 +142,7 @@ y = y - 1
 # n_samples, n_features = X.shape
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
 # train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
-train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep, 0.4)
+train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = train_test_rep_split3(digits, 1.0)
 
 x_train = train_data
 y_train = train_label
@@ -159,3 +195,18 @@ plt.plot(range(1, n_epoch + 1), history.acc)
 plt.xlabel('Epochs')
 plt.ylabel('Accuracy')
 plt.show()
+
+# intensity test
+emotion_list = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'disgust', 'surprised']
+for i in range(len(normal_test_sets)):
+    test_set = np.array(normal_test_sets[i])
+    y_test = keras.utils.to_categorical(np.array([i] * len(test_set)), category_count)
+    score = model.evaluate(test_set, y_test, verbose=0)
+    print('{} Test accuracy:\t{}'.format(emotion_list[i], score[1]))
+
+for i in range(len(strong_test_sets) - 1):
+    i += 1
+    test_set = np.array(strong_test_sets[i])
+    y_test = keras.utils.to_categorical(np.array([i] * len(test_set)), category_count)
+    score = model.evaluate(test_set, y_test, verbose=0)
+    print('{} Test accuracy:\t{}'.format(emotion_list[i], score[1]))
