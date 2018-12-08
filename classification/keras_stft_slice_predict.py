@@ -9,7 +9,7 @@ def get_data(raw_data):
                                             raw_data.get('file_id')[0], raw_data.get('slice_id')[0], \
                                             raw_data.get('repetition_label')[0]
     y = y - 1
-    x = x.reshape((x.shape[0], x.shape[1], x.shape[2], 1))
+    x = x.reshape((x.shape[0], x.shape[1], x.shape[2], c))
     return x, y, z, sr, file_ids, slice_ids, rep
 
 
