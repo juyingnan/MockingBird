@@ -75,9 +75,10 @@ def normalize_features(data, v_max=1.0, v_min=0.0):
 if __name__ == '__main__':
     raw_file_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
     np.seterr(all='ignore')
-    raw_mat, sample_rates, file_ids, slice_ids, meta_info_labels = read_wav_files(raw_file_path)
+    raw_mat, sample_rates, file_ids, slice_ids, meta_info_labels = read_wav_files(raw_file_path, slice_length=1.0,
+                                                                                  step=0.25)
 
-    sio.savemat(raw_file_path + 'raw_slice_050_025.mat', mdict={'feature_matrix': raw_mat,
+    sio.savemat(raw_file_path + 'raw_slice_100_025.mat', mdict={'feature_matrix': raw_mat,
                                                                 'sample_rate': sample_rates,
                                                                 'file_id': file_ids,
                                                                 'slice_id': slice_ids,

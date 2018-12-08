@@ -4,7 +4,7 @@ from python_speech_features import logfbank
 from scipy import io
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_path = root_path + 'raw_slice_050_025.mat'
+mat_path = root_path + 'raw_slice_100_025.mat'
 digits = io.loadmat(mat_path)
 X, y, z, sr, file_ids, slice_ids, rep = digits.get('feature_matrix'), digits.get('emotion_label')[0], \
                                         digits.get('intensity_label')[0], digits.get('sample_rate')[0], \
@@ -33,8 +33,9 @@ for i in range(len(X)):
     count += 1
     print("\rreading {0}/{1}".format(count, len(X)), end='')
 
+print(np.array(all_list[0]).shape)
 # 49 x 26 x 2
-io.savemat(root_path + 'mfcc_slice.mat', mdict={'feature_matrix': np.array(mfcc_list),
+io.savemat(root_path + 'mfcc_slice_2.mat', mdict={'feature_matrix': np.array(mfcc_list),
                                                 'sample_rate': sr,
                                                 'file_id': file_ids,
                                                 'slice_id': slice_ids,
@@ -43,7 +44,7 @@ io.savemat(root_path + 'mfcc_slice.mat', mdict={'feature_matrix': np.array(mfcc_
                                                 'repetition_label': rep
                                                 })
 
-io.savemat(root_path + 'logfbank_slice.mat', mdict={'feature_matrix': np.array(logfbank_list),
+io.savemat(root_path + 'logfbank_slice_2.mat', mdict={'feature_matrix': np.array(logfbank_list),
                                                     'sample_rate': sr,
                                                     'file_id': file_ids,
                                                     'slice_id': slice_ids,
@@ -52,7 +53,7 @@ io.savemat(root_path + 'logfbank_slice.mat', mdict={'feature_matrix': np.array(l
                                                     'repetition_label': rep
                                                     })
 
-io.savemat(root_path + 'mfcc_logfbank_slice.mat', mdict={'feature_matrix': np.array(all_list),
+io.savemat(root_path + 'mfcc_logfbank_slice_2.mat', mdict={'feature_matrix': np.array(all_list),
                                                          'sample_rate': sr,
                                                          'file_id': file_ids,
                                                          'slice_id': slice_ids,

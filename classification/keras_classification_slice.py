@@ -88,7 +88,7 @@ def train_test_rep_split3(raw_data, rate=1.0):
            np.array(_test_y), _normal_test_sets, _strong_test_sets
 
 
-h = 49
+h = 99
 w = 26
 c = 2
 train_image_count = 100000
@@ -131,7 +131,7 @@ model.add(Dense(category_count, activation='softmax', kernel_regularizer=regular
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_path = root_path + 'mfcc_logfbank_slice.mat'
+mat_path = root_path + 'mfcc_logfbank_slice_2.mat'
 digits = io.loadmat(mat_path)
 
 # X: nxm: n=1440//sample, m=feature

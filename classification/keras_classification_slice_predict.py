@@ -50,7 +50,7 @@ def get_max_and_confidence(pred_results):
     return index, max_confidence
 
 
-h = 49
+h = 99
 w = 26
 c = 2
 train_image_count = 100000
@@ -105,7 +105,7 @@ model.add(Dense(category_count, activation='softmax', kernel_regularizer=regular
 model.load_weights(root_path + '/feature_slice_model_weight.h5')
 
 # read image
-mat_path = root_path + 'mfcc_logfbank_slice.mat'
+mat_path = root_path + 'mfcc_logfbank_slice_2.mat'
 digits = io.loadmat(mat_path)
 test_data, test_label, test_ids = train_test_rep_split3(digits, 0.4)
 x_test = test_data
