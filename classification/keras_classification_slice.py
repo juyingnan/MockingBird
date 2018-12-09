@@ -1,8 +1,8 @@
 import numpy as np
 from scipy import io
 from tensorflow import keras
-from tensorflow.python.keras import regularizers
-from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
+from tensorflow.python.keras import regularizers, optimizers
+from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
 from tensorflow.python.keras.models import Sequential
 import matplotlib.pylab as plt
 
@@ -93,10 +93,10 @@ w = 26
 c = 2
 train_image_count = 100000
 input_shape = (h, w, c)
-learning_rate = 0.001
-regularization_rate = 0.0001
+learning_rate = 0.00001
+regularization_rate = 0.00001
 category_count = 7 + 1
-n_epoch = 100
+n_epoch = 500
 mini_batch_size = 64
 
 model = Sequential()
@@ -112,7 +112,7 @@ model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
 # Layer 2
 model.add(Conv2D(64, (3, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-
+model.add(Dropout(0.1))
 # Layer 3
 model.add(Conv2D(128, (3, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 1)))
@@ -120,7 +120,7 @@ model.add(MaxPooling2D(pool_size=(2, 1)))
 # Layer 4
 model.add(Conv2D(256, (3, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 1)))
-
+model.add(Dropout(0.2))
 # flatten
 model.add(Flatten(input_shape=input_shape))
 
@@ -179,7 +179,7 @@ set_session(tf.Session(config=config))
 history = AccuracyHistory()
 model.compile(loss=keras.losses.categorical_crossentropy,
               # optimizer=keras.optimizers.SGD(lr=0.01),
-              optimizer=keras.optimizers.Adam(lr=learning_rate),
+              optimizer=keras.optimizers.RMSprop(lr=learning_rate, decay=1e-6),
               metrics=['accuracy'])
 model.summary()
 model.fit(x_train, y_train,
