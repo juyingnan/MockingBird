@@ -139,22 +139,22 @@ for i in range(len(x_test)):
         cat = get_max_and_confidence(prob_list)[0]
         if cat == current_y:
             if test_ids[i][2] == 1:
-                correct_list_normal[test_label[i]] += 1
+                correct_list_normal[current_y] += 1
             else:
-                correct_list_strong[test_label[i]] += 1
+                correct_list_strong[current_y] += 1
         # confusion matrix
         if test_ids[i][2] == 1:
             confusion_list_normal[current_y][cat] += 1
         else:
             confusion_list_strong[current_y][cat] += 1
         # start new
-        if test_ids[i][2] == 1:
-            count_list_normal[test_label[i]] += 1
-        else:
-            count_list_strong[test_label[i]] += 1
         current_file = test_ids[i][0]
         current_y = test_label[i]
         prob_list = results[i]
+        if test_ids[i][2] == 1:
+            count_list_normal[current_y] += 1
+        else:
+            count_list_strong[current_y] += 1
 
 print('Test accuracy:\t{}'.format(
     (sum(correct_list_strong) + sum(correct_list_normal)) / (sum(count_list_strong) + sum(count_list_normal))))

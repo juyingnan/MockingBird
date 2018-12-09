@@ -137,22 +137,22 @@ for i in range(len(x_test)):
         cat = get_max_and_confidence(prob_list)[0]
         if cat == current_y:
             if test_ids[i][2] == 1:
-                correct_list_normal[test_label[i]] += 1
+                correct_list_normal[current_y] += 1
             else:
-                correct_list_strong[test_label[i]] += 1
+                correct_list_strong[current_y] += 1
         # confusion matrix
         if test_ids[i][2] == 1:
             confusion_list_normal[current_y][cat] += 1
         else:
             confusion_list_strong[current_y][cat] += 1
         # start new
-        if test_ids[i][2] == 1:
-            count_list_normal[test_label[i]] += 1
-        else:
-            count_list_strong[test_label[i]] += 1
         current_file = test_ids[i][0]
         current_y = test_label[i]
         prob_list = results[i]
+        if test_ids[i][2] == 1:
+            count_list_normal[current_y] += 1
+        else:
+            count_list_strong[current_y] += 1
 
 print('Test accuracy:\t{}'.format(
     (sum(correct_list_strong) + sum(correct_list_normal)) / (sum(count_list_strong) + sum(count_list_normal))))
@@ -161,6 +161,32 @@ print('\t'.join([str(correct_list_normal[i] / count_list_normal[i]) for i in ran
 count_list_strong[0] = 1  # prevent 0/0
 print('\t'.join([str(correct_list_strong[i] / count_list_strong[i]) for i in range(len(count_list_strong))]))
 
+print('strong cm')
+print('\t', '\t'.join(emotion_list))
+for i in range(len(emotion_list)):
+    print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
+
+print('normal cm')
+print('\t', '\t'.join(emotion_list))
+for i in range(len(emotion_list)):
+    print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
+
+# cm test
+confusion_list_strong = []
+confusion_list_normal = []
+for i in range(len(emotion_list)):
+    confusion_list_strong.append([])
+    confusion_list_normal.append([])
+    for j in range(len(emotion_list)):
+        confusion_list_strong[-1].append(0)
+        confusion_list_normal[-1].append(0)
+for i in range(len(x_test)):
+    current_y = test_label[i]
+    cat = get_max_and_confidence(results[i])[0]
+    if test_ids[i][2] == 1:
+        confusion_list_normal[current_y][cat] += 1
+    else:
+        confusion_list_strong[current_y][cat] += 1
 print('strong cm')
 print('\t', '\t'.join(emotion_list))
 for i in range(len(emotion_list)):
