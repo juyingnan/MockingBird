@@ -18,13 +18,11 @@ def train_test_rep_split2(raw_data, rate=0.2):
 
     assert len(x) == len(y)
     index = int(len(x) * rate)
-    _train_x = x[index:]
-    _train_y = y[index:]
     _test_x = x[:index]
     _test_y = y[:index]
-    assert len(_train_x) == len(_train_y)
+    _test_id = [(file_ids[i], slice_ids[i], z[i]) for i in range(index)]
     assert len(_test_x) == len(_test_y)
-    return np.array(_train_x), np.array(_train_y), np.array(_test_x), np.array(_test_y)
+    return np.array(_test_x), np.array(_test_y), _test_id
 
 
 def train_test_rep_split3(raw_data, rate=1.0):
