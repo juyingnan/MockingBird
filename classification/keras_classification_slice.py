@@ -60,7 +60,7 @@ def train_test_rep_split2(raw_data, rate=0.2):
     return np.array(_train_x), np.array(_train_y), np.array(_test_x), np.array(_test_y)
 
 
-def train_test_rep_split3(raw_data, rate=1.0):
+def train_test_rep_split3(raw_data, rate_start=0.0, rate_end=1.0):
     x, y, z, sr, file_ids, slice_ids, rep = get_data(raw_data)
     _train_x = []
     _train_y = []
@@ -68,10 +68,11 @@ def train_test_rep_split3(raw_data, rate=1.0):
     _test_y = []
     _normal_test_sets = [[], [], [], [], [], [], [], []]
     _strong_test_sets = [[], [], [], [], [], [], [], []]
-    index = int(len(x) * rate)
+    start_index = int(len(x) * rate_start)
+    end_index = int(len(x) * rate_end)
     assert len(x) == len(y) == len(rep)
     for i in range(len(x)):
-        if i <= index and rep[i] == 2:
+        if start_index <= i <= end_index and rep[i] == 2:
             _test_x.append(x[i])
             _test_y.append(y[i])
             # intensity
@@ -88,7 +89,7 @@ def train_test_rep_split3(raw_data, rate=1.0):
            np.array(_test_y), _normal_test_sets, _strong_test_sets
 
 
-h = 99
+h = 149
 w = 26
 c = 2
 train_image_count = 100000
@@ -131,7 +132,7 @@ model.add(Dense(category_count, activation='softmax', kernel_regularizer=regular
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_path = root_path + 'mfcc_logfbank_slice_2.mat'
+mat_path = root_path + 'mfcc_logfbank_slice_150.mat'
 digits = io.loadmat(mat_path)
 
 # X: nxm: n=1440//sample, m=feature
@@ -144,7 +145,9 @@ digits = io.loadmat(mat_path)
 # n_samples, n_features = X.shape
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
 # train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
-train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = train_test_rep_split3(digits, 0.4)
+train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = train_test_rep_split3(digits,
+                                                                                                           rate_start=0.2,
+                                                                                                           rate_end=0.6)
 
 x_train = train_data
 y_train = train_label
@@ -188,7 +191,7 @@ model.fit(x_train, y_train,
           verbose=2,
           validation_data=(x_val, y_val),
           callbacks=[history])
-model.save_weights(root_path + '/feature_slice_model_weight.h5')
+model.save_weights(root_path + '/feature_slice_model_weight_150_02_06.h5')
 model.save(root_path + '/model.h5')
 score = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', score[0])

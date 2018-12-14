@@ -25,15 +25,16 @@ def train_test_rep_split2(raw_data, rate=0.2):
     return np.array(_test_x), np.array(_test_y), _test_id
 
 
-def train_test_rep_split3(raw_data, rate=1.0):
+def train_test_rep_split3(raw_data, rate_start=0.0, rate_end=1.0):
     x, y, z, sr, file_ids, slice_ids, rep = get_data(raw_data)
     _test_x = []
     _test_y = []
     _test_id = []
-    index = int(len(x) * rate)
+    start_index = int(len(x) * rate_start)
+    end_index = int(len(x) * rate_end)
     assert len(x) == len(y) == len(rep)
     for i in range(len(x)):
-        if i <= index and rep[i] == 2:
+        if start_index <= i <= end_index and rep[i] == 2:
             _test_x.append(x[i])
             _test_y.append(y[i])
             _test_id.append((file_ids[i], slice_ids[i], z[i]))
@@ -48,7 +49,7 @@ def get_max_and_confidence(pred_results):
     return index, max_confidence
 
 
-h = 99
+h = 49
 w = 26
 c = 2
 train_image_count = 100000
@@ -100,12 +101,12 @@ model.add(Flatten(input_shape=input_shape))
 model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(64, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(category_count, activation='softmax', kernel_regularizer=regularizers.l2(regularization_rate)))
-model.load_weights(root_path + '/feature_slice_model_weight.h5')
+model.load_weights(root_path + '/feature_slice_model_weight_050.h5')
 
 # read image
-mat_path = root_path + 'mfcc_logfbank_slice_2.mat'
+mat_path = root_path + 'mfcc_logfbank_slice_050.mat'
 digits = io.loadmat(mat_path)
-test_data, test_label, test_ids = train_test_rep_split3(digits, 0.4)
+test_data, test_label, test_ids = train_test_rep_split3(digits, rate_start=0.2, rate_end=0.6)
 x_test = test_data
 y_test = test_label
 
