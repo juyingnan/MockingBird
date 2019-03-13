@@ -67,10 +67,10 @@ for i in range(len(X)):
 print(np.array(stft_list[0]).shape)
 # 129 x 186
 io.savemat(root_path + 'stft_slice_256_2.mat', mdict={'feature_matrix': np.array(stft_list),
-                                                    'sample_rate': sr,
-                                                    'file_id': file_ids,
-                                                    'slice_id': slice_ids,
-                                                    'emotion_label': y,
-                                                    'intensity_label': z,
-                                                    'repetition_label': rep
-                                                    })
+                                                      'sample_rate': sr,
+                                                      'file_id': file_ids,
+                                                      'slice_id': slice_ids,
+                                                      'emotion_label': y,
+                                                      'intensity_label': z,
+                                                      'repetition_label': rep
+                                                      })

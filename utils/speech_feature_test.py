@@ -3,7 +3,7 @@ import numpy as np
 from python_speech_features import mfcc
 # from python_speech_features import fbank
 from python_speech_features import logfbank
-from python_speech_features import ssc
+# from python_speech_features import ssc
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 mat_path = root_path + 'raw.mat'
@@ -27,13 +27,13 @@ for i in range(len(X)):
     _mfcc = mfcc(_data, _sr, nfft=2048, numcep=26, nfilt=26)
     _logfbank = logfbank(_data, _sr, nfft=2048, nfilt=26)
     # _ssc = ssc(_data, _sr, nfft=2048)
-    all = np.dstack((_mfcc, _logfbank))
+    _all = np.dstack((_mfcc, _logfbank))
 
     mfcc_list.append(_mfcc)
     # fbank_list.append(fbank(_data, _sr, nfft=2048))
     logfbank_list.append(_logfbank)
     # ssc_list.append(_ssc)
-    all_list.append(all)
+    all_list.append(_all)
 
     count += 1
     print("\rreading {0}/{1}".format(count, len(X)), end='')

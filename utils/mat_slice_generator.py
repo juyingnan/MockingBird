@@ -59,8 +59,12 @@ def read_wav_files(path, slice_length=0.5, step=0.25):
         assert len(meta_info_list) == len(audio_list)
 
     audio_array = np.asarray(audio_list, np.float32)
-    return audio_array, np.asarray(sr_list, int), np.asarray(file_id_list, int), np.asarray(slice_id_list, int), \
-           np.asarray(meta_info_lists, int)
+    return \
+        audio_array, \
+        np.asarray(sr_list, int), \
+        np.asarray(file_id_list, int), \
+        np.asarray(slice_id_list, int), \
+        np.asarray(meta_info_lists, int)
 
 
 def normalize_features(data, v_max=1.0, v_min=0.0):

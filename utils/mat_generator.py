@@ -78,13 +78,13 @@ if __name__ == '__main__':
     raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, is_normalized=True)
 
     sio.savemat(raw_file_path + 'raw_norm2.mat', mdict={'feature_matrix': raw_mat,
-                                                       'sample_rate': sample_rates,
-                                                       'actual_length': lengths,
-                                                       'modality_label': meta_info_labels[0],
-                                                       'vocal_channel_label': meta_info_labels[1],
-                                                       'emotion_label': meta_info_labels[2],
-                                                       'intensity_label': meta_info_labels[3],
-                                                       'statement_label': meta_info_labels[4],
-                                                       'repetition_label': meta_info_labels[5],
-                                                       'actor_label': meta_info_labels[6],
-                                                       })
+                                                        'sample_rate': sample_rates,
+                                                        'actual_length': lengths,
+                                                        'modality_label': meta_info_labels[0],
+                                                        'vocal_channel_label': meta_info_labels[1],
+                                                        'emotion_label': meta_info_labels[2],
+                                                        'intensity_label': meta_info_labels[3],
+                                                        'statement_label': meta_info_labels[4],
+                                                        'repetition_label': meta_info_labels[5],
+                                                        'actor_label': meta_info_labels[6],
+                                                        })

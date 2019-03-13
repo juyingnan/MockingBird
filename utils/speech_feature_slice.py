@@ -36,28 +36,28 @@ for i in range(len(X)):
 print(np.array(all_list[0]).shape)
 # 49 x 26 x 2
 io.savemat(root_path + 'mfcc_slice_2.mat', mdict={'feature_matrix': np.array(mfcc_list),
-                                                'sample_rate': sr,
-                                                'file_id': file_ids,
-                                                'slice_id': slice_ids,
-                                                'emotion_label': y,
-                                                'intensity_label': z,
-                                                'repetition_label': rep
-                                                })
+                                                  'sample_rate': sr,
+                                                  'file_id': file_ids,
+                                                  'slice_id': slice_ids,
+                                                  'emotion_label': y,
+                                                  'intensity_label': z,
+                                                  'repetition_label': rep
+                                                  })
 
 io.savemat(root_path + 'logfbank_slice_2.mat', mdict={'feature_matrix': np.array(logfbank_list),
-                                                    'sample_rate': sr,
-                                                    'file_id': file_ids,
-                                                    'slice_id': slice_ids,
-                                                    'emotion_label': y,
-                                                    'intensity_label': z,
-                                                    'repetition_label': rep
-                                                    })
+                                                      'sample_rate': sr,
+                                                      'file_id': file_ids,
+                                                      'slice_id': slice_ids,
+                                                      'emotion_label': y,
+                                                      'intensity_label': z,
+                                                      'repetition_label': rep
+                                                      })
 
 io.savemat(root_path + 'mfcc_logfbank_slice_2.mat', mdict={'feature_matrix': np.array(all_list),
-                                                         'sample_rate': sr,
-                                                         'file_id': file_ids,
-                                                         'slice_id': slice_ids,
-                                                         'emotion_label': y,
-                                                         'intensity_label': z,
-                                                         'repetition_label': rep
-                                                         })
+                                                           'sample_rate': sr,
+                                                           'file_id': file_ids,
+                                                           'slice_id': slice_ids,
+                                                           'emotion_label': y,
+                                                           'intensity_label': z,
+                                                           'repetition_label': rep
+                                                           })
