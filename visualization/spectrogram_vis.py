@@ -3,9 +3,10 @@ import numpy as np
 from scipy import signal
 import math
 import librosa
+# from sklearn import preprocessing
 from python_speech_features import mfcc
 from python_speech_features import logfbank
-from sklearn import preprocessing
+
 
 def calculate_dft_matrix(n):
     exp1, exp2 = np.meshgrid(np.arange(n), np.arange(n))
@@ -29,6 +30,7 @@ def stft(a, window_type, frame_size):
     a_frames = get_framed_matrix(a, window_type, frame_size)
     a_y_mat = dft_mat.dot(a_frames)
     return a_y_mat
+
 
 file_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24\Actor_01\03-01-01-01-01-01-01.wav'
 audio, sr_audio = librosa.load(file_path, sr=None)
