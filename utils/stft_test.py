@@ -37,7 +37,7 @@ X, y, z, sr, lengths, rep = digits.get('feature_matrix'), digits.get('emotion_la
                             digits.get('actual_length')[0], digits.get('repetition_label')[0]
 n_samples, n_features = X.shape
 
-N = 1024
+N = 512
 win_type = 'hann'
 
 dft_mat = calculate_dft_matrix(N)
@@ -63,7 +63,7 @@ for i in range(len(X)):
     count += 1
     print("\rreading {0}/{1}".format(count, len(X)), end='')
 
-io.savemat(root_path + 'stft_1024.mat', mdict={'feature_matrix': np.array(stft_list),
+io.savemat(root_path + 'stft_raw.mat', mdict={'feature_matrix': np.array(stft_list),
                                                'sample_rate': sr,
                                                'actual_length': lengths,
                                                'emotion_label': y,

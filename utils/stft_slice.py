@@ -30,7 +30,7 @@ def stft(a, window_type, frame_size):
 
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_path = root_path + 'raw_slice_100_025.mat'
+mat_path = root_path + 'raw_slice_050_025.mat'
 digits = io.loadmat(mat_path)
 X, y, z, sr, file_ids, slice_ids, rep = digits.get('feature_matrix'), digits.get('emotion_label')[0], \
                                         digits.get('intensity_label')[0], digits.get('sample_rate')[0], \
@@ -38,7 +38,7 @@ X, y, z, sr, file_ids, slice_ids, rep = digits.get('feature_matrix'), digits.get
                                         digits.get('repetition_label')[0]
 n_samples, n_features = X.shape
 
-N = 256
+N = 512
 win_type = 'hann'
 
 dft_mat = calculate_dft_matrix(N)
