@@ -1,5 +1,6 @@
 import numpy as np
 from scipy import io
+# import keras
 from tensorflow import keras
 from tensorflow.python.keras import regularizers, optimizers
 from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
@@ -98,7 +99,7 @@ learning_rate = 0.00001
 regularization_rate = 0.00001
 category_count = 7 + 1
 n_epoch = 500
-mini_batch_size = 64
+mini_batch_size = 128
 
 model = Sequential()
 
@@ -132,7 +133,8 @@ model.add(Dense(category_count, activation='softmax', kernel_regularizer=regular
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_path = root_path + 'mfcc_logfbank_slice_150.mat'
+mat_file_name = 'mfcc_logf_slice_150_025.mat'
+mat_path = root_path + mat_file_name
 digits = io.loadmat(mat_path)
 
 # X: nxm: n=1440//sample, m=feature
@@ -146,8 +148,8 @@ digits = io.loadmat(mat_path)
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
 # train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
 train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = train_test_rep_split3(digits,
-                                                                                                           rate_start=0.2,
-                                                                                                           rate_end=0.6)
+                                                                                                           rate_start=0.0,
+                                                                                                           rate_end=0.2)
 
 x_train = train_data
 y_train = train_label
@@ -191,8 +193,8 @@ model.fit(x_train, y_train,
           verbose=2,
           validation_data=(x_val, y_val),
           callbacks=[history])
-model.save_weights(root_path + '/feature_slice_model_weight_150_02_06.h5')
-model.save(root_path + '/model.h5')
+model.save_weights(root_path + '/weight_' + mat_file_name.split('.')[0] + '.h5')
+model.save(root_path + '/model_' + mat_file_name.split('.')[0] + '.h5')
 score = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
