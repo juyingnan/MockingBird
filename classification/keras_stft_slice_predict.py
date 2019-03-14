@@ -75,6 +75,10 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
     current_y = _test_label[0]
     results = model.predict(np.array(_x_test))
     prob_list = results[0]
+    if _test_ids[0][2] == 1:
+        count_list_normal[current_y] += 1
+    else:
+        count_list_strong[current_y] += 1
     for i in range(len(_x_test)):
         if _test_ids[i][0] == current_file:
             prob_list = prob_list + results[i]

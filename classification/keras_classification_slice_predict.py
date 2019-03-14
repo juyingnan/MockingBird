@@ -74,6 +74,10 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
     current_y = _test_label[0]
     results = model.predict(np.array(_x_test))
     prob_list = results[0]
+    if _test_ids[0][2] == 1:
+        count_list_normal[current_y] += 1
+    else:
+        count_list_strong[current_y] += 1
     for i in range(len(_x_test)):
         if _test_ids[i][0] == current_file:
             prob_list = prob_list + results[i]
@@ -140,17 +144,18 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
     #     print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
 
 
-h = 49
+h = 149
 w = 26
 c = 2
 train_image_count = 100000
 input_shape = (h, w, c)
-learning_rate = 0.001
-regularization_rate = 0.0001
+learning_rate = 0.00001
+regularization_rate = 0.00001
 category_count = 7 + 1
 n_epoch = 100
-mini_batch_size = 64
+mini_batch_size = 128
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
+file_name = 'mfcc_logf_slice_150_025'
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
@@ -175,7 +180,7 @@ model.add(MaxPooling2D(pool_size=(2, 1)))
 
 # Layer 4
 model.add(Conv2D(256, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 1)))
+model.add(MaxPooling2D(pool_size=(4, 1)))
 
 # flatten
 model.add(Flatten(input_shape=input_shape))
@@ -184,12 +189,12 @@ model.add(Flatten(input_shape=input_shape))
 model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(64, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(category_count, activation='softmax', kernel_regularizer=regularizers.l2(regularization_rate)))
-model.load_weights(root_path + '/feature_slice_model_weight_050.h5')
+model.load_weights(root_path + '/weight_'+file_name+'.h5')
 
 # read image
-mat_path = root_path + 'mfcc_logfbank_slice_050.mat'
+mat_path = root_path + file_name
 digits = io.loadmat(mat_path)
-test_data, test_label, test_ids = train_test_rep_split3(digits, rate_start=0.2, rate_end=0.6)
+test_data, test_label, test_ids = train_test_rep_split3(digits, rate_start=0.0, rate_end=0.2)
 x_test = test_data
 y_test = test_label
 
