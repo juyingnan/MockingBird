@@ -21,11 +21,11 @@ for i in range(len(X)):
     _data = X[i]
     _sr = sr[i]
     f, t, spectrogram = signal.stft(_data, window=win_type, nperseg=N, nfft=512)
-    stft_list.append(spectrogram)
+    stft_list.append(np.absolute(spectrogram))
     count += 1
     print("\rreading {0}/{1}".format(count, len(X)), end='')
 
-io.savemat(root_path + 'stft_1024.mat', mdict={'feature_matrix': np.array(stft_list),
+io.savemat(root_path + 'stft_raw.mat', mdict={'feature_matrix': np.array(stft_list),
                                                'sample_rate': sr,
                                                'actual_length': lengths,
                                                'emotion_label': y,
