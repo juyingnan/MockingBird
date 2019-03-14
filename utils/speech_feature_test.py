@@ -38,21 +38,21 @@ for i in range(len(X)):
     count += 1
     print("\rreading {0}/{1}".format(count, len(X)), end='')
 
-io.savemat(root_path + 'mfcc_26.mat', mdict={'feature_matrix': np.array(mfcc_list),
+io.savemat(root_path + 'mfcc_raw.mat', mdict={'feature_matrix': np.array(mfcc_list),
                                              'sample_rate': sr,
                                              'actual_length': lengths,
                                              'emotion_label': y,
                                              'intensity_label': z,
                                              'repetition_label': rep
                                              })
-io.savemat(root_path + 'logfbank_26.mat', mdict={'feature_matrix': np.array(logfbank_list),
+io.savemat(root_path + 'logf_raw.mat', mdict={'feature_matrix': np.array(logfbank_list),
                                                  'sample_rate': sr,
                                                  'actual_length': lengths,
                                                  'emotion_label': y,
                                                  'intensity_label': z,
                                                  'repetition_label': rep
                                                  })
-io.savemat(root_path + 'mfcc_logfbank_26.mat', mdict={'feature_matrix': np.array(all_list),
+io.savemat(root_path + 'mfcc_logf_raw.mat', mdict={'feature_matrix': np.array(all_list),
                                                       'sample_rate': sr,
                                                       'actual_length': lengths,
                                                       'emotion_label': y,
