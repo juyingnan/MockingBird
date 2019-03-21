@@ -12,6 +12,11 @@ import tensorflow as tf
 from tensorflow.python.keras.backend import set_session
 import dataset_split
 import model_parameter
+import logging
+import sys
+
+# Disable Tensorflow debugging information
+logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 h, w, kernel_size, kernel_stride, pool_stride, pool_size_list = model_parameter.get_parameter_149_26()
 c = 2
@@ -66,6 +71,10 @@ mat_file_name = 'mfcc_logf_slice_150_025.mat'
 mat_path = root_path + mat_file_name
 digits = io.loadmat(mat_path)
 split_method = 'rep'
+
+# redirect output to both console and txt
+sys.stdout = model_parameter.Logger(
+    root_path + '/log_train_' + mat_file_name.split('.')[0] + '_' + split_method + '.log')
 
 # X: nxm: n=1440//sample, m=feature
 # X = np.expand_dims(X,3)

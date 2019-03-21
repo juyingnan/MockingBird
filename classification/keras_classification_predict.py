@@ -6,6 +6,8 @@ from tensorflow import keras
 from tensorflow.python.keras.backend import set_session
 from tensorflow.python.keras.models import load_model
 import dataset_split
+import model_parameter
+import sys
 
 
 def get_max_and_confidence(pred_results):
@@ -108,6 +110,8 @@ file_name = 'mfcc_logf_slice_150_025'
 split_method = 'rep'
 category_count = 7 + 1
 c = 2
+
+sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + file_name + '_' + split_method + '.log')
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
