@@ -7,6 +7,7 @@ from tensorflow.python.keras.backend import set_session
 from tensorflow.python.keras.models import load_model
 import dataset_split
 import model_parameter
+import logging
 import sys
 
 
@@ -15,6 +16,77 @@ def get_max_and_confidence(pred_results):
     max_confidence = max(result_as_list)
     index = result_as_list.index(max_confidence)
     return index, max_confidence
+
+
+def get_early_predict(_x_test, _test_label, _test_ids, length, step):
+    # emotion_list = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'disgust', 'surprised']
+    results = model.predict(np.array(_x_test))
+
+    # find longest possibility
+    longest = 0
+    for i in range(len(_x_test)):
+        if _test_ids[i][1] > longest:
+            longest = _test_ids[i][1]
+    longest += 1
+
+    normal_accuracy_list = []
+    strong_accuracy_list = []
+    accuracy_list = []
+    uncomplete_predict_list = []
+
+    for l in range(longest):
+        count_list_strong = [0, 0, 0, 0, 0, 0, 0, 0]
+        count_list_normal = [0, 0, 0, 0, 0, 0, 0, 0]
+        correct_list_strong = [0, 0, 0, 0, 0, 0, 0, 0]
+        correct_list_normal = [0, 0, 0, 0, 0, 0, 0, 0]
+        uncomplete_file_list = []
+        current_file = _test_ids[0][0]
+        current_y = _test_label[0]
+        prob_list = results[0]
+        if _test_ids[0][2] == 1:
+            count_list_normal[current_y] += 1
+        else:
+            count_list_strong[current_y] += 1
+        for i in range(len(_x_test)):
+            if _test_ids[i][0] == current_file:
+                if _test_ids[i][1] <= l:
+                    prob_list = prob_list + results[i]
+                else:
+                    uncomplete_file_list.append(_test_ids[i][0])
+            else:
+                # finish last
+                cat = get_max_and_confidence(prob_list)[0]
+                if cat == current_y:
+                    if _test_ids[i][2] == 1:
+                        correct_list_normal[current_y] += 1
+                    else:
+                        correct_list_strong[current_y] += 1
+                # start new
+                current_file = _test_ids[i][0]
+                current_y = _test_label[i]
+                prob_list = results[i]
+                if _test_ids[i][2] == 1:
+                    count_list_normal[current_y] += 1
+                else:
+                    count_list_strong[current_y] += 1
+        normal_correct_count = sum(correct_list_normal)
+        strong_correct_count = sum(correct_list_strong)
+        correct_count = normal_correct_count + strong_correct_count
+        normal_count = sum(count_list_normal)
+        strong_count = sum(count_list_strong)
+        all_count = normal_count + strong_count
+        normal_accuracy_list.append(normal_correct_count / normal_count)
+        strong_accuracy_list.append(strong_correct_count / strong_count)
+        accuracy_list.append(correct_count / all_count)
+        uncomplete_predict_list.append(len(set(uncomplete_file_list)))
+
+    print('Early predict:')
+    print('\t'.join([str(i + 1) for i in range(longest)]))
+    print('\t'.join([str(length + step * i) for i in range(longest)]))
+    print('\t'.join([str(normal_accuracy_list[i]) for i in range(longest)]))
+    print('\t'.join([str(strong_accuracy_list[i]) for i in range(longest)]))
+    print('\t'.join([str(accuracy_list[i]) for i in range(longest)]))
+    print('\t'.join([str(uncomplete_predict_list[i]) for i in range(longest)]))
 
 
 def draw_confusion_matrix(_x_test, _test_label, _test_ids):
@@ -105,6 +177,9 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
         print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
 
 
+# Disable Tensorflow debugging information
+logging.getLogger("tensorflow").setLevel(logging.ERROR)
+
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 file_name = 'mfcc_logf_slice_150_025'
 split_method = 'rep'
@@ -129,3 +204,7 @@ print(x_test.shape[0], 'test samples')
 y_test = keras.utils.to_categorical(y_test, category_count)
 
 draw_confusion_matrix(x_test, test_label, test_ids)
+if sum([test_ids[s][1] for s in range(len(test_ids))]) > 0:  # slices
+    slice_len = int(file_name.split('_')[-2]) / 100
+    slice_step = int(file_name.split('_')[-1]) / 100 * slice_len
+    get_early_predict(x_test, test_label, test_ids, slice_len, slice_step)
