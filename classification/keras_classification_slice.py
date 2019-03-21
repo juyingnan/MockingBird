@@ -5,57 +5,50 @@ from tensorflow import keras
 from tensorflow.python.keras import regularizers, optimizers
 from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, Activation
 from tensorflow.python.keras.models import Sequential
-from tensorflow.python.keras.layers.normalization import BatchNormalization
+from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
+# from tensorflow.python.keras.layers.normalization import BatchNormalization
 import matplotlib.pylab as plt
+import tensorflow as tf
+from tensorflow.python.keras.backend import set_session
 import dataset_split
+import model_parameter
 
-
-class AccuracyHistory(keras.callbacks.Callback):
-    def on_train_begin(self, logs={}):
-        self.acc = []
-
-    def on_epoch_end(self, batch, logs={}):
-        self.acc.append(logs.get('val_acc'))
-
-
-h = 149
-w = 26
+h, w, kernel_size, kernel_stride, pool_stride, pool_size_list = model_parameter.get_parameter_149_26()
 c = 2
 train_image_count = 100000
 input_shape = (h, w, c)
-learning_rate = 0.00005
-regularization_rate = 0.00001
+learning_rate = 0.0001
+regularization_rate = 0.0001
 category_count = 7 + 1
-n_epoch = 200
+n_epoch = 300
 mini_batch_size = 256
 
 model = Sequential()
 
-kernel_size = (5, 5)
 # Layer 1
 model.add(Conv2D(32,
                  kernel_size=kernel_size,
-                 strides=(1, 1),
+                 strides=kernel_stride,
                  activation='relu',
                  input_shape=input_shape))
 # model.add(BatchNormalization())
 model.add(Dropout(0.3))
-model.add(MaxPooling2D(pool_size=(2, 1), strides=(2, 1)))
+model.add(MaxPooling2D(pool_size=pool_size_list[0], strides=pool_stride))
 
 # Layer 2
 model.add(Conv2D(64, kernel_size, activation='relu'))
 model.add(Dropout(0.3))
-model.add(MaxPooling2D(pool_size=(2, 1)))
+model.add(MaxPooling2D(pool_size=pool_size_list[1]))
 # Layer 3
 model.add(Conv2D(128, kernel_size, activation='relu'))
 model.add(Dropout(0.3))
-model.add(MaxPooling2D(pool_size=(2, 1)))
+model.add(MaxPooling2D(pool_size=pool_size_list[2]))
 
 # Layer 4
 model.add(Conv2D(256, kernel_size, activation='relu'))
 model.add(Activation('relu'))
 model.add(Dropout(0.3))
-model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(MaxPooling2D(pool_size=pool_size_list[3]))
 
 # flatten
 model.add(Flatten(input_shape=input_shape))
@@ -84,13 +77,13 @@ split_method = 'rep'
 # n_samples, n_features = X.shape
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
 # train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
-train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = dataset_split.train_test_rep_split4(
-    digits, c, split_method)
+train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = \
+    dataset_split.train_test_rep_split4(digits, c, split_method)
 
 x_train = train_data
 y_train = train_label
-x_val = test_data
-y_val = test_label
+x_val = test_data[:2000]
+y_val = test_label[:2000]
 x_test = test_data
 y_test = test_label
 
@@ -110,33 +103,48 @@ y_val = keras.utils.to_categorical(y_val, category_count)
 y_test = keras.utils.to_categorical(y_test, category_count)
 
 # train
-import tensorflow as tf
-from tensorflow.python.keras.backend import set_session
-
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 set_session(tf.Session(config=config))
 # train
-history = AccuracyHistory()
 model.compile(loss=keras.losses.categorical_crossentropy,
               # optimizer=keras.optimizers.SGD(lr=0.01),
-              optimizer=keras.optimizers.RMSprop(lr=learning_rate, decay=1e-6),
+              optimizer=optimizers.RMSprop(lr=learning_rate, decay=1e-5),
               metrics=['accuracy'])
+model_save_path = root_path + '/model_' + mat_file_name.split('.')[0] + '_' + split_method + '.h5'
+checkpoint = ModelCheckpoint(model_save_path, monitor='val_acc', verbose=1,
+                             save_best_only=True, save_weights_only=False, mode='auto', period=1)
+
+earlystop = EarlyStopping(monitor='val_acc', min_delta=0, patience=20, verbose=0, mode='auto',
+                          restore_best_weights=True)
+callback_list = [checkpoint, earlystop]
 model.summary()
-model.fit(x_train, y_train,
-          batch_size=mini_batch_size,
-          epochs=n_epoch,
-          verbose=2,
-          validation_data=(x_val, y_val),
-          callbacks=[history])
-model.save_weights(root_path + '/weight_' + mat_file_name.split('.')[0] + '_' + split_method + '.h5')
-model.save(root_path + '/model_' + mat_file_name.split('.')[0] + '_' + split_method + '.h5')
+history = model.fit(x_train, y_train,
+                    batch_size=mini_batch_size,
+                    epochs=n_epoch,
+                    verbose=2,
+                    validation_data=(x_val, y_val),
+                    callbacks=callback_list)
+# model.save_weights(root_path + '/weight_' + mat_file_name.split('.')[0] + '_' + split_method + '.h5')
+# model.save(model_save_path)
 score = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
-plt.plot(range(1, n_epoch + 1), history.acc)
-plt.xlabel('Epochs')
-plt.ylabel('Accuracy')
+
+# Plot training & validation accuracy values
+fig, ax1 = plt.subplots()
+ax2 = ax1.twinx()
+acc = ax1.plot(history.history['acc'], label='Train acc')
+val_acc = ax1.plot(history.history['val_acc'], label='Val acc')
+loss = ax2.plot(history.history['loss'], label='Train loss')
+val_loss = ax2.plot(history.history['val_loss'], label='Val loss')
+lines = acc + val_acc + loss + val_loss
+labs = [l.get_label() for l in lines]
+ax1.legend(lines, labs, loc=0)
+plt.title('Model accuracy')
+ax1.set_ylabel('Accuracy')
+ax2.set_ylabel('Loss')
+plt.xlabel('Epoch')
 plt.show()
 
 # intensity test
