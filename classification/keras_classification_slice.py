@@ -3,9 +3,11 @@ from scipy import io
 # import keras
 from tensorflow import keras
 from tensorflow.python.keras import regularizers, optimizers
-from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
+from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, Activation
 from tensorflow.python.keras.models import Sequential
+from tensorflow.python.keras.layers.normalization import BatchNormalization
 import matplotlib.pylab as plt
+import dataset_split
 
 
 class AccuracyHistory(keras.callbacks.Callback):
@@ -13,81 +15,7 @@ class AccuracyHistory(keras.callbacks.Callback):
         self.acc = []
 
     def on_epoch_end(self, batch, logs={}):
-        self.acc.append(logs.get('acc'))
-
-
-def train_test_rep_split(raw_data, rate=1.0):
-    x, y, z, sr, file_ids, slice_ids, rep = get_data(raw_data)
-
-    _train_x = []
-    _train_y = []
-    _test_x = []
-    _test_y = []
-    index = int(len(x) * rate)
-    assert len(x) == len(y) == len(rep)
-    for i in range(len(x)):
-        if i <= index and rep[i] == 2:
-            _test_x.append(x[i])
-            _test_y.append(y[i])
-        else:
-            _train_x.append(x[i])
-            _train_y.append(y[i])
-    assert len(_train_x) == len(_train_y)
-    assert len(_test_x) == len(_test_y)
-    return np.array(_train_x), np.array(_train_y), np.array(_test_x), np.array(_test_y)
-
-
-def get_data(raw_data):
-    x, y, z, sr, file_ids, slice_ids, rep = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
-                                            raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
-                                            raw_data.get('file_id')[0], raw_data.get('slice_id')[0], \
-                                            raw_data.get('repetition_label')[0]
-    y = y - 1
-    x = x.reshape((x.shape[0], x.shape[1], x.shape[2], c))
-    return x, y, z, sr, file_ids, slice_ids, rep
-
-
-def train_test_rep_split2(raw_data, rate=0.2):
-    x, y, z, sr, file_ids, slice_ids, rep = get_data(raw_data)
-
-    assert len(x) == len(y)
-    index = int(len(x) * rate)
-    _train_x = x[index:]
-    _train_y = y[index:]
-    _test_x = x[:index]
-    _test_y = y[:index]
-    assert len(_train_x) == len(_train_y)
-    assert len(_test_x) == len(_test_y)
-    return np.array(_train_x), np.array(_train_y), np.array(_test_x), np.array(_test_y)
-
-
-def train_test_rep_split3(raw_data, rate_start=0.0, rate_end=1.0):
-    x, y, z, sr, file_ids, slice_ids, rep = get_data(raw_data)
-    _train_x = []
-    _train_y = []
-    _test_x = []
-    _test_y = []
-    _normal_test_sets = [[], [], [], [], [], [], [], []]
-    _strong_test_sets = [[], [], [], [], [], [], [], []]
-    start_index = int(len(x) * rate_start)
-    end_index = int(len(x) * rate_end)
-    assert len(x) == len(y) == len(rep)
-    for i in range(len(x)):
-        if start_index <= i <= end_index and rep[i] == 2:
-            _test_x.append(x[i])
-            _test_y.append(y[i])
-            # intensity
-            if z[i] == 1:
-                _normal_test_sets[y[i]].append(x[i])
-            else:
-                _strong_test_sets[y[i]].append(x[i])
-        else:
-            _train_x.append(x[i])
-            _train_y.append(y[i])
-    assert len(_train_x) == len(_train_y)
-    assert len(_test_x) == len(_test_y)
-    return np.array(_train_x), np.array(_train_y), np.array(_test_x), \
-           np.array(_test_y), _normal_test_sets, _strong_test_sets
+        self.acc.append(logs.get('val_acc'))
 
 
 h = 149
@@ -99,36 +27,44 @@ learning_rate = 0.00001
 regularization_rate = 0.00001
 category_count = 7 + 1
 n_epoch = 500
-mini_batch_size = 128
+mini_batch_size = 256
 
 model = Sequential()
 
+kernel_size = (5, 5)
 # Layer 1
 model.add(Conv2D(32,
-                 kernel_size=(3, 3),
+                 kernel_size=kernel_size,
                  strides=(1, 1),
                  activation='relu',
                  input_shape=input_shape))
-model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+# model.add(BatchNormalization())
+model.add(Dropout(0.3))
+model.add(MaxPooling2D(pool_size=(2, 1), strides=(2, 1)))
 
 # Layer 2
-model.add(Conv2D(64, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Dropout(0.1))
+model.add(Conv2D(64, kernel_size, activation='relu'))
+model.add(Dropout(0.3))
+model.add(MaxPooling2D(pool_size=(2, 1)))
 # Layer 3
-model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(Conv2D(128, kernel_size, activation='relu'))
+model.add(Dropout(0.3))
 model.add(MaxPooling2D(pool_size=(2, 1)))
 
 # Layer 4
-model.add(Conv2D(256, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 1)))
-model.add(Dropout(0.2))
+model.add(Conv2D(256, kernel_size, activation='relu'))
+model.add(Activation('relu'))
+model.add(Dropout(0.3))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
 # flatten
 model.add(Flatten(input_shape=input_shape))
 
 # fc layers
 model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
+model.add(Dropout(0.4))
 model.add(Dense(64, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
+model.add(Dropout(0.4))
 model.add(Dense(category_count, activation='softmax', kernel_regularizer=regularizers.l2(regularization_rate)))
 
 # read image
@@ -147,9 +83,8 @@ digits = io.loadmat(mat_path)
 # n_samples, n_features = X.shape
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
 # train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
-train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = train_test_rep_split3(digits,
-                                                                                                           rate_start=0.0,
-                                                                                                           rate_end=0.2)
+train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = dataset_split.train_test_rep_split4(
+    digits, c, 'rep')
 
 x_train = train_data
 y_train = train_label

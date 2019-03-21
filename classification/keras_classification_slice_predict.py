@@ -8,45 +8,7 @@ from tensorflow.python.keras import regularizers
 from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.backend import set_session
-
-
-def get_data(raw_data):
-    x, y, z, sr, file_ids, slice_ids, rep = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
-                                            raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
-                                            raw_data.get('file_id')[0], raw_data.get('slice_id')[0], \
-                                            raw_data.get('repetition_label')[0]
-    y = y - 1
-    x = x.reshape((x.shape[0], x.shape[1], x.shape[2], c))
-    return x, y, z, sr, file_ids, slice_ids, rep
-
-
-def train_test_rep_split2(raw_data, rate=0.2):
-    x, y, z, sr, file_ids, slice_ids, rep = get_data(raw_data)
-
-    assert len(x) == len(y)
-    index = int(len(x) * rate)
-    _test_x = x[:index]
-    _test_y = y[:index]
-    _test_id = [(file_ids[i], slice_ids[i], z[i]) for i in range(index)]
-    assert len(_test_x) == len(_test_y)
-    return np.array(_test_x), np.array(_test_y), _test_id
-
-
-def train_test_rep_split3(raw_data, rate_start=0.0, rate_end=1.0):
-    x, y, z, sr, file_ids, slice_ids, rep = get_data(raw_data)
-    _test_x = []
-    _test_y = []
-    _test_id = []
-    start_index = int(len(x) * rate_start)
-    end_index = int(len(x) * rate_end)
-    assert len(x) == len(y) == len(rep)
-    for i in range(len(x)):
-        if start_index <= i <= end_index and rep[i] == 2:
-            _test_x.append(x[i])
-            _test_y.append(y[i])
-            _test_id.append((file_ids[i], slice_ids[i], z[i]))
-    assert len(_test_x) == len(_test_y)
-    return np.array(_test_x), np.array(_test_y), _test_id
+import dataset_split
 
 
 def get_max_and_confidence(pred_results):
@@ -161,26 +123,27 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 set_session(tf.Session(config=config))
 model = Sequential()
+kernel_size = (5, 5)
 
 # Layer 1
 model.add(Conv2D(32,
-                 kernel_size=(3, 3),
+                 kernel_size=kernel_size,
                  strides=(1, 1),
                  activation='relu',
                  input_shape=input_shape))
-model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+model.add(MaxPooling2D(pool_size=(2, 1), strides=(2, 1)))
 
 # Layer 2
-model.add(Conv2D(64, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Conv2D(64, kernel_size, activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 1)))
 
 # Layer 3
-model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(Conv2D(128, kernel_size, activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 1)))
 
 # Layer 4
-model.add(Conv2D(256, (3, 3), activation='relu'))
-model.add(MaxPooling2D(pool_size=(4, 1)))
+model.add(Conv2D(256, kernel_size, activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
 
 # flatten
 model.add(Flatten(input_shape=input_shape))
@@ -189,12 +152,12 @@ model.add(Flatten(input_shape=input_shape))
 model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(64, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(category_count, activation='softmax', kernel_regularizer=regularizers.l2(regularization_rate)))
-model.load_weights(root_path + '/weight_'+file_name+'.h5')
+model.load_weights(root_path + '/weight_' + file_name + '.h5')
 
 # read image
 mat_path = root_path + file_name
 digits = io.loadmat(mat_path)
-test_data, test_label, test_ids = train_test_rep_split3(digits, rate_start=0.0, rate_end=0.2)
+test_data, test_label, test_ids = dataset_split.train_test_rep_split4(digits, c, 'rep', is_test_only=True)
 x_test = test_data
 y_test = test_label
 
