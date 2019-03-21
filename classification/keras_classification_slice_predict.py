@@ -118,6 +118,7 @@ n_epoch = 100
 mini_batch_size = 128
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 file_name = 'mfcc_logf_slice_150_025'
+split_method = 'rep'
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
@@ -152,12 +153,12 @@ model.add(Flatten(input_shape=input_shape))
 model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(64, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
 model.add(Dense(category_count, activation='softmax', kernel_regularizer=regularizers.l2(regularization_rate)))
-model.load_weights(root_path + '/weight_' + file_name + '.h5')
+model.load_weights(root_path + '/weight_' + file_name + '_' + split_method + '.h5')
 
 # read image
 mat_path = root_path + file_name
 digits = io.loadmat(mat_path)
-test_data, test_label, test_ids = dataset_split.train_test_rep_split4(digits, c, 'rep', is_test_only=True)
+test_data, test_label, test_ids = dataset_split.train_test_rep_split4(digits, c, split_method, is_test_only=True)
 x_test = test_data
 y_test = test_label
 

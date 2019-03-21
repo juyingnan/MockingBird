@@ -23,10 +23,10 @@ w = 26
 c = 2
 train_image_count = 100000
 input_shape = (h, w, c)
-learning_rate = 0.00001
+learning_rate = 0.00005
 regularization_rate = 0.00001
 category_count = 7 + 1
-n_epoch = 500
+n_epoch = 200
 mini_batch_size = 256
 
 model = Sequential()
@@ -72,6 +72,7 @@ root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 mat_file_name = 'mfcc_logf_slice_150_025.mat'
 mat_path = root_path + mat_file_name
 digits = io.loadmat(mat_path)
+split_method = 'rep'
 
 # X: nxm: n=1440//sample, m=feature
 # X = np.expand_dims(X,3)
@@ -84,7 +85,7 @@ digits = io.loadmat(mat_path)
 # train_data, test_data, train_label, test_label = train_test_split(X, y, test_size=0.1, shuffle=True, random_state=777)
 # train_data, test_data, train_label, test_label = train_test_rep_split(X, y, rep)
 train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = dataset_split.train_test_rep_split4(
-    digits, c, 'rep')
+    digits, c, split_method)
 
 x_train = train_data
 y_train = train_label
@@ -128,8 +129,8 @@ model.fit(x_train, y_train,
           verbose=2,
           validation_data=(x_val, y_val),
           callbacks=[history])
-model.save_weights(root_path + '/weight_' + mat_file_name.split('.')[0] + '.h5')
-model.save(root_path + '/model_' + mat_file_name.split('.')[0] + '.h5')
+model.save_weights(root_path + '/weight_' + mat_file_name.split('.')[0] + '_' + split_method + '.h5')
+model.save(root_path + '/model_' + mat_file_name.split('.')[0] + '_' + split_method + '.h5')
 score = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
