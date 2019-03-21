@@ -1,13 +1,10 @@
 import numpy as np
 from scipy import io
 # import keras
-# from keras.models import load_model
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.python.keras import regularizers
-from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
-from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.backend import set_session
+from tensorflow.python.keras.models import load_model
 import dataset_split
 
 
@@ -79,81 +76,43 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
     for i in range(len(emotion_list)):
         print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
 
-    # cm test
-    # confusion_list_strong = []
-    # confusion_list_normal = []
-    # for i in range(len(emotion_list)):
-    #     confusion_list_strong.append([])
-    #     confusion_list_normal.append([])
-    #     for j in range(len(emotion_list)):
-    #         confusion_list_strong[-1].append(0)
-    #         confusion_list_normal[-1].append(0)
-    # for i in range(len(x_test)):
-    #     current_y = test_label[i]
-    #     cat = get_max_and_confidence(results[i])[0]
-    #     if test_ids[i][2] == 1:
-    #         confusion_list_normal[current_y][cat] += 1
-    #     else:
-    #         confusion_list_strong[current_y][cat] += 1
-    # print('strong cm')
-    # print('\t', '\t'.join(emotion_list))
-    # for i in range(len(emotion_list)):
-    #     print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
-    #
-    # print('normal cm')
-    # print('\t', '\t'.join(emotion_list))
-    # for i in range(len(emotion_list)):
-    #     print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
+    # cm test for slices
+    confusion_list_strong = []
+    confusion_list_normal = []
+    for i in range(len(emotion_list)):
+        confusion_list_strong.append([])
+        confusion_list_normal.append([])
+        for j in range(len(emotion_list)):
+            confusion_list_strong[-1].append(0)
+            confusion_list_normal[-1].append(0)
+    for i in range(len(x_test)):
+        current_y = test_label[i]
+        cat = get_max_and_confidence(results[i])[0]
+        if test_ids[i][2] == 1:
+            confusion_list_normal[current_y][cat] += 1
+        else:
+            confusion_list_strong[current_y][cat] += 1
+    print('strong cm')
+    print('\t', '\t'.join(emotion_list))
+    for i in range(len(emotion_list)):
+        print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
+
+    print('normal cm')
+    print('\t', '\t'.join(emotion_list))
+    for i in range(len(emotion_list)):
+        print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
 
 
-h = 149
-w = 26
-c = 2
-train_image_count = 100000
-input_shape = (h, w, c)
-learning_rate = 0.00001
-regularization_rate = 0.00001
-category_count = 7 + 1
-n_epoch = 100
-mini_batch_size = 128
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 file_name = 'mfcc_logf_slice_150_025'
 split_method = 'rep'
+category_count = 7 + 1
+c = 2
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 set_session(tf.Session(config=config))
-model = Sequential()
-kernel_size = (5, 5)
-
-# Layer 1
-model.add(Conv2D(32,
-                 kernel_size=kernel_size,
-                 strides=(1, 1),
-                 activation='relu',
-                 input_shape=input_shape))
-model.add(MaxPooling2D(pool_size=(2, 1), strides=(2, 1)))
-
-# Layer 2
-model.add(Conv2D(64, kernel_size, activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 1)))
-
-# Layer 3
-model.add(Conv2D(128, kernel_size, activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 1)))
-
-# Layer 4
-model.add(Conv2D(256, kernel_size, activation='relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
-
-# flatten
-model.add(Flatten(input_shape=input_shape))
-
-# fc layers
-model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
-model.add(Dense(64, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
-model.add(Dense(category_count, activation='softmax', kernel_regularizer=regularizers.l2(regularization_rate)))
-model.load_weights(root_path + '/weight_' + file_name + '_' + split_method + '.h5')
+model = load_model(root_path + '/model_' + file_name + '_' + split_method + '.h5')
 
 # read image
 mat_path = root_path + file_name
