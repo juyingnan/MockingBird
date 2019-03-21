@@ -2,10 +2,15 @@ import numpy as np
 
 
 def get_data(raw_data, channel):
-    x, y, z, sr, file_ids, slice_ids, rep, sen = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
-                                                 raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
-                                                 raw_data.get('file_id')[0], raw_data.get('slice_id')[0], \
-                                                 raw_data.get('repetition_label')[0], raw_data.get('statement_label')[0]
+    x, y, z, sr, rep, sen = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
+                            raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
+                            raw_data.get('repetition_label')[0], raw_data.get('statement_label')[0]
+    file_ids = None
+    slice_ids = None
+    if 'file_id' in raw_data:
+        file_ids = raw_data.get('file_id')[0]
+    if 'slice_id' in raw_data:
+        slice_ids = raw_data.get('slice_id')[0]
     y = y - 1
     x = x.reshape((x.shape[0], x.shape[1], x.shape[2], channel))
     return x, y, z, sr, file_ids, slice_ids, rep, sen
@@ -89,7 +94,10 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
         if (rep[i] == 2 and sep_criteria == 'rep') or (sen[i] == 2 and sep_criteria == 'sen'):
             _test_x.append(x[i])
             _test_y.append(y[i])
-            _test_id.append((file_ids[i], slice_ids[i], z[i]))
+            if file_ids is not None and slice_ids is not None:
+                _test_id.append((file_ids[i], slice_ids[i], z[i]))
+            else:
+                _test_id.append((i, 0, z[i]))
             # intensity
             if z[i] == 1:
                 _normal_test_sets[y[i]].append(x[i])
