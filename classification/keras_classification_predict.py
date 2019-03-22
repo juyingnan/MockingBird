@@ -186,6 +186,12 @@ split_method = 'rep'
 category_count = 7 + 1
 c = 2
 
+# override filepath via args
+if len(sys.argv) >= 4:
+    file_name = sys.argv[1]
+    split_method = sys.argv[2]
+    c = int(sys.argv[3])
+
 sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + file_name + '_' + split_method + '.log')
 
 config = tf.ConfigProto()
