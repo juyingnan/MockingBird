@@ -64,13 +64,9 @@ category_count = 7 + 1
 n_epoch = 500
 mini_batch_size = 256
 
-cnn_model = get_cnn_model()
-
 # read image
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_file_name = 'mfcc_logf_slice_150_025.mat'
-mat_path = root_path + mat_file_name
-digits = io.loadmat(mat_path)
+mat_file_name = 'mfcc_logf_slice_050_025.mat'
 split_method = 'rep'
 
 # override filepath via args
@@ -84,6 +80,8 @@ digits = io.loadmat(mat_path)
 print("parameter, file path: ", mat_path)
 input_shape = (h, w, c)
 print("input_shape: ", input_shape)
+
+cnn_model = get_cnn_model()
 
 # redirect output to both console and txt
 sys.stdout = model_parameter.Logger(
