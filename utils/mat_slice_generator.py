@@ -85,7 +85,8 @@ if __name__ == '__main__':
                                                                                   _slice_length=slice_length,
                                                                                   _step=step)
 
-    sio.savemat(raw_file_path + 'raw_slice_' + str(int(100 * slice_length)) + str(int(100 * step)) + '.mat',
+    sio.savemat(raw_file_path + 'raw_slice_' + str('%0*d' % (3, int(100 * slice_length))) + '_' + str(
+        '%0*d' % (3, int(100 * step))) + '.mat',
                 mdict={'feature_matrix': raw_mat,
                        'sample_rate': sample_rates,
                        'file_id': file_ids,
