@@ -6,17 +6,17 @@ from scipy import io, signal
 
 def get_slice_feature(original_mat_path):
     digits = io.loadmat(original_mat_path)
-    X, sr, = digits.get('feature_matrix'), digits.get('sample_rate')[0]
-    n_samples, n_features = X.shape
+    x, sr, = digits.get('feature_matrix'), digits.get('sample_rate')[0]
+    n_samples, n_features = x.shape
+    print(n_samples, n_features)
     win_type = 'hann'
     stft_list = []
     mfcc_list = []
-    fbank_list = []
     logfbank_list = []
     all_list = []
     count = 0
-    for i in range(len(X)):
-        _data = X[i]
+    for i in range(len(x)):
+        _data = x[i]
         _sr = sr[i]
 
         # stft
@@ -37,7 +37,7 @@ def get_slice_feature(original_mat_path):
         all_list.append(_all)
 
         count += 1
-        print("\rreading {0}/{1}".format(count, len(X)), end='')
+        print("\rreading {0}/{1}".format(count, len(x)), end='')
 
     print('stft shape: ', np.array(stft_list[0]).shape)
     print('mfcc+logfbank shape: ', np.array(all_list[0]).shape)
