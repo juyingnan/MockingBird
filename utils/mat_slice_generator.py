@@ -15,7 +15,7 @@ actor_index = 6:            01 to 24. Odd numbered actors are male, even numbere
 '''
 
 
-def read_wav_files(path, slice_length=0.5, step=0.25):
+def read_wav_files(path, _slice_length=0.5, _step=0.25):
     cate = [path + folder for folder in os.listdir(path) if os.path.isdir(path + folder)]
     audio_list = []
     sr_list = []
@@ -34,7 +34,7 @@ def read_wav_files(path, slice_length=0.5, step=0.25):
             file_path = os.path.join(folder, file_name)
             audio, sr_audio = librosa.load(file_path, sr=None)
             start = 0
-            end = int(start + slice_length * sr_audio)
+            end = int(start + _slice_length * sr_audio)
             slice_id = 0
             while end < len(audio):
                 audio_clip = audio[start:end]
@@ -49,8 +49,8 @@ def read_wav_files(path, slice_length=0.5, step=0.25):
                     slice_id_list.append(slice_id)
                     file_id_list.append(count)
                 slice_id += 1
-                start += int(step * sr_audio)
-                end = start + int(slice_length * sr_audio)
+                start += int(_step * sr_audio)
+                end = start + int(_slice_length * sr_audio)
             count += 1
             if count % 10 == 0:
                 print("\rreading {0}/{1}".format(count, len(os.listdir(folder))), end='')
@@ -79,18 +79,22 @@ def normalize_features(data, v_max=1.0, v_min=0.0):
 if __name__ == '__main__':
     raw_file_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
     np.seterr(all='ignore')
-    raw_mat, sample_rates, file_ids, slice_ids, meta_info_labels = read_wav_files(raw_file_path, slice_length=1.0,
-                                                                                  step=0.25)
+    slice_length = 2.0
+    step = 0.25
+    raw_mat, sample_rates, file_ids, slice_ids, meta_info_labels = read_wav_files(raw_file_path,
+                                                                                  _slice_length=slice_length,
+                                                                                  _step=step)
 
-    sio.savemat(raw_file_path + 'raw_slice_100_025.mat', mdict={'feature_matrix': raw_mat,
-                                                                'sample_rate': sample_rates,
-                                                                'file_id': file_ids,
-                                                                'slice_id': slice_ids,
-                                                                'modality_label': meta_info_labels[0],
-                                                                'vocal_channel_label': meta_info_labels[1],
-                                                                'emotion_label': meta_info_labels[2],
-                                                                'intensity_label': meta_info_labels[3],
-                                                                'statement_label': meta_info_labels[4],
-                                                                'repetition_label': meta_info_labels[5],
-                                                                'actor_label': meta_info_labels[6],
-                                                                })
+    sio.savemat(raw_file_path + 'raw_slice_' + str(int(100 * slice_length)) + str(int(100 * step)) + '.mat',
+                mdict={'feature_matrix': raw_mat,
+                       'sample_rate': sample_rates,
+                       'file_id': file_ids,
+                       'slice_id': slice_ids,
+                       'modality_label': meta_info_labels[0],
+                       'vocal_channel_label': meta_info_labels[1],
+                       'emotion_label': meta_info_labels[2],
+                       'intensity_label': meta_info_labels[3],
+                       'statement_label': meta_info_labels[4],
+                       'repetition_label': meta_info_labels[5],
+                       'actor_label': meta_info_labels[6],
+                       })
