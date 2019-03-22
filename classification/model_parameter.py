@@ -22,6 +22,8 @@ def select_parameter(_h, _w):
     if _w == 26:
         if _h == 526:
             return get_parameter_526_26()
+        if _h == 199:
+            return get_parameter_199_26()
         if _h == 149:
             return get_parameter_149_26()
         if _h == 99:
@@ -50,6 +52,16 @@ def get_parameter_526_26():
     kernel_stride = (1, 1)
     pool_stride = (4, 1)
     pool_size_list = [(4, 1), (4, 1), (2, 1), (2, 2)]
+    return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
+
+
+def get_parameter_199_26():
+    h = 199
+    w = 26
+    kernel_size = (5, 5)
+    kernel_stride = (1, 1)
+    pool_stride = (2, 1)
+    pool_size_list = [(2, 1), (2, 1), (2, 1), (2, 2)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
 
 
