@@ -55,8 +55,6 @@ def get_cnn_model():
 # Disable Tensorflow debugging information
 logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
-h, w, kernel_size, kernel_stride, pool_stride, pool_size_list = model_parameter.get_parameter_149_26()
-c = 1
 train_image_count = 100000
 learning_rate = 0.0001
 regularization_rate = 0.0001
@@ -70,16 +68,21 @@ mat_file_name = 'mfcc_logf_slice_050_025.mat'
 split_method = 'rep'
 
 # override filepath via args
-if len(sys.argv) >= 4:
+if len(sys.argv) >= 3:
     mat_file_name = sys.argv[1]
     split_method = sys.argv[2]
-    c = int(sys.argv[3])
 
 mat_path = root_path + mat_file_name
 digits = io.loadmat(mat_path)
 print("parameter, file path: ", mat_path)
+item_count, h, w = digits.get('feature_matrix').shape[:3]
+c = digits.get('feature_matrix').shape[3] if len(digits.get('feature_matrix').shape) > 3 else 1
+h, w, kernel_size, kernel_stride, pool_stride, pool_size_list = model_parameter.select_parameter(h, w)
 input_shape = (h, w, c)
 print("input_shape: ", input_shape)
+if h * w > 50000:
+    mini_batch_size //= (1 + (h * w // 50000))
+    print('mini batch size adjusted to: ', mini_batch_size)
 
 cnn_model = get_cnn_model()
 
@@ -102,8 +105,8 @@ train_data, train_label, test_data, test_label, normal_test_sets, strong_test_se
 
 x_train = train_data
 y_train = train_label
-x_val = test_data[:2000]
-y_val = test_label[:2000]
+x_val = test_data[:len(test_data) // 2]
+y_val = test_label[:len(test_data) // 2]
 x_test = test_data
 y_test = test_label
 
@@ -165,7 +168,7 @@ plt.title('Model accuracy')
 ax1.set_ylabel('Accuracy')
 ax2.set_ylabel('Loss')
 plt.xlabel('Epoch')
-plt.show()
+# plt.show()
 
 # intensity test
 emotion_list = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'disgust', 'surprised']
