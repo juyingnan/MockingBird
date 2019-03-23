@@ -41,7 +41,7 @@ def get_cnn_model():
     model.add(Dropout(0.3))
     model.add(MaxPooling2D(pool_size=pool_size_list[3]))
     # flatten
-    model.add(Flatten(input_shape=input_shape))
+    model.add(Flatten())
     # fc layers
     model.add(Dense(256, activation='relu', kernel_regularizer=regularizers.l2(regularization_rate)))
     model.add(Dropout(0.4))
