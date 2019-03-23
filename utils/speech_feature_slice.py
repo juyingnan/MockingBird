@@ -31,7 +31,7 @@ def get_slice_feature(original_mat_path):
         # mfcc + logfbank
         _all = np.dstack((_mfcc, _logfbank))
 
-        stft_list.append(np.absolute(spectrogram))
+        stft_list.append(np.absolute(spectrogram.T))
         mfcc_list.append(_mfcc)
         logfbank_list.append(_logfbank)
         all_list.append(_all)
