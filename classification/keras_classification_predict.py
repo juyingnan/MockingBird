@@ -11,6 +11,15 @@ import logging
 import sys
 
 
+def parse_file_name(full_file_name):
+    file_name_no_postfix = full_file_name.split('.')[0]
+    if str(file_name_no_postfix).startswith('model_'):
+        file_name_no_postfix = file_name_no_postfix[len('model_'):]
+    _split_method = file_name_no_postfix[-3:]
+    _meaningful_file_name = file_name_no_postfix[:-4]
+    return _meaningful_file_name, _split_method
+
+
 def get_max_and_confidence(pred_results):
     result_as_list = [v for v in pred_results]
     max_confidence = max(result_as_list)
@@ -181,26 +190,26 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
 logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-file_name = 'mfcc_logf_slice_150_025'
+meaningful_file_name = 'mfcc_logf_slice_150_025'
 split_method = 'rep'
 category_count = 7 + 1
-c = 2
 
 # override filepath via args
-if len(sys.argv) >= 4:
+if len(sys.argv) >= 2:
     file_name = sys.argv[1]
-    split_method = sys.argv[2]
-    c = int(sys.argv[3])
+    # c = int(sys.argv[3])
+    meaningful_file_name, split_method = parse_file_name(file_name)
+c = 2 if 'mfcc_logf' in meaningful_file_name else 1
 
-sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + file_name + '_' + split_method + '.log')
+sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + meaningful_file_name + '_' + split_method + '.log')
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 set_session(tf.Session(config=config))
-model = load_model(root_path + '/model_' + file_name + '_' + split_method + '.h5')
+model = load_model(root_path + '/model_' + meaningful_file_name + '_' + split_method + '.h5')
 
 # read image
-mat_path = root_path + file_name
+mat_path = root_path + meaningful_file_name
 digits = io.loadmat(mat_path)
 test_data, test_label, test_ids = dataset_split.train_test_rep_split4(digits, c, split_method, is_test_only=True)
 x_test = test_data
@@ -211,6 +220,6 @@ y_test = keras.utils.to_categorical(y_test, category_count)
 
 draw_confusion_matrix(x_test, test_label, test_ids)
 if sum([test_ids[s][1] for s in range(len(test_ids))]) > 0:  # slices
-    slice_len = int(file_name.split('_')[-2]) / 100
-    slice_step = int(file_name.split('_')[-1]) / 100 * slice_len
+    slice_len = int(meaningful_file_name.split('_')[-2]) / 100
+    slice_step = int(meaningful_file_name.split('_')[-1]) / 100 * slice_len
     get_early_predict(x_test, test_label, test_ids, slice_len, slice_step)
