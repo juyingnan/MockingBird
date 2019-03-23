@@ -32,15 +32,15 @@ def select_parameter(_h, _w):
             return get_parameter_49_26()
 
     # stft
-    if _h == 257:
-        if _w == 95:
-            return get_parameter_257_95()
-        if _w == 189:
-            return get_parameter_257_189()
-        if _w == 283:
-            return get_parameter_257_283()
-        if _w == 990:
-            return get_parameter_257_990()
+    if _w == 257:
+        if _h == 95:
+            return get_parameter_95_257()
+        if _h == 189:
+            return get_parameter_189_257()
+        if _h == 283:
+            return get_parameter_283_257()
+        if _h == 990:
+            return get_parameter_990_257()
 
     return None
 
@@ -95,41 +95,41 @@ def get_parameter_49_26():
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
 
 
-def get_parameter_257_95():
-    h = 257
-    w = 95
+def get_parameter_95_257():
+    h = 95
+    w = 257
     kernel_size = (5, 5)
     kernel_stride = (2, 2)
     pool_stride = (2, 1)
-    pool_size_list = [(2, 2), (2, 2), (2, 2), (2, 2)]
+    pool_size_list = [(1, 2), (1, 2), (1, 2), (2, 4)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
 
 
-def get_parameter_257_189():
-    h = 257
-    w = 189
+def get_parameter_189_257():
+    h = 189
+    w = 257
     kernel_size = (5, 5)
     kernel_stride = (2, 2)
     pool_stride = (2, 1)
-    pool_size_list = [(2, 2), (2, 2), (2, 2), (2, 2)]
+    pool_size_list = [(1, 2), (1, 2), (2, 2), (2, 4)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
 
 
-def get_parameter_257_283():
-    h = 257
-    w = 283
+def get_parameter_283_257():
+    h = 283
+    w = 257
     kernel_size = (5, 5)
     kernel_stride = (2, 2)
     pool_stride = (2, 1)
-    pool_size_list = [(2, 2), (2, 2), (2, 2), (2, 4)]
+    pool_size_list = [(1, 2), (2, 2), (2, 2), (2, 4)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
 
 
-def get_parameter_257_990():
-    h = 257
-    w = 990
+def get_parameter_990_257():
+    h = 990
+    w = 257
     kernel_size = (5, 5)
     kernel_stride = (2, 2)
     pool_stride = (2, 1)
-    pool_size_list = [(2, 2), (2, 4), (2, 4), (2, 4)]
+    pool_size_list = [(2, 2), (2, 2), (4, 2), (4, 4)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
