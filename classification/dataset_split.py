@@ -91,7 +91,8 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
     _strong_test_sets = [[], [], [], [], [], [], [], []]
     assert len(x) == len(y) == len(rep)
     for i in range(len(x)):
-        if (rep[i] == 2 and sep_criteria == 'rep') or (sen[i] == 2 and sep_criteria == 'sen'):
+        if (rep[i] == 2 and sep_criteria == 'rep') or (sen[i] == 2 and sep_criteria == 'sen') or (
+                i >= len(x) / 6 * 5 and sep_criteria == 'act'):
             _test_x.append(x[i])
             _test_y.append(y[i])
             if file_ids is not None and slice_ids is not None:
