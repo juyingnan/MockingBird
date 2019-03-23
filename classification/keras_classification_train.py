@@ -80,8 +80,8 @@ c = digits.get('feature_matrix').shape[3] if len(digits.get('feature_matrix').sh
 h, w, kernel_size, kernel_stride, pool_stride, pool_size_list = model_parameter.select_parameter(h, w)
 input_shape = (h, w, c)
 print("input_shape: ", input_shape)
-if h * w > 50000:
-    mini_batch_size //= (1 + (h * w // 50000))
+if h * w > 30000:
+    mini_batch_size //= (1 + (h * w // 30000))
     print('mini batch size adjusted to: ', mini_batch_size)
 
 cnn_model = get_cnn_model()
