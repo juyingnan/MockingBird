@@ -31,9 +31,17 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
     # emotion_list = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'disgust', 'surprised']
     results = model.predict(np.array(_x_test))
 
-    # find longest possibility
+    # find longest possibility and set slice+id to start at 0
     longest = 0
+    current_file = -1
+    current_slice_id = -1
     for i in range(len(_x_test)):
+        if _test_ids[i][0] != current_file:
+            # start new
+            current_file = _test_ids[i][0]
+            current_slice_id = 0
+        _test_ids[i][1] = current_slice_id
+        current_slice_id += 1
         if _test_ids[i][1] > longest:
             longest = _test_ids[i][1]
     longest += 1
@@ -49,12 +57,12 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
         correct_list_strong = [0, 0, 0, 0, 0, 0, 0, 0]
         correct_list_normal = [0, 0, 0, 0, 0, 0, 0, 0]
         uncomplete_file_list = []
-        current_file = 0
-        current_y = 0
+        current_file = -1
+        current_y = -1
         prob_list = []
 
         for i in range(len(_x_test)):
-            if _test_ids[i][1] == 0:
+            if _test_ids[i][0] != current_file:
                 # start new
                 current_file = _test_ids[i][0]
                 current_y = _test_label[i]
@@ -68,6 +76,9 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
                     prob_list = prob_list + results[i]
                 else:
                     uncomplete_file_list.append(_test_ids[i][0])
+            assert current_file != -1
+            assert current_y != -1
+
             if i + 1 == len(_x_test) or _test_ids[i + 1][0] != current_file:  # last one or file end
                 # finish last
                 cat = get_max_and_confidence(prob_list)[0]
@@ -111,13 +122,13 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
         for j in range(len(emotion_list)):
             confusion_list_strong[-1].append(0)
             confusion_list_normal[-1].append(0)
-    current_file = 0
-    current_y = 0
+    current_file = -1
+    current_y = -1
     prob_list = []
     results = model.predict(np.array(_x_test))
 
     for i in range(len(_x_test)):
-        if _test_ids[i][1] == 0:
+        if _test_ids[i][0] != current_file:
             # start new
             current_file = _test_ids[i][0]
             current_y = _test_label[i]
@@ -128,6 +139,9 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
                 count_list_strong[current_y] += 1
         else:
             prob_list = prob_list + results[i]
+        assert current_file != -1
+        assert current_y != -1
+
         if i + 1 == len(_x_test) or _test_ids[i + 1][0] != current_file:  # last one or file end
             # finish last
             cat = get_max_and_confidence(prob_list)[0]

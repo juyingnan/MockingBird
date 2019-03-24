@@ -96,9 +96,9 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
             _test_x.append(x[i])
             _test_y.append(y[i])
             if file_ids is not None and slice_ids is not None:
-                _test_id.append((file_ids[i], slice_ids[i], z[i]))
+                _test_id.append([file_ids[i], slice_ids[i], z[i]])
             else:
-                _test_id.append((i, 0, z[i]))
+                _test_id.append([i, 0, z[i]])
             # intensity
             if z[i] == 1:
                 _normal_test_sets[y[i]].append(x[i])
