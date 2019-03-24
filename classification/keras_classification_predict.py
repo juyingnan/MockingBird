@@ -49,24 +49,12 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
         correct_list_strong = [0, 0, 0, 0, 0, 0, 0, 0]
         correct_list_normal = [0, 0, 0, 0, 0, 0, 0, 0]
         uncomplete_file_list = []
-        current_file = _test_ids[0][0]
-        current_y = _test_label[0]
-        prob_list = results[0]
+        current_file = 0
+        current_y = 0
+        prob_list = []
 
         for i in range(len(_x_test)):
-            if _test_ids[i][0] == current_file:
-                if _test_ids[i][1] <= l:
-                    prob_list = prob_list + results[i]
-                else:
-                    uncomplete_file_list.append(_test_ids[i][0])
-            else:
-                # finish last
-                cat = get_max_and_confidence(prob_list)[0]
-                if cat == current_y:
-                    if _test_ids[i][2] == 1:
-                        correct_list_normal[current_y] += 1
-                    else:
-                        correct_list_strong[current_y] += 1
+            if _test_ids[i][1] == 0:
                 # start new
                 current_file = _test_ids[i][0]
                 current_y = _test_label[i]
@@ -75,6 +63,20 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
                     count_list_normal[current_y] += 1
                 else:
                     count_list_strong[current_y] += 1
+            else:
+                if _test_ids[i][1] <= l:
+                    prob_list = prob_list + results[i]
+                else:
+                    uncomplete_file_list.append(_test_ids[i][0])
+            if i + 1 == len(_x_test) or _test_ids[i + 1][0] != current_file:  # last one or file end
+                # finish last
+                cat = get_max_and_confidence(prob_list)[0]
+                if cat == current_y:
+                    if _test_ids[i][2] == 1:
+                        correct_list_normal[current_y] += 1
+                    else:
+                        correct_list_strong[current_y] += 1
+
         normal_correct_count = sum(correct_list_normal)
         strong_correct_count = sum(correct_list_strong)
         correct_count = normal_correct_count + strong_correct_count
@@ -109,15 +111,24 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
         for j in range(len(emotion_list)):
             confusion_list_strong[-1].append(0)
             confusion_list_normal[-1].append(0)
-    current_file = _test_ids[0][0]
-    current_y = _test_label[0]
+    current_file = 0
+    current_y = 0
+    prob_list = []
     results = model.predict(np.array(_x_test))
-    prob_list = results[0]
 
     for i in range(len(_x_test)):
-        if _test_ids[i][0] == current_file:
-            prob_list = prob_list + results[i]
+        if _test_ids[i][1] == 0:
+            # start new
+            current_file = _test_ids[i][0]
+            current_y = _test_label[i]
+            prob_list = results[i]
+            if _test_ids[i][2] == 1:
+                count_list_normal[current_y] += 1
+            else:
+                count_list_strong[current_y] += 1
         else:
+            prob_list = prob_list + results[i]
+        if i + 1 == len(_x_test) or _test_ids[i + 1][0] != current_file:  # last one or file end
             # finish last
             cat = get_max_and_confidence(prob_list)[0]
             if cat == current_y:
@@ -130,14 +141,7 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
                 confusion_list_normal[current_y][cat] += 1
             else:
                 confusion_list_strong[current_y][cat] += 1
-            # start new
-            current_file = _test_ids[i][0]
-            current_y = _test_label[i]
-            prob_list = results[i]
-            if _test_ids[i][2] == 1:
-                count_list_normal[current_y] += 1
-            else:
-                count_list_strong[current_y] += 1
+
     print('Test accuracy:\t{}'.format(
         (sum(correct_list_strong) + sum(correct_list_normal)) / (sum(count_list_strong) + sum(count_list_normal))))
     print('\t'.join(emotion_list))
@@ -149,14 +153,14 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
     print('\t'.join(
         [str((correct_list_strong[i] + correct_list_normal[i]) / (count_list_strong[i] + count_list_normal[i]))
          for i in range(len(count_list_strong))]))
-    print('strong cm')
-    print('\t', '\t'.join(emotion_list))
-    for i in range(len(emotion_list)):
-        print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
     print('normal cm')
     print('\t', '\t'.join(emotion_list))
     for i in range(len(emotion_list)):
         print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
+    print('strong cm')
+    print('\t', '\t'.join(emotion_list))
+    for i in range(len(emotion_list)):
+        print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
     # all cm
     print('all cm')
     print('\t', '\t'.join(emotion_list))
@@ -181,16 +185,15 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
             confusion_list_normal[current_y][cat] += 1
         else:
             confusion_list_strong[current_y][cat] += 1
-    print('strong cm (slice)')
-    print('\t', '\t'.join(emotion_list))
-    for i in range(len(emotion_list)):
-        print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
 
     print('normal cm (slice)')
     print('\t', '\t'.join(emotion_list))
     for i in range(len(emotion_list)):
         print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
-
+    print('strong cm (slice)')
+    print('\t', '\t'.join(emotion_list))
+    for i in range(len(emotion_list)):
+        print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
     print('all cm (slice)')
     print('\t', '\t'.join(emotion_list))
     for i in range(len(emotion_list)):
