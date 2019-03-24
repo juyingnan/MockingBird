@@ -150,6 +150,10 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
     print('\t'.join([str(correct_list_normal[i] / count_list_normal[i]) for i in range(len(count_list_normal))]))
     count_list_strong[0] = 1  # prevent 0/0
     print('\t'.join([str(correct_list_strong[i] / count_list_strong[i]) for i in range(len(count_list_strong))]))
+    # all
+    print('\t'.join(
+        [str((correct_list_strong[i] + correct_list_normal[i]) / (count_list_strong[i] + count_list_normal[i]))
+         for i in range(len(count_list_strong))]))
     print('strong cm')
     print('\t', '\t'.join(emotion_list))
     for i in range(len(emotion_list)):
@@ -158,8 +162,15 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
     print('\t', '\t'.join(emotion_list))
     for i in range(len(emotion_list)):
         print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
+    # all cm
+    print('all cm')
+    print('\t', '\t'.join(emotion_list))
+    for i in range(len(emotion_list)):
+        print(emotion_list[i], '\t', '\t'.join([str(confusion_list_normal[i][j] + confusion_list_strong[i][j]) for j in
+                                                range(len(confusion_list_normal[i]))]))
 
     # cm test for slices
+    print('\ncm for slices')
     confusion_list_strong = []
     confusion_list_normal = []
     for i in range(len(emotion_list)):
@@ -175,15 +186,21 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
             confusion_list_normal[current_y][cat] += 1
         else:
             confusion_list_strong[current_y][cat] += 1
-    print('strong cm')
+    print('strong cm (slice)')
     print('\t', '\t'.join(emotion_list))
     for i in range(len(emotion_list)):
         print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_strong[i]]))
 
-    print('normal cm')
+    print('normal cm (slice)')
     print('\t', '\t'.join(emotion_list))
     for i in range(len(emotion_list)):
         print(emotion_list[i], '\t', '\t'.join([str(item) for item in confusion_list_normal[i]]))
+
+    print('all cm (slice)')
+    print('\t', '\t'.join(emotion_list))
+    for i in range(len(emotion_list)):
+        print(emotion_list[i], '\t', '\t'.join([str(confusion_list_normal[i][j] + confusion_list_strong[i][j]) for j in
+                                                range(len(confusion_list_normal[i]))]))
 
 
 # Disable Tensorflow debugging information
