@@ -10,6 +10,7 @@ from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
 import matplotlib.pylab as plt
 import tensorflow as tf
 from tensorflow.python.keras.backend import set_session
+from sklearn import model_selection
 import dataset_split
 import model_parameter
 import logging
@@ -64,7 +65,7 @@ mini_batch_size = 256
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-mat_file_name = 'mfcc_logf_slice_050_025.mat'
+mat_file_name = 'mfcc_logf_slice_100_025.mat'
 split_method = 'rep'
 
 # override filepath via args
@@ -103,10 +104,8 @@ sys.stdout = model_parameter.Logger(
 train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = \
     dataset_split.train_test_rep_split4(digits, c, split_method)
 
-x_train = train_data
-y_train = train_label
-x_val = test_data[:len(test_data) // 2]
-y_val = test_label[:len(test_data) // 2]
+x_train, x_val, y_train, y_val = model_selection.train_test_split(train_data, train_label, test_size=0.1,
+                                                                  random_state=42)
 x_test = test_data
 y_test = test_label
 
