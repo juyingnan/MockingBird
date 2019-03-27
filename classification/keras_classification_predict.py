@@ -9,6 +9,7 @@ import dataset_split
 import model_parameter
 import logging
 import sys
+from scipy import signal
 
 
 def parse_file_name(full_file_name):
@@ -25,6 +26,16 @@ def get_max_and_confidence(pred_results):
     max_confidence = max(result_as_list)
     index = result_as_list.index(max_confidence)
     return index, max_confidence
+
+
+def calculate_weighted_prob_list(pred_result_list, window_type=''):
+    weight_list = [1] * len(pred_result_list)
+    if window_type == 'hann':
+        weight_list = list(np.hanning(len(pred_result_list)))
+    if window_type == 'tukey':
+        weight_list = list(signal.windows.tukey(len(pred_result_list), alpha=0.25))
+    return [sum([(pred_result_list[j][i] * weight_list[j]) for j in range(len(pred_result_list))]) for i in
+            range(len(pred_result_list[0]))]
 
 
 def get_early_predict(_x_test, _test_label, _test_ids, length, step):
@@ -66,14 +77,16 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
                 # start new
                 current_file = _test_ids[i][0]
                 current_y = _test_label[i]
-                prob_list = results[i]
+                prob_list = list()
+                prob_list.append(results[i])
                 if _test_ids[i][2] == 1:
                     count_list_normal[current_y] += 1
                 else:
                     count_list_strong[current_y] += 1
             else:
                 if _test_ids[i][1] <= l:
-                    prob_list = prob_list + results[i]
+                    # prob_list = prob_list + results[i]
+                    prob_list.append(results[i])
                 else:
                     uncomplete_file_list.append(_test_ids[i][0])
             assert current_file != -1
@@ -81,7 +94,8 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
 
             if i + 1 == len(_x_test) or _test_ids[i + 1][0] != current_file:  # last one or file end
                 # finish last
-                cat = get_max_and_confidence(prob_list)[0]
+                final_prob_list = calculate_weighted_prob_list(prob_list, window_type='')
+                cat = get_max_and_confidence(final_prob_list)[0]
                 if cat == current_y:
                     if _test_ids[i][2] == 1:
                         correct_list_normal[current_y] += 1
@@ -219,7 +233,7 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
 logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-meaningful_file_name = 'mfcc_logf_slice_150_025'
+meaningful_file_name = 'mfcc_logf_slice_100_025'
 split_method = 'rep'
 category_count = 7 + 1
 
