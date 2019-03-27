@@ -134,10 +134,11 @@ cnn_model.compile(loss=keras.losses.categorical_crossentropy,
                   optimizer=optimizers.RMSprop(lr=learning_rate, decay=1e-5),
                   metrics=['accuracy'])
 model_save_path = root_path + '/model_' + mat_file_name.split('.')[0] + '_' + split_method + '.h5'
-checkpoint = ModelCheckpoint(model_save_path, monitor='val_acc', verbose=1,
+monitor_criteria = 'val_loss'
+checkpoint = ModelCheckpoint(model_save_path, monitor=monitor_criteria, verbose=1,
                              save_best_only=True, save_weights_only=False, mode='auto', period=1)
 
-earlystop = EarlyStopping(monitor='val_acc', min_delta=0, patience=30, verbose=0, mode='auto',
+earlystop = EarlyStopping(monitor=monitor_criteria, min_delta=0, patience=30, verbose=0, mode='auto',
                           restore_best_weights=True)
 callback_list = [checkpoint, earlystop]
 cnn_model.summary()
