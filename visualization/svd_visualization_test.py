@@ -46,8 +46,8 @@ ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
 plt.xlabel('Projection on {}'.format(x_axis_index))
 plt.ylabel('Projection on {}'.format(y_axis_index))
-ev1 = np.absolute(Vh[x_axis_index])  # ev: nx1/1440x1
-ev2 = np.absolute(Vh[y_axis_index])
+ev1 = Vh[x_axis_index]  # ev: nx1/1440x1
+ev2 = Vh[y_axis_index]
 xx = X.transpose().dot(ev1)  # mxn.nx1 = mx1
 yy = X.transpose().dot(ev2)
 small_edge = (max(yy) - min(yy)) * small_edge_index
@@ -70,7 +70,7 @@ ax.axvline(x=0, color='k')
 plt.xlabel('Correlation on {}'.format(x_axis_index))
 plt.ylabel('Correlation on {}'.format(y_axis_index))
 s_x = preprocessing.normalize(X.transpose())
-normalized_vh = preprocessing.normalize(np.absolute(Vh))
+normalized_vh = preprocessing.normalize(Vh)
 s_ev1 = normalized_vh[x_axis_index]
 s_ev2 = normalized_vh[y_axis_index]
 xx = s_x.dot(s_ev1)
@@ -98,8 +98,8 @@ ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
 plt.xlabel('Projection on {}'.format(x_axis_index))
 plt.ylabel('Projection on {}'.format(y_axis_index))
-ev1 = np.absolute(Vh[x_axis_index])  # ev: nx1/1440x1
-ev2 = np.absolute(Vh[y_axis_index])
+ev1 = Vh[x_axis_index]  # ev: nx1/1440x1
+ev2 = Vh[y_axis_index]
 xx = X.dot(ev1)  # nxm.mx1=nx1
 yy = X.dot(ev2)
 small_edge = (max(yy) - min(yy)) * small_edge_index
@@ -119,7 +119,7 @@ ax.axvline(x=0, color='k')
 plt.xlabel('Correlation on {}'.format(x_axis_index))
 plt.ylabel('Correlation on {}'.format(y_axis_index))
 s_x = preprocessing.normalize(X)
-normalized_vh = preprocessing.normalize(np.absolute(Vh))
+normalized_vh = preprocessing.normalize(Vh)
 s_ev1 = normalized_vh[x_axis_index]
 s_ev2 = normalized_vh[y_axis_index]
 xx = s_x.dot(s_ev1)
