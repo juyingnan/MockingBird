@@ -138,7 +138,7 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
             confusion_list_normal[-1].append(0)
     current_file = -1
     current_y = -1
-    prob_list = []
+    prob_list = list()
     results = model.predict(np.array(_x_test))
 
     for i in range(len(_x_test)):
@@ -146,19 +146,21 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
             # start new
             current_file = _test_ids[i][0]
             current_y = _test_label[i]
-            prob_list = results[i]
+            prob_list = list()
+            prob_list.append(results[i])
             if _test_ids[i][2] == 1:
                 count_list_normal[current_y] += 1
             else:
                 count_list_strong[current_y] += 1
         else:
-            prob_list = prob_list + results[i]
+            prob_list.append(results[i])
         assert current_file != -1
         assert current_y != -1
 
         if i + 1 == len(_x_test) or _test_ids[i + 1][0] != current_file:  # last one or file end
             # finish last
-            cat = get_max_and_confidence(prob_list)[0]
+            final_prob_list = calculate_weighted_prob_list(prob_list, window_type='')
+            cat = get_max_and_confidence(final_prob_list)[0]
             if cat == current_y:
                 if _test_ids[i][2] == 1:
                     correct_list_normal[current_y] += 1
