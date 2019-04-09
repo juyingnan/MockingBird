@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-from scipy import io
 import numpy as np
+from scipy import io
 from sklearn import preprocessing
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
@@ -109,7 +109,7 @@ small_edge = (max(xx) - min(xx)) * small_edge_index
 ax.set_xlim(min(xx) - small_edge if min(xx) <= -small_edge else -small_edge,
             max(xx) + small_edge if max(xx) >= small_edge else small_edge)
 for i in range(X.shape[0]):
-    ax.text(xx[i], yy[i], str(y[i] % 2 + 1), color=plt.cm.tab20(int(y[i] % 2 + 1)), fontdict={'size': 8})
+    ax.text(xx[i], yy[i], str(y[i] % 2 + 1), plt.cm.get_cmap('tab10')(int(y[i] % 2 + 1)), fontdict={'size': 8})
 ax.set_title('samples_projection')
 
 ax = fig.add_subplot(326)
@@ -131,7 +131,7 @@ small_edge = (max(xx) - min(xx)) * small_edge_index
 ax.set_xlim(min(xx) - small_edge if min(xx) <= -small_edge else -small_edge,
             max(xx) + small_edge if max(xx) >= small_edge else small_edge)
 for i in range(X.shape[0]):
-    ax.text(xx[i], yy[i], str(y[i] % 2 + 1), color=plt.cm.tab20(int(y[i] % 2 + 1)), fontdict={'size': 8})
+    ax.text(xx[i], yy[i], str(y[i] % 2 + 1), color=plt.cm.get_cmap('tab10')(int(y[i] % 2 + 1)), fontdict={'size': 8})
 ax.set_title('samples_correlation')
 
 plt.show()
