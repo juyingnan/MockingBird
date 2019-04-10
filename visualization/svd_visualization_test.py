@@ -109,7 +109,8 @@ small_edge = (max(xx) - min(xx)) * small_edge_index
 ax.set_xlim(min(xx) - small_edge if min(xx) <= -small_edge else -small_edge,
             max(xx) + small_edge if max(xx) >= small_edge else small_edge)
 for i in range(X.shape[0]):
-    ax.text(xx[i], yy[i], str(y[i] % 2 + 1), plt.cm.get_cmap('tab10')(int(y[i] % 2 + 1)), fontdict={'size': 8})
+    ax.text(xx[i], yy[i], str(y[i] % 2 + 1), color=plt.cm.get_cmap('tab10')(int(y[i] % 2 + 1)), fontdict={'size': 8})
+# ax.scatter(xx, yy, s=0.5, c=[item % 2 + 1 for item in y], cmap=plt.cm.get_cmap('Set2'))
 ax.set_title('samples_projection')
 
 ax = fig.add_subplot(326)
@@ -132,6 +133,7 @@ ax.set_xlim(min(xx) - small_edge if min(xx) <= -small_edge else -small_edge,
             max(xx) + small_edge if max(xx) >= small_edge else small_edge)
 for i in range(X.shape[0]):
     ax.text(xx[i], yy[i], str(y[i] % 2 + 1), color=plt.cm.get_cmap('tab10')(int(y[i] % 2 + 1)), fontdict={'size': 8})
+# ax.scatter(xx, yy, s=0.5, c=[item % 2 + 1 for item in y], cmap=plt.cm.get_cmap('Set2'))
 ax.set_title('samples_correlation')
 
 plt.show()
