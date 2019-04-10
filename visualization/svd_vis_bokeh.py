@@ -1,11 +1,19 @@
 import numpy as np
 from bokeh.io import output_file, show
-from bokeh.layouts import gridplot
-from bokeh.models import ColumnDataSource
+from bokeh.layouts import gridplot  # , column
+from bokeh.models import ColumnDataSource, Select  # , CustomJS
 from bokeh.plotting import figure
 from bokeh.transform import factor_mark, factor_cmap
 from scipy import io
 from sklearn import preprocessing
+
+# def update_plot(attrname, old, new):
+#     label = labels[label_select.value]
+#     sample_left.scatter("xx_sample_projection", "yy_sample_projection", source=sample_source, fill_alpha=0.4, size=12,
+#                         marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
+#                         color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
+#                         legend=label['real_label_list'])
+
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 file_name = 'mfcc.mat'
@@ -17,7 +25,7 @@ digits = io.loadmat(mat_path)
 # X, y = digits.get('feature_matrix'), digits.get('emotion_label')[0]  # X: nxm: n=1440//sample, m=feature
 # X = X[:, ::100]
 X = digits.get('feature_matrix')
-t = 1
+t = 13
 X = X[:, :, t:t + 1]
 X = X.reshape(X.shape[0], -1)
 n_samples, n_features = X.shape
@@ -51,6 +59,10 @@ tools_list = "pan," \
              "reset," \
              "save," \
              "help"
+
+feature_matrix = figure(title="feature matrix", tools=tools_list)
+feature_matrix.x_range.range_padding = feature_matrix.y_range.range_padding = 0
+feature_matrix.image(image=[X.transpose()], x=0, y=0, dw=20, dh=20, palette="Spectral11")
 
 # feature projection calculation
 ev1 = Vh[x_axis_index]  # ev: nx1/1440x1
@@ -127,23 +139,69 @@ custom_tooltip = [
     ("label", "@emotion_label"),
 ]
 
-# sample vis
-sample_left = figure(title="samples projection", tools=tools_list, tooltips=custom_tooltip)
-sample_left.xaxis.axis_label = 'Projection on {}'.format(x_axis_index)
-sample_left.yaxis.axis_label = 'Projection on {}'.format(y_axis_index)
-sample_left.scatter("xx_sample_projection", "yy_sample_projection", source=sample_source, fill_alpha=0.4, size=12,
-                    marker=factor_mark('emotion_label', markers, emotions),
-                    color=factor_cmap('emotion_label', 'Category10_8', emotions),
-                    legend='emotion_label')
+# controls
+current_label = 'gender'
+labels = {
+    'emotion':
+        {
+            'real_label_list': 'emotion_label',
+            'standard_label_list': emotions,
+        },
+    'gender':
+        {
+            'real_label_list': 'gender_label',
+            'standard_label_list': genders,
+        },
+    'statement':
+        {
+            'real_label_list': 'statement_label',
+            'standard_label_list': statements,
+        },
+}
+label_select = Select(value=current_label, title='Label', options=sorted(labels.keys()))
+current_label = labels[label_select.value]
 
-sample_right = figure(title="samples correlation", tools=tools_list, tooltips=custom_tooltip)
-sample_right.xaxis.axis_label = 'Correlation on {}'.format(x_axis_index)
-sample_right.yaxis.axis_label = 'Correlation on {}'.format(y_axis_index)
-sample_right.scatter("xx_sample_correlation", "yy_sample_correlation", source=sample_source, fill_alpha=0.4, size=12,
-                     marker=factor_mark('emotion_label', markers, emotions),
-                     color=factor_cmap('emotion_label', 'Category10_8', emotions),
-                     legend='emotion_label')
+
+def create_scatter(x_data, y_data, source, label, title='', x_axis_title='', y_axis_title=''):
+    result_plot = figure(title=title, tools=tools_list, tooltips=custom_tooltip)
+    result_plot.xaxis.axis_label = x_axis_title
+    result_plot.yaxis.axis_label = y_axis_title
+    result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12,
+                        marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
+                        color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
+                        legend=label['real_label_list'])
+    return result_plot
+
+
+# sample vis
+sample_plot_list = []
+for current_label_key in ['emotion', 'gender', 'statement']:
+    current_label = labels[current_label_key]
+    sample_plot_list.append(
+        create_scatter(x_data="xx_sample_projection", y_data="yy_sample_projection", source=sample_source,
+                       label=current_label,
+                       title="samples projection", x_axis_title='Projection on {}'.format(x_axis_index),
+                       y_axis_title='Projection on {}'.format(y_axis_index)))
+    sample_plot_list.append(
+        create_scatter(x_data="xx_sample_correlation", y_data="yy_sample_correlation", source=sample_source,
+                       label=current_label,
+                       title="samples correlation", x_axis_title='Correlation on {}'.format(x_axis_index),
+                       y_axis_title='Correlation on {}'.format(y_axis_index)))
+
+# label_select.js_on_change('value',
+#                           CustomJS(args=dict(labels=labels, sample_source=sample_source), code="""
+#     var label = labels[cb_obj.value];
+#     console.log(label);
+#     sample_left.reset.emit();
+#     sample_left.scatter({field:"xx_sample_projection"}, {field:"yy_sample_projection"},
+#     {source:sample_source, fill_alpha:0.4, size:12});
+#     """))  # update_plot)
+# controls = column(label_select)
 
 p = gridplot([[feature_left, feature_right],
-              [sample_left, sample_right]])
+              [sample_plot_list[0], sample_plot_list[1]],
+              [sample_plot_list[2], sample_plot_list[3]],
+              [sample_plot_list[4], sample_plot_list[5]], ])
+
 show(p)
+# curdoc().add_root(column(p, controls))
