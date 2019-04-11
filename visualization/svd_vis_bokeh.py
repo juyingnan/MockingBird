@@ -1,7 +1,7 @@
 import numpy as np
 from bokeh.io import output_file, show
 from bokeh.layouts import gridplot  # , column
-from bokeh.models import ColumnDataSource, Select  # , CustomJS
+from bokeh.models import ColumnDataSource, Select, CDSView, IndexFilter  # , CustomJS
 from bokeh.plotting import figure
 from bokeh.transform import factor_mark, factor_cmap
 from scipy import io
@@ -25,8 +25,10 @@ digits = io.loadmat(mat_path)
 # X, y = digits.get('feature_matrix'), digits.get('emotion_label')[0]  # X: nxm: n=1440//sample, m=feature
 # X = X[:, ::100]
 X = digits.get('feature_matrix')
-t = 13
-X = X[:, :, t:t + 1]
+# t = 13
+# X = X[:, :, t:t + 1]
+wanted_columns = [x for x in range(26) if x not in ([] + [6,13,16,19,20])]
+X = X[:, :, wanted_columns]
 X = X.reshape(X.shape[0], -1)
 n_samples, n_features = X.shape
 print("{} samples, {} features".format(n_samples, n_features))
@@ -60,9 +62,9 @@ tools_list = "pan," \
              "save," \
              "help"
 
-feature_matrix = figure(title="feature matrix", tools=tools_list)
-feature_matrix.x_range.range_padding = feature_matrix.y_range.range_padding = 0
-feature_matrix.image(image=[X.transpose()], x=0, y=0, dw=20, dh=20, palette="Spectral11")
+# feature_matrix = figure(title="feature matrix", tools=tools_list)
+# feature_matrix.x_range.range_padding = feature_matrix.y_range.range_padding = 0
+# feature_matrix.image(image=[X.transpose()], x=0, y=0, dw=20, dh=20, palette="Spectral11")
 
 # feature projection calculation
 ev1 = Vh[x_axis_index]  # ev: nx1/1440x1
@@ -99,8 +101,12 @@ feature_right.scatter("xx_feature_correlation", "yy_feature_correlation", source
                       size=12)
 
 # eigenvalues, eigenvectors = np.linalg.eig(np.cov(X.transpose()))  # values: mx1/12x1, vectors: mxm/12x12
+
 U, s, Vh = np.linalg.svd(X, full_matrices=False)  # u: nxn/1440x1440, s: mx1, v:mxm
 # s[2:] = 0
+# s[1] = 0
+
+# X = np.dot(U * s, Vh)
 
 # sample projection calculation
 ev1 = Vh[x_axis_index]  # ev: nx1/1440x1
@@ -166,10 +172,20 @@ def create_scatter(x_data, y_data, source, label, title='', x_axis_title='', y_a
     result_plot = figure(title=title, tools=tools_list, tooltips=custom_tooltip)
     result_plot.xaxis.axis_label = x_axis_title
     result_plot.yaxis.axis_label = y_axis_title
-    result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12,
-                        marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
-                        color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
-                        legend=label['real_label_list'])
+    for filter in label['standard_label_list']:
+        index_list = []
+        for i in range(len(source.data[label['real_label_list']])):
+            if source.data[label['real_label_list']][i] == filter:
+                index_list.append(i)
+        view = CDSView(source=source, filters=[IndexFilter(index_list)])
+        result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12,
+                            marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
+                            color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
+                            # muted_color=factor_cmap(label['real_label_list'], 'Category10_8',
+                            #                         label['standard_label_list']),
+                            muted_alpha=0.1, view=view,
+                            legend=filter)
+    result_plot.legend.click_policy = "mute"
     return result_plot
 
 
