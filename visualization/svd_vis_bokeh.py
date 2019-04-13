@@ -27,7 +27,7 @@ def create_feature_scatter(x_data, y_data, source, title='', x_axis_title='', y_
     result_plot = figure(title=title, tools=tools_list)
     result_plot.xaxis.axis_label = x_axis_title
     result_plot.yaxis.axis_label = y_axis_title
-    result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12)
+    result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=4)
     # highlight x y axes
     result_plot.renderers.extend([vline, hline])
     return result_plot
@@ -43,7 +43,7 @@ def create_sample_scatter(x_data, y_data, source, label, title='', x_axis_title=
             if source.data[label['real_label_list']][i] == cat_filter:
                 index_list.append(i)
         view = CDSView(source=source, filters=[IndexFilter(index_list)])
-        result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12,
+        result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=8,
                             marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
                             color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
                             # muted_color=factor_cmap(label['real_label_list'], 'Category10_8',
