@@ -1,42 +1,120 @@
 import numpy as np
 from bokeh.io import output_file, show
-from bokeh.layouts import gridplot, column  # , column
-from bokeh.models import ColumnDataSource, Select, CDSView, IndexFilter, Span, CustomJS  # , CustomJS
+from bokeh.layouts import gridplot, column
+from bokeh.models import ColumnDataSource, Select, CDSView, IndexFilter, Span, CustomJS
 from bokeh.plotting import figure
 from bokeh.transform import factor_mark, factor_cmap
 from scipy import io
 from sklearn import preprocessing
+import sys
 
-# def update_plot(attrname, old, new):
-#     label = labels[label_select.value]
-#     sample_left.scatter("xx_sample_projection", "yy_sample_projection", source=sample_source, fill_alpha=0.4, size=12,
-#                         marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
-#                         color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
-#                         legend=label['real_label_list'])
 
+def show_simple_bar(title, x_axis_label, y_axis_label, source, x, y):
+    # Create the blank plot
+    result_plot = figure(title=title,
+                         x_axis_label=x_axis_label,
+                         y_axis_label=y_axis_label,
+                         tools=tools_list, tooltips="@%s: @% s" % (x, y))
+
+    result_plot.vbar(x=x, top=y, width=0.5, alpha=0.4, source=source)  # , legend=x, )
+
+    result_plot.xgrid.grid_line_color = None
+    result_plot.y_range.start = 0
+    return result_plot
+
+
+def create_feature_scatter(x_data, y_data, source, title='', x_axis_title='', y_axis_title=''):
+    result_plot = figure(title=title, tools=tools_list)
+    result_plot.xaxis.axis_label = x_axis_title
+    result_plot.yaxis.axis_label = y_axis_title
+    result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12)
+    # highlight x y axes
+    result_plot.renderers.extend([vline, hline])
+    return result_plot
+
+
+def create_sample_scatter(x_data, y_data, source, label, title='', x_axis_title='', y_axis_title=''):
+    result_plot = figure(title=title, tools=tools_list, tooltips=custom_tooltip)
+    result_plot.xaxis.axis_label = x_axis_title
+    result_plot.yaxis.axis_label = y_axis_title
+    for cat_filter in label['standard_label_list']:
+        index_list = []
+        for i in range(len(source.data[label['real_label_list']])):
+            if source.data[label['real_label_list']][i] == cat_filter:
+                index_list.append(i)
+        view = CDSView(source=source, filters=[IndexFilter(index_list)])
+        result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12,
+                            marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
+                            color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
+                            # muted_color=factor_cmap(label['real_label_list'], 'Category10_8',
+                            #                         label['standard_label_list']),
+                            muted_alpha=0.1, view=view,
+                            legend=cat_filter)
+    result_plot.legend.click_policy = "mute"
+    # highlight x y axes
+    result_plot.renderers.extend([vline, hline])
+
+    return result_plot
+
+
+select_control_code = """
+    var index = labels[cb_obj.value];
+    console.log(index);
+    var data = source.data;
+    data['current_projection_'+ key] = projection_pool[index]
+    data['current_correlation_'+ key] = correlation_pool[index]
+    var ax
+    for (ax of axis[0])
+    {
+        ax.axis_label = "Projection on " + cb_obj.value;
+    }
+    for (ax of axis[1])
+    {
+        ax.axis_label = "Correlation on " + cb_obj.value;
+    }
+    source.change.emit();
+    """
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
-file_name = 'mfcc.mat'
-output_file("result/svd.html")
-mat_path = root_path + file_name
+feature_name = 'mfcc'
 statements = ['st 1: Kids are talking by the door', 'st 2: Dogs are sitting by the door']
 genders = ['female', 'male']
 emotions = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'disgust', 'surprised']
 markers = ['hex', 'triangle', 'circle', 'cross', 'diamond', 'square', 'x', 'inverted_triangle']
+sample_labels = {
+    'emotion':
+        {
+            'real_label_list': 'emotion_label',
+            'standard_label_list': emotions,
+        },
+    'gender':
+        {
+            'real_label_list': 'gender_label',
+            'standard_label_list': genders,
+        },
+    'statement':
+        {
+            'real_label_list': 'statement_label',
+            'standard_label_list': statements,
+        },
+}
 axis_threshold = 5
 default_x_index = '1'
 default_y_index = '2'
-digits = io.loadmat(mat_path)
 # X, y = digits.get('feature_matrix'), digits.get('emotion_label')[0]  # X: nxm: n=1440//sample, m=feature
 # X = X[:, ::100]
-X = digits.get('feature_matrix')
-# t = 13
-# X = X[:, :, t:t + 1]
-# wanted_columns = [x for x in range(26) if x not in ([] + [6,13,16,19,20])]
-# X = X[:, :, wanted_columns]
-X = X.reshape(X.shape[0], -1)
-n_samples, n_features = X.shape
-print("{} samples, {} features".format(n_samples, n_features))
+layer_index = "all"
+if len(sys.argv) >= 3:
+    feature_name = sys.argv[1]
+    layer_index = sys.argv[2]
+
+# read data
+file_name = feature_name + '.mat'
+mat_path = root_path + file_name
+digits = io.loadmat(mat_path)
+
+# output file
+output_file("result/svd_%s_%s.html" % (feature_name, layer_index))
 
 # plot tools
 tools_list = "pan," \
@@ -52,6 +130,17 @@ tools_list = "pan," \
 vline = Span(location=0, dimension='height', line_color='black', line_width=2)
 hline = Span(location=0, dimension='width', line_color='black', line_width=2)
 
+X = digits.get('feature_matrix')
+if layer_index != "all":
+    X = X[:, :, int(layer_index):int(layer_index) + 1]
+#
+# wanted_columns = [x for x in range(26) if x not in ([] + [6,13,16,19,20])]
+# X = X[:, :, wanted_columns]
+
+X = X.reshape(X.shape[0], -1)
+n_samples, n_features = X.shape
+print("{} samples, {} features".format(n_samples, n_features))
+
 # s[2:] = 0
 
 
@@ -63,7 +152,7 @@ hline = Span(location=0, dimension='width', line_color='black', line_width=2)
 # ax.set_title('original_mat')
 #
 # ax = fig.add_subplot(322)
-# ax.bar(np.arange(len(s)), s)
+# ax.bar(, s)
 # ax.set_title('singular_values_feature')
 
 
@@ -77,7 +166,17 @@ xx_feature_correlation_list = list()
 # eigenvalues, eigenvectors = np.linalg.eig(np.cov(X))  # values: nx1/1440x1, vectors: nxn/1440x1440
 U, s, Vh = np.linalg.svd(X.transpose(), full_matrices=False)  # u: mxm, s: mx1, v:nxn/1440x1440
 del U
-del s
+
+# eigen values vis
+eigen_source = ColumnDataSource(data=dict(x=np.arange(len(s)), y=s, ))
+eigen_plot = show_simple_bar(title='Eigen Values',
+                             x_axis_label="Eigen index",
+                             y_axis_label="Eigen Value",
+                             source=eigen_source,
+                             x='x',
+                             y='y'
+                             )
+
 for axis_index in range(axis_threshold):
     ev1 = Vh[axis_index]
     xx_feature_projection_list.append(X.transpose().dot(ev1))
@@ -97,18 +196,7 @@ feature_data = {'current_projection_x': xx_feature_projection_list[0],
                 }
 feature_source = ColumnDataSource(data=feature_data)
 
-
 # feature vis
-def create_feature_scatter(x_data, y_data, source, title='', x_axis_title='', y_axis_title=''):
-    result_plot = figure(title=title, tools=tools_list)
-    result_plot.xaxis.axis_label = x_axis_title
-    result_plot.yaxis.axis_label = y_axis_title
-    result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12)
-    # highlight x y axes
-    result_plot.renderers.extend([vline, hline])
-    return result_plot
-
-
 feature_left = create_feature_scatter(x_data="current_projection_x", y_data="current_projection_y",
                                       source=feature_source,
                                       title="features projection",
@@ -127,35 +215,19 @@ for j in range(axis_threshold):
 
 feature_axis_x_select = Select(value=default_x_index, title='X-axis', options=sorted(feature_selection_dict.keys()))
 feature_axis_y_select = Select(value=default_y_index, title='Y-axis', options=sorted(feature_selection_dict.keys()))
-code = """
-    var index = labels[cb_obj.value];
-    console.log(index);
-    var data = source.data;
-    data['current_projection_'+ key] = projection_pool[index]
-    data['current_correlation_'+ key] = correlation_pool[index]
-    var ax
-    for (ax of axis[0])
-    {
-        ax.axis_label = "Projection on " + cb_obj.value;
-    }
-    for (ax of axis[1])
-    {
-        ax.axis_label = "Correlation on " + cb_obj.value;
-    }
-    source.change.emit();
-    """
+
 feature_axis_x_select.js_on_change('value',
                                    CustomJS(args=dict(key='x', labels=feature_selection_dict, source=feature_source,
                                                       projection_pool=xx_feature_projection_list,
                                                       correlation_pool=xx_feature_correlation_list,
                                                       axis=[[feature_left.xaxis[0]], [feature_right.xaxis[0]]]),
-                                            code=code))
+                                            code=select_control_code))
 feature_axis_y_select.js_on_change('value',
                                    CustomJS(args=dict(key='y', labels=feature_selection_dict, source=feature_source,
                                                       projection_pool=xx_feature_projection_list,
                                                       correlation_pool=xx_feature_correlation_list,
                                                       axis=[[feature_left.yaxis[0]], [feature_right.yaxis[0]]]),
-                                            code=code))
+                                            code=select_control_code))
 feature_controls = column(feature_axis_x_select, feature_axis_y_select)
 
 # SAMPLE
@@ -195,57 +267,10 @@ custom_tooltip = [
     ("label", "@emotion_label"),
 ]
 
-# controls
-current_label = 'gender'
-labels = {
-    'emotion':
-        {
-            'real_label_list': 'emotion_label',
-            'standard_label_list': emotions,
-        },
-    'gender':
-        {
-            'real_label_list': 'gender_label',
-            'standard_label_list': genders,
-        },
-    'statement':
-        {
-            'real_label_list': 'statement_label',
-            'standard_label_list': statements,
-        },
-}
-label_select = Select(value=current_label, title='Label', options=sorted(labels.keys()))
-current_label = labels[label_select.value]
-
-
-def create_sample_scatter(x_data, y_data, source, label, title='', x_axis_title='', y_axis_title=''):
-    result_plot = figure(title=title, tools=tools_list, tooltips=custom_tooltip)
-    result_plot.xaxis.axis_label = x_axis_title
-    result_plot.yaxis.axis_label = y_axis_title
-    for cat_filter in label['standard_label_list']:
-        index_list = []
-        for i in range(len(source.data[label['real_label_list']])):
-            if source.data[label['real_label_list']][i] == cat_filter:
-                index_list.append(i)
-        view = CDSView(source=source, filters=[IndexFilter(index_list)])
-        result_plot.scatter(x_data, y_data, source=source, fill_alpha=0.4, size=12,
-                            marker=factor_mark(label['real_label_list'], markers, label['standard_label_list']),
-                            color=factor_cmap(label['real_label_list'], 'Category10_8', label['standard_label_list']),
-                            # muted_color=factor_cmap(label['real_label_list'], 'Category10_8',
-                            #                         label['standard_label_list']),
-                            muted_alpha=0.1, view=view,
-                            legend=cat_filter)
-    result_plot.legend.click_policy = "mute"
-    # highlight x y axes
-    result_plot.renderers.extend([vline, hline])
-
-    return result_plot
-
-
 # sample vis
 sample_plot_list = list()
 for current_label_key in ['emotion', 'gender', 'statement']:
-    current_label = labels[current_label_key]
+    current_label = sample_labels[current_label_key]
     sample_plot_list.append(
         create_sample_scatter(x_data="current_projection_x", y_data="current_projection_y", source=sample_source,
                               label=current_label,
@@ -267,20 +292,20 @@ sample_axis_x_select.js_on_change('value',
                                                      correlation_pool=xx_sample_correlation_list,
                                                      axis=[[sample_plot_list[i].xaxis[0] for i in [0, 2, 4]],
                                                            [sample_plot_list[i].xaxis[0] for i in [1, 3, 5]]]),
-                                           code=code))
+                                           code=select_control_code))
 sample_axis_y_select.js_on_change('value',
                                   CustomJS(args=dict(key='y', labels=feature_selection_dict, source=sample_source,
                                                      projection_pool=xx_sample_projection_list,
                                                      correlation_pool=xx_sample_correlation_list,
                                                      axis=[[sample_plot_list[i].yaxis[0] for i in [0, 2, 4]],
                                                            [sample_plot_list[i].yaxis[0] for i in [1, 3, 5]]]),
-                                           code=code))
+                                           code=select_control_code))
 sample_controls = column(sample_axis_x_select, sample_axis_y_select)
 
-p = gridplot([[feature_left, feature_right, feature_controls],
+p = gridplot([[eigen_plot],
+              [feature_left, feature_right, feature_controls],
               [sample_plot_list[0], sample_plot_list[1], sample_controls],
               [sample_plot_list[2], sample_plot_list[3]],
               [sample_plot_list[4], sample_plot_list[5]], ])
 
 show(p)
-# curdoc().add_root(column(p, controls))
