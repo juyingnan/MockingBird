@@ -1,6 +1,6 @@
 import numpy as np
 from bokeh.io import output_file, show
-from bokeh.layouts import gridplot, column
+from bokeh.layouts import gridplot, widgetbox
 from bokeh.models import ColumnDataSource, Select, CDSView, IndexFilter, Span, CustomJS
 from bokeh.plotting import figure
 from bokeh.transform import factor_mark, factor_cmap
@@ -228,7 +228,7 @@ feature_axis_y_select.js_on_change('value',
                                                       correlation_pool=xx_feature_correlation_list,
                                                       axis=[[feature_left.yaxis[0]], [feature_right.yaxis[0]]]),
                                             code=select_control_code))
-feature_controls = column(feature_axis_x_select, feature_axis_y_select)
+feature_controls = widgetbox(feature_axis_x_select, feature_axis_y_select)
 
 # SAMPLE
 xx_sample_projection_list = list()
@@ -300,7 +300,7 @@ sample_axis_y_select.js_on_change('value',
                                                      axis=[[sample_plot_list[i].yaxis[0] for i in [0, 2, 4]],
                                                            [sample_plot_list[i].yaxis[0] for i in [1, 3, 5]]]),
                                            code=select_control_code))
-sample_controls = column(sample_axis_x_select, sample_axis_y_select)
+sample_controls = widgetbox(sample_axis_x_select, sample_axis_y_select)
 
 p = gridplot([[eigen_plot],
               [feature_left, feature_right, feature_controls],
