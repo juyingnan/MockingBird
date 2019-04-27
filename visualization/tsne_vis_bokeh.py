@@ -6,6 +6,7 @@ from bokeh.transform import factor_mark, factor_cmap
 from sklearn.manifold import TSNE
 from scipy import io
 import math
+import sys
 
 
 def create_sample_scatter(x_data, y_data, source, label, title='', x_axis_title='', y_axis_title=''):
@@ -71,6 +72,11 @@ sample_labels = {
 
 root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
 feature_name = 'mfcc'
+
+if len(sys.argv) >= 2:
+    feature_name = sys.argv[1]
+    # layer_index = sys.argv[2]
+
 file_name = feature_name + '.mat'
 mat_path = root_path + file_name
 digits = io.loadmat(mat_path)
