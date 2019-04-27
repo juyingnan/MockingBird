@@ -91,13 +91,13 @@ print('N: {}, cols: {}'.format(N, cols))
 # T-SNE
 
 # all
-tsne = TSNE(n_components=2, init='random', random_state=501)
+tsne = TSNE(n_components=2, init='random', random_state=42)
 all_X = X.reshape(X.shape[0], -1)
 All_tsne = tsne.fit_transform(all_X)
 print(
-    "ALL: After {} iter: Org data dimension is {}. Embedded data dimension is {}".format(tsne.n_iter,
-                                                                                         all_X.shape[-1],
-                                                                                         All_tsne.shape[-1]))
+    "ALL:\tAfter {} iter: Org data dimension is {}. Embedded data dimension is {}".format(tsne.n_iter,
+                                                                                          all_X.shape[-1],
+                                                                                          All_tsne.shape[-1]))
 
 # layers
 tsne_list = list()
@@ -106,13 +106,13 @@ for t in range(N):
     x_layer = x_layer.reshape(x_layer.shape[0], -1)
 
     '''t-SNE'''
-    tsne = TSNE(n_components=2, init='random', random_state=501)
+    tsne = TSNE(n_components=2, init='random', random_state=42)
     X_tsne = tsne.fit_transform(x_layer)
     print(
-        "Layer {}: After {} iter: Org data dimension is {}. Embedded data dimension is {}".format(t,
-                                                                                                  tsne.n_iter,
-                                                                                                  x_layer.shape[-1],
-                                                                                                  X_tsne.shape[-1]))
+        "Layer {}:\tAfter {} iter: Org data dimension is {}. Embedded data dimension is {}".format(t,
+                                                                                                   tsne.n_iter,
+                                                                                                   x_layer.shape[-1],
+                                                                                                   X_tsne.shape[-1]))
     tsne_list.append(X_tsne)
 
 tab_list = list()
@@ -135,7 +135,7 @@ for label_key, labels in zip(['statement', 'gender', 'emotion'], [statement_labe
         sample_source = ColumnDataSource(data=data)
         plot = create_sample_scatter(x_data="X", y_data="Y", source=sample_source,
                                      label=current_label,
-                                     title="%s" % (t + 1), )
+                                     title="%s" % t, )
         grid_list.append(plot)
 
     grid = gridplot(grid_list, ncols=cols, plot_width=350, plot_height=350)
