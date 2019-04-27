@@ -84,8 +84,9 @@ gender_label = [genders[i % 2] for i in raw_actor_label]
 emotion_label = [emotions[i - 1] for i in raw_emotion_label]
 
 X = digits.get('feature_matrix')
-N = X.shape[-1]
+N = X.shape[2]
 cols = round(math.sqrt(N))
+print('N: {}, cols: {}'.format(N, cols))
 
 # T-SNE
 
