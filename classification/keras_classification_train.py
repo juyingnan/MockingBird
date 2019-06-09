@@ -58,13 +58,13 @@ logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 train_image_count = 100000
 learning_rate = 0.0001
-regularization_rate = 0.0001
+regularization_rate = 0.00001
 category_count = 7 + 1
 n_epoch = 500
 mini_batch_size = 256
 
 # read image
-root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
+root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
 mat_file_name = 'mfcc_logf_slice_100_025.mat'
 split_method = 'rep'
 
@@ -104,7 +104,7 @@ sys.stdout = model_parameter.Logger(
 train_data, train_label, test_data, test_label, normal_test_sets, strong_test_sets = \
     dataset_split.train_test_rep_split4(digits, c, split_method)
 
-x_train, x_val, y_train, y_val = model_selection.train_test_split(train_data, train_label, test_size=0.1,
+x_train, x_val, y_train, y_val = model_selection.train_test_split(train_data, train_label, test_size=0.2,
                                                                   random_state=42)
 x_test = test_data
 y_test = test_label
@@ -138,7 +138,7 @@ monitor_criteria = 'val_loss'
 checkpoint = ModelCheckpoint(model_save_path, monitor=monitor_criteria, verbose=1,
                              save_best_only=True, save_weights_only=False, mode='auto', period=1)
 
-earlystop = EarlyStopping(monitor=monitor_criteria, min_delta=0, patience=30, verbose=0, mode='auto',
+earlystop = EarlyStopping(monitor=monitor_criteria, min_delta=0, patience=60, verbose=0, mode='auto',
                           restore_best_weights=True)
 callback_list = [checkpoint, earlystop]
 cnn_model.summary()

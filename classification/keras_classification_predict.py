@@ -234,7 +234,7 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
 # Disable Tensorflow debugging information
 logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
-root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
+root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
 meaningful_file_name = 'mfcc_logf_slice_100_025'
 split_method = 'rep'
 category_count = 7 + 1
