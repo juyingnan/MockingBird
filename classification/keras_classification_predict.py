@@ -1,15 +1,17 @@
 import numpy as np
 from scipy import io
-# import keras
-import tensorflow as tf
+import keras
+import tensorflow.compat.v1 as tf
 from tensorflow import keras
-from tensorflow.python.keras.backend import set_session
-from tensorflow.python.keras.models import load_model
+from tensorflow.compat.v1.keras.backend import set_session
+from tensorflow.compat.v1.keras.models import load_model
 import dataset_split
 import model_parameter
 import logging
 import sys
 from scipy import signal
+
+tf.disable_v2_behavior()
 
 
 def parse_file_name(full_file_name):
@@ -235,7 +237,7 @@ def draw_confusion_matrix(_x_test, _test_label, _test_ids):
 logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
-meaningful_file_name = 'mfcc_logf_slice_100_025'
+meaningful_file_name = 'mfcc_logf'
 split_method = 'rep'
 category_count = 7 + 1
 

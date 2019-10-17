@@ -2,19 +2,21 @@ import numpy as np
 from scipy import io
 # import keras
 from tensorflow import keras
-from tensorflow.python.keras import regularizers, optimizers
-from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, Activation
-from tensorflow.python.keras.models import Sequential
-from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.compat.v1.keras import regularizers, optimizers
+from tensorflow.compat.v1.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, Activation
+from tensorflow.compat.v1.keras.models import Sequential
+from tensorflow.compat.v1.keras.callbacks import EarlyStopping, ModelCheckpoint
 # from tensorflow.python.keras.layers.normalization import BatchNormalization
 import matplotlib.pylab as plt
-import tensorflow as tf
-from tensorflow.python.keras.backend import set_session
+import tensorflow.compat.v1 as tf
+from tensorflow.compat.v1.keras.backend import set_session
 from sklearn import model_selection
 import dataset_split
 import model_parameter
 import logging
 import sys
+
+tf.disable_v2_behavior()
 
 
 def get_cnn_model():
@@ -65,7 +67,7 @@ mini_batch_size = 256
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
-mat_file_name = 'mfcc_logf_slice_100_025.mat'
+mat_file_name = 'mfcc_logf.mat'
 split_method = 'rep'
 
 # override filepath via args
