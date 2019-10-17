@@ -1,22 +1,17 @@
 import numpy as np
 from scipy import io
-# import keras
 from tensorflow import keras
-from tensorflow.compat.v1.keras import regularizers, optimizers
-from tensorflow.compat.v1.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, Activation
-from tensorflow.compat.v1.keras.models import Sequential
-from tensorflow.compat.v1.keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.keras import regularizers, optimizers
+from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout, Activation
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 # from tensorflow.python.keras.layers.normalization import BatchNormalization
 import matplotlib.pylab as plt
-import tensorflow.compat.v1 as tf
-from tensorflow.compat.v1.keras.backend import set_session
 from sklearn import model_selection
 import dataset_split
 import model_parameter
 import logging
 import sys
-
-tf.disable_v2_behavior()
 
 
 def get_cnn_model():
@@ -126,10 +121,6 @@ y_train = keras.utils.to_categorical(y_train, category_count)
 y_val = keras.utils.to_categorical(y_val, category_count)
 y_test = keras.utils.to_categorical(y_test, category_count)
 
-# train
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-set_session(tf.Session(config=config))
 # train
 cnn_model.compile(loss=keras.losses.categorical_crossentropy,
                   # optimizer=keras.optimizers.SGD(lr=0.01),

@@ -1,17 +1,12 @@
 import numpy as np
 from scipy import io
-import keras
-import tensorflow.compat.v1 as tf
 from tensorflow import keras
-from tensorflow.compat.v1.keras.backend import set_session
-from tensorflow.compat.v1.keras.models import load_model
+from tensorflow.keras.models import load_model
 import dataset_split
 import model_parameter
 import logging
 import sys
 from scipy import signal
-
-tf.disable_v2_behavior()
 
 
 def parse_file_name(full_file_name):
@@ -250,9 +245,6 @@ c = 2 if 'mfcc_logf' in meaningful_file_name else 1
 
 sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + meaningful_file_name + '_' + split_method + '.log')
 
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-set_session(tf.Session(config=config))
 model = load_model(root_path + '/model_' + meaningful_file_name + '_' + split_method + '.h5')
 
 # read image
