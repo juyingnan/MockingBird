@@ -241,6 +241,9 @@ if len(sys.argv) >= 2:
     file_name = sys.argv[1]
     # c = int(sys.argv[3])
     meaningful_file_name, split_method = parse_file_name(file_name)
+if len(sys.argv) >= 3:
+    root_path = sys.argv[2]
+
 c = 2 if 'mfcc_logf' in meaningful_file_name else 1
 
 sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + meaningful_file_name + '_' + split_method + '.log')
