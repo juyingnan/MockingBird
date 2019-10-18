@@ -94,7 +94,7 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
     for i in range(len(x)):
         if (rep[i] == 2 and sep_criteria == 'rep') \
                 or (sen[i] == 2 and sep_criteria == 'sen') \
-                or (act[i] == 2 and sep_criteria == 'gen') \
+                or (act[i] % 2 == 0 and sep_criteria == 'gen') \
                 or (i >= len(x) / 6 * 5 and sep_criteria == 'act'):
             _test_x.append(x[i])
             _test_y.append(y[i])
