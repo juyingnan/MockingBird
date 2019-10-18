@@ -69,6 +69,8 @@ split_method = 'rep'
 if len(sys.argv) >= 3:
     mat_file_name = sys.argv[1]
     split_method = sys.argv[2]
+if len(sys.argv) >= 4:
+    root_path = sys.argv[3]
 
 mat_path = root_path + mat_file_name
 digits = io.loadmat(mat_path)
@@ -148,19 +150,19 @@ print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
 # Plot training & validation accuracy values
-fig, ax1 = plt.subplots()
-ax2 = ax1.twinx()
-acc = ax1.plot(history.history['acc'], label='Train acc')
-val_acc = ax1.plot(history.history['val_acc'], label='Val acc')
-loss = ax2.plot(history.history['loss'], label='Train loss')
-val_loss = ax2.plot(history.history['val_loss'], label='Val loss')
-lines = acc + val_acc + loss + val_loss
-labs = [l.get_label() for l in lines]
-ax1.legend(lines, labs, loc=0)
-plt.title('Model accuracy')
-ax1.set_ylabel('Accuracy')
-ax2.set_ylabel('Loss')
-plt.xlabel('Epoch')
+# fig, ax1 = plt.subplots()
+# ax2 = ax1.twinx()
+# acc = ax1.plot(history.history['acc'], label='Train acc')
+# val_acc = ax1.plot(history.history['val_acc'], label='Val acc')
+# loss = ax2.plot(history.history['loss'], label='Train loss')
+# val_loss = ax2.plot(history.history['val_loss'], label='Val loss')
+# lines = acc + val_acc + loss + val_loss
+# labs = [l.get_label() for l in lines]
+# ax1.legend(lines, labs, loc=0)
+# plt.title('Model accuracy')
+# ax1.set_ylabel('Accuracy')
+# ax2.set_ylabel('Loss')
+# plt.xlabel('Epoch')
 # plt.show()
 
 # intensity test
