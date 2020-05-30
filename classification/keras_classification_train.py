@@ -91,7 +91,7 @@ cnn_model = get_cnn_model()
 # sys.stdout = model_parameter.Logger(
 #     root_path + '/log_train_' + mat_file_name.split('.')[0] + '_' + split_method + '.log')
 sys.stdout = model_parameter.Logger(
-    f'{root_path}/log_train_{mat_file_name.split(".")[0]}_split_method_{time.strftime("%Y%m%d-%H%M%S")}.log')
+    f'{root_path}/log_train_{mat_file_name.split(".")[0]}_{split_method}_{time.strftime("%Y%m%d-%H%M%S")}.log')
 
 # X: nxm: n=1440//sample, m=feature
 # X = np.expand_dims(X,3)

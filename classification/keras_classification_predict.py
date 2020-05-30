@@ -249,7 +249,7 @@ c = 2 if 'mfcc_logf' in meaningful_file_name else 1
 
 # sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + meaningful_file_name + '_' + split_method + '.log')
 sys.stdout = model_parameter.Logger(
-    f'{root_path}/log_predict_{meaningful_file_name}_split_method_{time.strftime("%Y%m%d-%H%M%S")}.log')
+    f'{root_path}/log_predict_{meaningful_file_name}_{split_method}_{time.strftime("%Y%m%d-%H%M%S")}.log')
 
 model = load_model(root_path + '/model_' + meaningful_file_name + '_' + split_method + '.h5')
 
