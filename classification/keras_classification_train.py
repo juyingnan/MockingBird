@@ -6,12 +6,13 @@ from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropou
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 # from tensorflow.python.keras.layers.normalization import BatchNormalization
-import matplotlib.pylab as plt
+# import matplotlib.pylab as plt
 from sklearn import model_selection
 import dataset_split
 import model_parameter
 import logging
 import sys
+import time
 
 
 def get_cnn_model():
@@ -87,8 +88,10 @@ if h * w > 30000:
 cnn_model = get_cnn_model()
 
 # redirect output to both console and txt
+# sys.stdout = model_parameter.Logger(
+#     root_path + '/log_train_' + mat_file_name.split('.')[0] + '_' + split_method + '.log')
 sys.stdout = model_parameter.Logger(
-    root_path + '/log_train_' + mat_file_name.split('.')[0] + '_' + split_method + '.log')
+    f'{root_path}/log_train_{mat_file_name.split(".")[0]}_split_method_{time.strftime("%Y%m%d-%H%M%S")}.log')
 
 # X: nxm: n=1440//sample, m=feature
 # X = np.expand_dims(X,3)
