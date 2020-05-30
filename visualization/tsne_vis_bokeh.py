@@ -70,7 +70,7 @@ sample_labels = {
         },
 }
 
-root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
+root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
 feature_name = 'mfcc'
 
 if len(sys.argv) >= 2:
