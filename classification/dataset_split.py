@@ -96,7 +96,10 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
                 or (sen[i] == 2 and sep_criteria == 'sen') \
                 or (act[i] % 2 == 0 and sep_criteria == 'm2f') \
                 or (act[i] % 2 == 1 and sep_criteria == 'f2m') \
-                or (i >= len(x) / 2 and sep_criteria == 'act'):
+                or (i >= len(x) / 2 and sep_criteria == 'act') \
+                or (act[i] == int(sep_criteria[-2:]) and sep_criteria.startswith("male")) \
+                or (act[i] == int(sep_criteria[-2:]) and sep_criteria.startswith("female")) \
+                or (act[i] == int(sep_criteria[-2:]) and sep_criteria.startswith("single")):
             _test_x.append(x[i])
             _test_y.append(y[i])
             if file_ids is not None and slice_ids is not None:
@@ -109,6 +112,9 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
             else:
                 _strong_test_sets[y[i]].append(x[i])
         else:
+            if (sep_criteria.startswith("male") and act[i] % 2 == 0) \
+                    or (sep_criteria.startswith("female") and act[i] % 2 == 1):
+                continue
             _train_x.append(x[i])
             _train_y.append(y[i])
     assert len(_train_x) == len(_train_y)
