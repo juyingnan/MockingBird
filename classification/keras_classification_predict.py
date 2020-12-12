@@ -14,8 +14,12 @@ def parse_file_name(full_file_name):
     file_name_no_postfix = full_file_name.split('.')[0]
     if str(file_name_no_postfix).startswith('model_'):
         file_name_no_postfix = file_name_no_postfix[len('model_'):]
-    _split_method = file_name_no_postfix[-3:]
-    _meaningful_file_name = file_name_no_postfix[:-4]
+    _split_method = file_name_no_postfix.split('_')[-1]
+    _meaningful_file_name = file_name_no_postfix.replace(f'_{_split_method}', '')
+    print(f"Split method: {split_method}")
+    print(f"meaningful_file_name: {_meaningful_file_name}")
+    # _split_method = file_name_no_postfix[-3:]
+    # _meaningful_file_name = file_name_no_postfix[:-4]
     return _meaningful_file_name, _split_method
 
 
