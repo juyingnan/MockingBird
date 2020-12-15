@@ -248,21 +248,26 @@ if len(sys.argv) >= 2:
     meaningful_file_name, split_method = parse_file_name(file_name)
 if len(sys.argv) >= 3:
     root_path = sys.argv[2]
-if len(sys.argv) >= 4:
-    split_method = sys.argv[3]
 
 c = 2 if 'mfcc_logf' in meaningful_file_name else 1
-
-# sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + meaningful_file_name + '_' + split_method + '.log')
-sys.stdout = model_parameter.Logger(
-    f'{root_path}/log_predict_{meaningful_file_name}_{split_method}_{time.strftime("%Y%m%d-%H%M%S")}.log')
 
 model = load_model(root_path + '/model_' + meaningful_file_name + '_' + split_method + '.h5')
 
 # read image
 mat_path = root_path + meaningful_file_name
 digits = io.loadmat(mat_path)
-test_data, test_label, test_ids = dataset_split.train_test_rep_split4(digits, c, split_method, is_test_only=True)
+
+real_split_method = split_method
+
+if len(sys.argv) >= 4:
+    real_split_method = sys.argv[3]
+
+# sys.stdout = model_parameter.Logger(root_path + '/log_predict_' + meaningful_file_name + '_' + split_method + '.log')
+sys.stdout = model_parameter.Logger(
+    f'{root_path}/log_predict_{meaningful_file_name}_{split_method}_'
+    f'{real_split_method}_{time.strftime("%Y%m%d-%H%M%S")}.log')
+
+test_data, test_label, test_ids = dataset_split.train_test_rep_split4(digits, c, real_split_method, is_test_only=True)
 x_test = test_data
 y_test = test_label
 
