@@ -64,7 +64,7 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
     accuracy_list = []
     uncomplete_predict_list = []
 
-    for l in range(longest):
+    for m in range(longest):
         count_list_strong = [0, 0, 0, 0, 0, 0, 0, 0]
         count_list_normal = [0, 0, 0, 0, 0, 0, 0, 0]
         correct_list_strong = [0, 0, 0, 0, 0, 0, 0, 0]
@@ -86,7 +86,7 @@ def get_early_predict(_x_test, _test_label, _test_ids, length, step):
                 else:
                     count_list_strong[current_y] += 1
             else:
-                if _test_ids[i][1] <= l:
+                if _test_ids[i][1] <= m:
                     # prob_list = prob_list + results[i]
                     prob_list.append(results[i])
                 else:
