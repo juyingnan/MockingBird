@@ -1,14 +1,19 @@
 import os
 
 
-def extract_accuracy(path):
-    start_word = 'Test accuracy:'
+def extract_accuracy(path, start_word):
     with open(path) as f:
         for line in f:
             if line.startswith(start_word):
                 accuracy = line.split(start_word)[1].strip()[:6]
                 return accuracy
     return 'N/A'
+
+
+def extract_accuracy_2(path, row_number):
+    with open(path) as f:
+        lines = f.readlines()
+        return lines[row_number].strip()
 
 
 # root_path = r'D:\Projects\emotion_in_speech\Audio_Speech_Actors_01-24/'
@@ -29,10 +34,11 @@ def extract_accuracy(path):
 #             print(extract_accuracy(raw_file_path))
 #             print()
 
-root_path = r'C:\Users\bunny\Desktop\data/'
+root_path = r'D:\Shared\log_fms_20201212/'
 
 file_names = os.listdir(root_path)
 for file_name in file_names:
     file_path = root_path + file_name
-    result = extract_accuracy(file_path)
+    result = extract_accuracy(file_path, 'Test accuracy:')
+    # result = extract_accuracy_2(file_path, 3)
     print(file_name, '\t', result)
