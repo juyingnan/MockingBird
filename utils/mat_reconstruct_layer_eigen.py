@@ -2,6 +2,7 @@ import numpy as np
 import sys
 from scipy import io
 import mat_reconstruct_svd
+import mat_reconstruct_layer
 
 if __name__ == '__main__':
     root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
@@ -31,6 +32,13 @@ if __name__ == '__main__':
         reconstruct_mat = reconstruct_mat.reshape(original_shape)
 
         X[:, :, layer_index] = reconstruct_mat
+
+    # layers in which linearly separable eigenvectors are discarded
+    to_discard_layer = []
+    for each in to_discard_list:
+        to_discard_layer.append(int(each.split("-")[0]))
+
+    X = mat_reconstruct_layer.layer_keep(X, to_discard_layer)
 
     # print(np.allclose(X, reconstruct_mat))
     digits['feature_matrix'] = np.array(X)
