@@ -28,7 +28,7 @@ def layer_discard_overwrite(matrix, discard_list):
 if __name__ == '__main__':
     root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
     file_name = 'mfcc.mat'
-    to_discard_list = [1, 3, 5, 7, 9]
+    to_discard_list = [1, 3, 5, 7, 8]
 
     if len(sys.argv) >= 3:
         file_name = sys.argv[1] + '.mat'
