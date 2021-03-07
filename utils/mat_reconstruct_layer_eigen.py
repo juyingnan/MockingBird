@@ -6,7 +6,7 @@ import mat_reconstruct_svd
 if __name__ == '__main__':
     root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
     file_name = 'mfcc.mat'
-    to_discard_list = ['1-2-5','2-2']
+    to_discard_list = ['1-4', '3-2', '5-1', '8-1', '9-2']
 
     if len(sys.argv) >= 3:
         file_name = sys.argv[1] + '.mat'
@@ -26,7 +26,7 @@ if __name__ == '__main__':
         original_shape = layer.shape
         print("Original shape: {}".format(original_shape))
 
-        reconstruct_mat = mat_reconstruct_svd.eigen_discard(layer, eigen_index, need_reshape=True)
+        reconstruct_mat = mat_reconstruct_svd.eigen_keep(layer, eigen_index, need_reshape=True)
         print("Reconstructed shape: {}".format(reconstruct_mat.shape))
         reconstruct_mat = reconstruct_mat.reshape(original_shape)
 
@@ -34,4 +34,4 @@ if __name__ == '__main__':
 
     # print(np.allclose(X, reconstruct_mat))
     digits['feature_matrix'] = np.array(X)
-    io.savemat(mat_path.replace('.mat', '_both_%s.mat' % result_file_name_postfix), mdict=digits)
+    io.savemat(mat_path.replace('.mat', '_keep_%s.mat' % result_file_name_postfix), mdict=digits)
