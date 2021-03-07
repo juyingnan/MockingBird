@@ -13,6 +13,16 @@ def eigen_discard(matrix, discard_list, need_reshape=False):
     result = np.dot(_u * _s, _vh)
     return result
 
+def eigen_keep(matrix, keep_list, need_reshape=False):
+    if need_reshape:
+        _u, _s, _vh = np.linalg.svd(matrix.reshape(matrix.shape[0], -1), full_matrices=False)
+    else:
+        _u, _s, _vh = np.linalg.svd(matrix, full_matrices=False)
+    for index in range(len(_s)):
+        if index not in keep_list:
+            _s[index] = 0
+    result = np.dot(_u * _s, _vh)
+    return result
 
 if __name__ == '__main__':
     root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
