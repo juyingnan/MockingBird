@@ -13,6 +13,10 @@ import model_parameter
 import logging
 import sys
 import time
+import os
+
+# Solve the "CUDNN_STATUS_ALLOC_FAILED" problem
+os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 
 
 def get_cnn_model():
@@ -63,7 +67,7 @@ mini_batch_size = 256
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
-mat_file_name = 'mfcc_logf.mat'
+mat_file_name = 'mfcc_keep_1-4-3-2-5-1-8-1-9-2.mat'
 split_method = 'rep'
 
 # override filepath via args
