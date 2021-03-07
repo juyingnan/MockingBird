@@ -9,6 +9,13 @@ def layer_discard(matrix, discard_list):
         result[:, :, index] = 0
     return result
 
+def layer_keep(matrix, keep_list):
+    result = np.copy(matrix)
+    for index in range(result.shape[-1]):
+        if index not in keep_list:
+            result[:, :, index] = 0
+    return result
+
 
 def layer_discard_overwrite(matrix, discard_list):
     result = np.copy(matrix)
@@ -34,11 +41,11 @@ if __name__ == '__main__':
     X = digits.get('feature_matrix')
     print(X.shape)
 
-    reconstruct_mat = layer_discard(X, to_discard_list)
-    reconstruct_mat_overwrite = layer_discard_overwrite(X, to_discard_list)
+    reconstruct_mat = layer_keep(X, to_discard_list)
+    # reconstruct_mat_overwrite = layer_discard_overwrite(X, to_discard_list)
 
     digits['feature_matrix'] = np.array(reconstruct_mat)
-    io.savemat(mat_path.replace('.mat', '_layer_%s.mat' % result_file_name_postfix), mdict=digits)
+    io.savemat(mat_path.replace('.mat', '_layer_keep_%s.mat' % result_file_name_postfix), mdict=digits)
 
-    digits['feature_matrix'] = np.array(reconstruct_mat_overwrite)
-    io.savemat(mat_path.replace('.mat', '_layer_%s_ow.mat' % result_file_name_postfix), mdict=digits)
+    # digits['feature_matrix'] = np.array(reconstruct_mat_overwrite)
+    # io.savemat(mat_path.replace('.mat', '_layer_%s_ow.mat' % result_file_name_postfix), mdict=digits)
