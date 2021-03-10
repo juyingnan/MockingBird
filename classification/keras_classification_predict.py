@@ -8,6 +8,10 @@ import logging
 import sys
 import time
 from scipy import signal
+import os
+
+# Solve the "CUDNN_STATUS_ALLOC_FAILED" problem
+os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 
 
 def parse_file_name(full_file_name):
