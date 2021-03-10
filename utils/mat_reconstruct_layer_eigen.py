@@ -8,6 +8,7 @@ if __name__ == '__main__':
     root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
     file_name = 'mfcc.mat'
     to_discard_list = ['1-4', '3-2', '5-1', '8-1', '9-2']
+    is_keep_other_layers = True
 
     if len(sys.argv) >= 3:
         file_name = sys.argv[1] + '.mat'
@@ -34,11 +35,15 @@ if __name__ == '__main__':
         X[:, :, layer_index] = reconstruct_mat
 
     # layers in which linearly separable eigenvectors are discarded
-    to_discard_layer = []
-    for each in to_discard_list:
-        to_discard_layer.append(int(each.split("-")[0]))
+    if not is_keep_other_layers:
+        to_discard_layer = []
+        for each in to_discard_list:
+            to_discard_layer.append(int(each.split("-")[0]))
 
-    X = mat_reconstruct_layer.layer_keep(X, to_discard_layer)
+        X = mat_reconstruct_layer.layer_keep(X, to_discard_layer)
+        print("discard other layers")
+    else:
+        print("keep other layers")
 
     # print(np.allclose(X, reconstruct_mat))
     digits['feature_matrix'] = np.array(X)
