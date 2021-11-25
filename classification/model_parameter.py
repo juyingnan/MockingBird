@@ -39,6 +39,8 @@ def select_parameter(_h, _w):
             return get_parameter_189_257()
         if _h == 283:
             return get_parameter_283_257()
+        if _h == 376:
+            return get_parameter_376_257()
         if _h == 990:
             return get_parameter_990_257()
 
@@ -122,6 +124,16 @@ def get_parameter_283_257():
     kernel_stride = (2, 2)
     pool_stride = (2, 1)
     pool_size_list = [(1, 2), (2, 2), (2, 2), (2, 4)]
+    return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
+
+
+def get_parameter_376_257():
+    h = 376
+    w = 257
+    kernel_size = (5, 5)
+    kernel_stride = (2, 2)
+    pool_stride = (2, 1)
+    pool_size_list = [(2, 2), (2, 2), (2, 2), (2, 4)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
 
 
