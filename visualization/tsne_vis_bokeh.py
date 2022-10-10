@@ -52,7 +52,8 @@ def create_sample_scatter(x_data, y_data, source, label, title='', x_axis_title=
                 current.muted = False
             else:
                 current.muted = True
-    result_plot.add_layout(result_plot.legend[0], 'right')
+            result_plot.legend.visible = False
+    # result_plot.add_layout(result_plot.legend[0], 'right')
     result_plot.legend.label_text_font_size = '8pt'
     result_plot.legend.click_policy = "mute"
 
@@ -97,6 +98,8 @@ sample_labels = {
         },
 }
 
+DEBUG = False
+
 root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
 feature_name = 'mfcc'
 
@@ -119,7 +122,7 @@ for mapping in ['tsne', 'umap']:
     emotion_label = [emotions[i - 1] for i in raw_emotion_label]
 
     X = digits.get('feature_matrix')
-    N = 2  # X.shape[2]
+    N = X.shape[2] if not DEBUG else 2
     cols = round(math.sqrt(N))
     print('N: {}, cols: {}'.format(N, cols))
 
