@@ -67,8 +67,8 @@ mini_batch_size = 256
 
 # read image
 root_path = r'D:\Projects\emotion_in_speech\vis_mat/'
-mat_file_name = 'mfcc_keep_1-4-3-2-5-1-8-1-9-2.mat'
-split_method = 'rep'
+mat_file_name = 'mfcc_layer_3.mat'
+split_method = 'sen'
 
 # override filepath via args
 if len(sys.argv) >= 3:
@@ -82,6 +82,7 @@ digits = io.loadmat(mat_path)
 print("parameter, file path: ", mat_path)
 item_count, h, w = digits.get('feature_matrix').shape[:3]
 c = digits.get('feature_matrix').shape[3] if len(digits.get('feature_matrix').shape) > 3 else 1
+print(h, w)
 h, w, kernel_size, kernel_stride, pool_stride, pool_size_list = model_parameter.select_parameter(h, w)
 input_shape = (h, w, c)
 print("input_shape: ", input_shape)

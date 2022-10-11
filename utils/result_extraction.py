@@ -34,7 +34,7 @@ def extract_accuracy_2(path, row_number):
 #             print(extract_accuracy(raw_file_path))
 #             print()
 
-root_path = r'D:\Shared\log_fms_20201212/'
+root_path = r'C:\Users\bunny\Desktop\log_20211117/'
 
 file_names = os.listdir(root_path)
 for file_name in file_names:
