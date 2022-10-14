@@ -255,7 +255,9 @@ if len(sys.argv) >= 3:
 
 c = 2 if 'mfcc_logf' in meaningful_file_name else 1
 
-model = load_model(root_path + '/model_' + meaningful_file_name + '_' + split_method + '.h5')
+model_path = root_path + '/model_' + meaningful_file_name + '_' + split_method + '.h5'
+print(model_path)
+model = load_model(model_path)
 
 # read image
 mat_path = root_path + meaningful_file_name
