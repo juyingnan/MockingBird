@@ -2,6 +2,7 @@ import numpy as np
 from python_speech_features import mfcc
 from python_speech_features import logfbank
 from scipy import io, signal
+from tqdm import tqdm
 
 
 def get_slice_feature(original_mat_path):
@@ -15,7 +16,7 @@ def get_slice_feature(original_mat_path):
     logfbank_list = []
     all_list = []
     count = 0
-    for i in range(len(x)):
+    for i in tqdm(range(len(x)), desc="Processing"):
         _data = x[i]
         _sr = sr[i]
 
