@@ -109,7 +109,6 @@ def read_wav_files(path, is_normalized=False):
     max_length = 0
     actor_gender_dict = read_gender_info(
         os.path.join(os.path.abspath(os.path.join(path, os.pardir)), 'VideoDemographics.csv'))
-    print('reading the audios:')
     filenames = os.listdir(path)
     for i in tqdm(range(len(filenames)), desc="Reading"):
         file_name = filenames[i]
@@ -153,6 +152,57 @@ def read_wav_files(path, is_normalized=False):
         meta_info_lists, int)
 
 
+def read_wav_file_slices(path, is_normalized=False, _slice_length=0.5, _step=0.25):
+    audio_list = []
+    sr_list = []
+    slice_id_list = []
+    file_id_list = []
+    meta_info_lists = [[], [], [], [], [], [], []]
+    separator = '_'
+    clip_threshold = 0.1
+
+    actor_gender_dict = read_gender_info(
+        os.path.join(os.path.abspath(os.path.join(path, os.pardir)), 'VideoDemographics.csv'))
+    print('reading the audios:')
+    filenames = os.listdir(path)
+    for i in tqdm(range(len(filenames)), desc="Reading"):
+        file_name = filenames[i]
+        if not os.path.isfile(os.path.join(path, file_name)):
+            continue
+        file_path = os.path.join(path, file_name)
+        audio, sr_audio = librosa.load(file_path, sr=None)
+        if is_normalized:
+            # audio_list.append(audio / np.linalg.norm(audio))
+            audio = 2 * (audio - np.min(audio)) / np.ptp(audio) - 1
+        start = 0
+        end = int(start + _slice_length * sr_audio)
+        slice_id = 0
+        while end < len(audio):
+            audio_clip = audio[start:end]
+            # print(np.linalg.norm(audio_clip))
+            if np.linalg.norm(audio_clip) > clip_threshold:
+                audio_list.append(audio_clip)
+                sr_list.append(sr_audio)
+                file_name_prefix = file_name.split('.')[0]
+                meta_info = str(file_name_prefix).split(separator)
+                meta_info_lists[0].append(int(meta_info[0]))
+                meta_info_lists[1].append(sentence_dict[meta_info[1]])
+                meta_info_lists[2].append(emotion_dict[meta_info[2]])
+                meta_info_lists[3].append(intensity_dict[meta_info[3]])
+                meta_info_lists[4].append(actor_gender_dict[meta_info[0]])
+                meta_info_lists[5].append(slice_id)
+                meta_info_lists[6].append(i)
+            slice_id += 1
+            start += int(_step * sr_audio)
+            end = start + int(_slice_length * sr_audio)
+
+    audio_array = np.asarray(audio_list, np.float32)
+    return \
+        audio_array, \
+            np.asarray(sr_list, int), \
+            np.asarray(meta_info_lists, int)
+
+
 def normalize_features(data, v_max=1.0, v_min=0.0):
     data_array = np.asarray(data, np.float32)
     mins = np.min(data_array, axis=0)
@@ -166,14 +216,41 @@ if __name__ == '__main__':
     root_path = r'D:\Projects\emotion_in_speech\CREMA-D/'
     raw_file_path = os.path.join(root_path, 'AudioWAV/')
     np.seterr(all='ignore')
-    raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, is_normalized=True)
+    for is_norm in [True, False]:
+        raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, is_normalized=is_norm)
 
-    mat_path = os.path.join(root_path, 'raw_norm2.mat')
-    sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
-                                 'sample_rate': sample_rates,
-                                 'actual_length': lengths,
-                                 'actor_label': meta_info_labels[0],
-                                 'statement_label': meta_info_labels[1],
-                                 'emotion_label': meta_info_labels[2],
-                                 'intensity_label': meta_info_labels[3],
-                                 })
+        mat_name = 'norm_raw.mat' if is_norm else 'raw.mat'
+        mat_path = os.path.join(root_path, mat_name)
+        print('saving to:', mat_path)
+        sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
+                                     'sample_rate': sample_rates,
+                                     'actual_length': lengths,
+                                     'actor_label': meta_info_labels[0],
+                                     'statement_label': meta_info_labels[1],
+                                     'emotion_label': meta_info_labels[2],
+                                     'intensity_label': meta_info_labels[3],
+                                     'gender_label': meta_info_labels[4],
+                                     })
+
+        for slice_length in [0.5, 1.0, 1.5]:
+            for step in [0.25, 0.5, 0.75]:
+                slice_parameter = str('%0*d' % (3, int(100 * slice_length))) + '_' + str('%0*d' % (3, int(100 * step)))
+                mat_file_name = 'raw_slice_' + slice_parameter + '.mat'
+                if is_norm:
+                    mat_file_name = 'norm_' + mat_file_name
+                mat_path = os.path.join(root_path, mat_file_name)
+                raw_mat, sample_rates, meta_info_labels = read_wav_file_slices(raw_file_path,
+                                                                               is_normalized=is_norm,
+                                                                               _slice_length=slice_length,
+                                                                               _step=step)
+                print('saving to:', mat_path)
+                sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
+                                             'sample_rate': sample_rates,
+                                             'actor_label': meta_info_labels[0],
+                                             'statement_label': meta_info_labels[1],
+                                             'emotion_label': meta_info_labels[2],
+                                             'intensity_label': meta_info_labels[3],
+                                             'gender_label': meta_info_labels[4],
+                                             'slice_id': meta_info_labels[5],
+                                             'file_id': meta_info_labels[6],
+                                             })
