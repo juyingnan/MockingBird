@@ -39,7 +39,7 @@ def get_slice_feature(original_mat_path):
         mfcc_fbank_list.append(_mfcc_fbank)
 
         count += 1
-        print("\rreading {0}/{1}".format(count, len(x)), end='')
+        # print("\rreading {0}/{1}".format(count, len(x)), end='')
 
     print('stft shape: ', np.array(stft_list[0]).shape)
     print('mfcc+logfbank shape: ', np.array(mfcc_fbank_list[0]).shape)
