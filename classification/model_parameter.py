@@ -30,6 +30,8 @@ def select_parameter(_h, _w):
             return get_parameter_99_26()
         if _h == 49:
             return get_parameter_49_26()
+        if _h == 499:
+            return get_parameter_499_26()
 
     # stft
     if _w == 257:
@@ -92,6 +94,15 @@ def get_parameter_49_26():
     w = 26
     kernel_size = (3, 2)
     kernel_stride = (1, 1)
+    pool_stride = (4, 1)
+    pool_size_list = [(2, 1), (1, 1), (2, 1), (2, 1)]
+    return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
+
+def get_parameter_499_26():
+    h = 499
+    w = 26
+    kernel_size = (5, 2)
+    kernel_stride = (2, 1)
     pool_stride = (4, 1)
     pool_size_list = [(2, 1), (1, 1), (2, 1), (2, 1)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list

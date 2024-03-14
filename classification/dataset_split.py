@@ -16,6 +16,32 @@ def get_data(raw_data, channel):
     x = x.reshape((x.shape[0], x.shape[1], x.shape[2], channel))
     return x, y, z, sr, file_ids, slice_ids, rep, sen, act
 
+# for Crema-d dataset
+#                 sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
+#                                              'sample_rate': sample_rates,
+#                                              'actor_label': meta_info_labels[0],
+#                                              'statement_label': meta_info_labels[1],
+#                                              'emotion_label': meta_info_labels[2],
+#                                              'intensity_label': meta_info_labels[3],
+#                                              'gender_label': meta_info_labels[4],
+#                                              'slice_id': meta_info_labels[5],
+#                                              'file_id': meta_info_labels[6],
+#                                              })
+def get_data_cremad(raw_data, channel):
+    x, y, z, sr, gen, sen, act = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
+                                 raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
+                                 raw_data.get('gender_label')[0], raw_data.get('statement_label')[0], \
+                                 raw_data.get('actor_label')[0]
+    file_ids = None
+    slice_ids = None
+    if 'file_id' in raw_data:
+        file_ids = raw_data.get('file_id')[0]
+    if 'slice_id' in raw_data:
+        slice_ids = raw_data.get('slice_id')[0]
+    # y = y - 1
+    x = x.reshape((x.shape[0], x.shape[1], x.shape[2], channel))
+    return x, y, z, sr, file_ids, slice_ids, gen, sen, act
+
 
 def train_test_rep_split(raw_data, channel, rate=1.0):
     x, y, z, sr, file_ids, slice_ids, rep, sen, act = get_data(raw_data, channel)
@@ -124,3 +150,38 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
             _test_y), _normal_test_sets, _strong_test_sets
     else:
         return np.array(_test_x), np.array(_test_y), _test_id
+
+# for Crema-d dataset
+def train_test_rep_split5(raw_data, channel, sep_criteria):
+    x, y, z, sr, file_ids, slice_ids, gen, sen, act = get_data_cremad(raw_data, channel)
+    _train_x = []
+    _train_y = []
+    _test_x = []
+    _test_y = []
+    _test_id = []
+    _matrix_test_sets = [[], [], [], [], [], []]
+    for i in range(len(x)):
+        if (gen[i] == 1 and sep_criteria == 'gen') \
+                or (sen[i] > 9 and sep_criteria == 'sen') \
+                or (act[i] % 2 == 0 and sep_criteria == 'm2f') \
+                or (act[i] % 2 == 1 and sep_criteria == 'f2m') \
+                or (act[i] > 1080 and sep_criteria == 'act') \
+                or (sep_criteria.startswith("male") and act[i] == int(sep_criteria[-2:])) \
+                or (sep_criteria.startswith("female") and act[i] == int(sep_criteria[-2:])) \
+                or (sep_criteria.startswith("single") and act[i] == int(sep_criteria[-2:])):
+            _test_x.append(x[i])
+            _test_y.append(y[i])
+            if file_ids is not None and slice_ids is not None:
+                _test_id.append([file_ids[i], slice_ids[i], z[i]])
+            else:
+                _test_id.append([i, 0, z[i]])
+            _matrix_test_sets[y[i]].append(x[i])
+        else:
+            if (sep_criteria.startswith("male") and act[i] % 2 == 0) \
+                    or (sep_criteria.startswith("female") and act[i] % 2 == 1):
+                continue
+            _train_x.append(x[i])
+            _train_y.append(y[i])
+    assert len(_train_x) == len(_train_y)
+    assert len(_test_x) == len(_test_y)
+    return np.array(_train_x), np.array(_train_y), np.array(_test_x), np.array(_test_y), _matrix_test_sets
