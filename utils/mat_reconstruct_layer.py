@@ -1,3 +1,5 @@
+import os.path
+
 import numpy as np
 import sys
 from scipy import io
@@ -35,17 +37,17 @@ if __name__ == '__main__':
         to_discard_list = [int(item) for item in sys.argv[2:]]
         print(to_discard_list)
 
-    mat_path = root_path + file_name
+    mat_path = os.path.join(root_path, file_name)
     result_file_name_postfix = '-'.join([str(item) for item in to_discard_list])
     digits = io.loadmat(mat_path)
     X = digits.get('feature_matrix')
     print(X.shape)
 
-    reconstruct_mat = layer_keep(X, to_discard_list)
+    reconstruct_mat = layer_discard(X, to_discard_list)
     # reconstruct_mat_overwrite = layer_discard_overwrite(X, to_discard_list)
 
     digits['feature_matrix'] = np.array(reconstruct_mat)
-    io.savemat(mat_path.replace('.mat', '_layer_keep_%s.mat' % result_file_name_postfix), mdict=digits)
+    io.savemat(mat_path.replace('.mat', '_layer_dis_%s.mat' % result_file_name_postfix), mdict=digits)
 
     # digits['feature_matrix'] = np.array(reconstruct_mat_overwrite)
     # io.savemat(mat_path.replace('.mat', '_layer_%s_ow.mat' % result_file_name_postfix), mdict=digits)
