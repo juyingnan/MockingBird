@@ -1,3 +1,5 @@
+import sys
+
 import numpy as np
 import csv
 import os
@@ -173,7 +175,11 @@ def read_wav_file_slices(path, is_normalized=False, _slice_length=0.5, _step=0.2
         audio, sr_audio = librosa.load(file_path, sr=None)
         if is_normalized:
             # audio_list.append(audio / np.linalg.norm(audio))
-            audio = 2 * (audio - np.min(audio)) / np.ptp(audio) - 1
+            peak_to_peak = np.ptp(audio)
+            if peak_to_peak != 0:
+                audio = 2 * (audio - np.min(audio)) / np.ptp(audio) - 1
+            else:
+                print('peak_to_peak is 0, file:', file_name)
         start = 0
         end = int(start + _slice_length * sr_audio)
         slice_id = 0
@@ -216,10 +222,27 @@ if __name__ == '__main__':
     root_path = r'D:\Projects\emotion_in_speech\CREMA-D/'
     raw_file_path = os.path.join(root_path, 'AudioWAV/')
     np.seterr(all='ignore')
-    for is_norm in [True, False]:
-        raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, is_normalized=is_norm)
+    is_normalized = True
 
-        mat_name = 'norm_raw.mat' if is_norm else 'raw.mat'
+    # reading arguments to decide if is_normalized
+    if len(sys.argv) >= 2:
+        is_normalized = sys.argv[1] == 'Norm'
+    print('is_normalized:', is_normalized)
+
+    slice_length = None
+    step = None
+
+    # reading arguments to decide slice_length and step
+    if len(sys.argv) >= 4:
+        slice_length = float(sys.argv[2])
+        step = float(sys.argv[3])
+        print('slice_length:', slice_length, 'step:', step)
+
+    if slice_length is None and step is None:
+        print('slice_length and step are not provided, reading the whole audio files.')
+        raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, is_normalized=is_normalized)
+
+        mat_name = 'norm_raw.mat' if is_normalized else 'raw.mat'
         mat_path = os.path.join(root_path, mat_name)
         print('saving to:', mat_path)
         sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
@@ -232,25 +255,26 @@ if __name__ == '__main__':
                                      'gender_label': meta_info_labels[4],
                                      })
 
-        for slice_length in [0.5, 1.0, 1.5]:
-            for step in [0.25, 0.5, 0.75]:
-                slice_parameter = str('%0*d' % (3, int(100 * slice_length))) + '_' + str('%0*d' % (3, int(100 * step)))
-                mat_file_name = 'raw_slice_' + slice_parameter + '.mat'
-                if is_norm:
-                    mat_file_name = 'norm_' + mat_file_name
-                mat_path = os.path.join(root_path, mat_file_name)
-                raw_mat, sample_rates, meta_info_labels = read_wav_file_slices(raw_file_path,
-                                                                               is_normalized=is_norm,
-                                                                               _slice_length=slice_length,
-                                                                               _step=step)
-                print('saving to:', mat_path)
-                sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
-                                             'sample_rate': sample_rates,
-                                             'actor_label': meta_info_labels[0],
-                                             'statement_label': meta_info_labels[1],
-                                             'emotion_label': meta_info_labels[2],
-                                             'intensity_label': meta_info_labels[3],
-                                             'gender_label': meta_info_labels[4],
-                                             'slice_id': meta_info_labels[5],
-                                             'file_id': meta_info_labels[6],
-                                             })
+    elif slice_length is not None and step is not None:
+        slice_parameter = str('%0*d' % (3, int(100 * slice_length))) + '_' + str('%0*d' % (3, int(100 * step)))
+        mat_file_name = 'raw_slice_' + slice_parameter + '.mat'
+        if is_normalized:
+            mat_file_name = 'norm_' + mat_file_name
+        mat_path = os.path.join(root_path, mat_file_name)
+        raw_mat, sample_rates, meta_info_labels = read_wav_file_slices(raw_file_path,
+                                                                       is_normalized=is_normalized,
+                                                                       _slice_length=slice_length,
+                                                                       _step=step)
+        print('saving to:', mat_path)
+        sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
+                                     'sample_rate': sample_rates,
+                                     'actor_label': meta_info_labels[0],
+                                     'statement_label': meta_info_labels[1],
+                                     'emotion_label': meta_info_labels[2],
+                                     'intensity_label': meta_info_labels[3],
+                                     'gender_label': meta_info_labels[4],
+                                     'slice_id': meta_info_labels[5],
+                                     'file_id': meta_info_labels[6],
+                                     })
+    else:
+        print('slice_length and step are not both provided, ending...')
