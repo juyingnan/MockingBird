@@ -17,7 +17,8 @@ statement_index = 4:        01 = "Kids are talking by the door", 02 = "Dogs are 
 repetition_index = 5:       01 = 1st repetition, 02 = 2nd repetition
 actor_index = 6:            01 to 24. Odd numbered actors are male, even numbered actors are female
 
-Actors spoke from a selection of 12 sentences (in parentheses is the three letter acronym used in the second part of the filename):
+Actors spoke from a selection of 12 sentences 
+(in parentheses is the three letter acronym used in the second part of the filename):
 
 0 It's eleven o'clock (IEO).
 1 That is exactly what happened (TIE).
@@ -32,7 +33,8 @@ Actors spoke from a selection of 12 sentences (in parentheses is the three lette
 10 The surface is slick (TSI).
 11 We'll stop in a couple of minutes (WSI).
 
-The sentences were presented using different emotion (in parentheses is the three letter code used in the third part of the filename):
+The sentences were presented using different emotion 
+(in parentheses is the three letter code used in the third part of the filename):
 
 0 Anger (ANG)
 1 Disgust (DIS)
@@ -101,7 +103,7 @@ def read_gender_info(file_path):
     return id_gender_dict
 
 
-def read_wav_files(path, is_normalized=False):
+def read_wav_files(path, _is_normalized=False):
     audio_list = []
     sr_list = []  # sample rate
     audio_length_list = []
@@ -119,7 +121,7 @@ def read_wav_files(path, is_normalized=False):
         file_path = os.path.join(path, file_name)
         audio, sr_audio = librosa.load(file_path, sr=None)
         # audio = np.trim_zeros(audio)
-        if is_normalized:
+        if _is_normalized:
             # audio_list.append(audio / np.linalg.norm(audio))
             audio_list.append(2 * (audio - np.min(audio)) / np.ptp(audio) - 1)
         else:
@@ -154,11 +156,9 @@ def read_wav_files(path, is_normalized=False):
         meta_info_lists, int)
 
 
-def read_wav_file_slices(path, is_normalized=False, _slice_length=0.5, _step=0.25):
+def read_wav_file_slices(path, _is_normalized=False, _slice_length=0.5, _step=0.25):
     audio_list = []
     sr_list = []
-    slice_id_list = []
-    file_id_list = []
     meta_info_lists = [[], [], [], [], [], [], []]
     separator = '_'
     clip_threshold = 0.1
@@ -173,7 +173,7 @@ def read_wav_file_slices(path, is_normalized=False, _slice_length=0.5, _step=0.2
             continue
         file_path = os.path.join(path, file_name)
         audio, sr_audio = librosa.load(file_path, sr=None)
-        if is_normalized:
+        if _is_normalized:
             # audio_list.append(audio / np.linalg.norm(audio))
             peak_to_peak = np.ptp(audio)
             if peak_to_peak != 0:
@@ -204,9 +204,7 @@ def read_wav_file_slices(path, is_normalized=False, _slice_length=0.5, _step=0.2
 
     audio_array = np.asarray(audio_list, np.float32)
     return \
-        audio_array, \
-            np.asarray(sr_list, int), \
-            np.asarray(meta_info_lists, int)
+        audio_array, np.asarray(sr_list, int), np.asarray(meta_info_lists, int)
 
 
 def normalize_features(data, v_max=1.0, v_min=0.0):
@@ -240,7 +238,7 @@ if __name__ == '__main__':
 
     if slice_length is None and step is None:
         print('slice_length and step are not provided, reading the whole audio files.')
-        raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, is_normalized=is_normalized)
+        raw_mat, sample_rates, lengths, meta_info_labels = read_wav_files(raw_file_path, _is_normalized=is_normalized)
 
         mat_name = 'norm_raw.mat' if is_normalized else 'raw.mat'
         mat_path = os.path.join(root_path, mat_name)
@@ -262,7 +260,7 @@ if __name__ == '__main__':
             mat_file_name = 'norm_' + mat_file_name
         mat_path = os.path.join(root_path, mat_file_name)
         raw_mat, sample_rates, meta_info_labels = read_wav_file_slices(raw_file_path,
-                                                                       is_normalized=is_normalized,
+                                                                       _is_normalized=is_normalized,
                                                                        _slice_length=slice_length,
                                                                        _step=step)
         print('saving to:', mat_path)

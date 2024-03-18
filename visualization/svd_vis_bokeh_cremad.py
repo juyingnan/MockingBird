@@ -334,5 +334,5 @@ p = gridplot([[eigen_plot],
               [sample_plot_list[2], sample_plot_list[3]],
               [sample_plot_list[4], sample_plot_list[5]], ])
 
-# show(p)
+show(p)
 save(p)

@@ -3,20 +3,20 @@ import re
 from datetime import datetime
 
 
-def format_for_excel(accuracies):
+def format_for_excel(acc):
     # First, transform the data into a single dictionary for easier handling
     combined_accuracies = {}
-    for split_method in ['act', 'sen']:
-        for feature_method, accuracy in accuracies[split_method]:
-            if feature_method not in combined_accuracies:
-                combined_accuracies[feature_method] = {}
-            combined_accuracies[feature_method][split_method] = accuracy
+    for _split_method in ['act', 'sen']:
+        for _feature_method, _accuracy in acc[_split_method]:
+            if _feature_method not in combined_accuracies:
+                combined_accuracies[_feature_method] = {}
+            combined_accuracies[_feature_method][_split_method] = _accuracy
 
     # Now format the output
     output_lines = ["mfcc_logf\tACT\tSEN"]
-    for feature_method, accuracy_dict in combined_accuracies.items():
-        line = f"{feature_method}\t{accuracy_dict.get('act', '')}\t{accuracy_dict.get('sen', '')}"
-        output_lines.append(line)
+    for _feature_method, _accuracy_dict in combined_accuracies.items():
+        _line = f"{_feature_method}\t{_accuracy_dict.get('act', '')}\t{_accuracy_dict.get('sen', '')}"
+        output_lines.append(_line)
 
     return "\n".join(output_lines)
 

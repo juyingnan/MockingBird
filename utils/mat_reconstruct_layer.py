@@ -11,6 +11,7 @@ def layer_discard(matrix, discard_list):
         result[:, :, index] = 0
     return result
 
+
 def layer_keep(matrix, keep_list):
     result = np.copy(matrix)
     for index in range(result.shape[-1]):

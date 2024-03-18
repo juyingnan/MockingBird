@@ -98,6 +98,7 @@ def get_parameter_49_26():
     pool_size_list = [(2, 1), (1, 1), (2, 1), (2, 1)]
     return h, w, kernel_size, kernel_stride, pool_stride, pool_size_list
 
+
 def get_parameter_499_26():
     h = 499
     w = 26

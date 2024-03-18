@@ -3,9 +3,9 @@ import numpy as np
 
 def get_data(raw_data, channel):
     x, y, z, sr, rep, sen, act = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
-                                 raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
-                                 raw_data.get('repetition_label')[0], raw_data.get('statement_label')[0], \
-                                 raw_data.get('actor_label')[0]
+        raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
+        raw_data.get('repetition_label')[0], raw_data.get('statement_label')[0], \
+        raw_data.get('actor_label')[0]
     file_ids = None
     slice_ids = None
     if 'file_id' in raw_data:
@@ -15,6 +15,7 @@ def get_data(raw_data, channel):
     y = y - 1
     x = x.reshape((x.shape[0], x.shape[1], x.shape[2], channel))
     return x, y, z, sr, file_ids, slice_ids, rep, sen, act
+
 
 # for Crema-d dataset
 #                 sio.savemat(mat_path, mdict={'feature_matrix': raw_mat,
@@ -29,9 +30,9 @@ def get_data(raw_data, channel):
 #                                              })
 def get_data_cremad(raw_data, channel):
     x, y, z, sr, gen, sen, act = raw_data.get('feature_matrix'), raw_data.get('emotion_label')[0], \
-                                 raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
-                                 raw_data.get('gender_label')[0], raw_data.get('statement_label')[0], \
-                                 raw_data.get('actor_label')[0]
+        raw_data.get('intensity_label')[0], raw_data.get('sample_rate')[0], \
+        raw_data.get('gender_label')[0], raw_data.get('statement_label')[0], \
+        raw_data.get('actor_label')[0]
     file_ids = None
     slice_ids = None
     if 'file_id' in raw_data:
@@ -150,6 +151,7 @@ def train_test_rep_split4(raw_data, channel, sep_criteria, is_test_only=False):
             _test_y), _normal_test_sets, _strong_test_sets
     else:
         return np.array(_test_x), np.array(_test_y), _test_id
+
 
 # for Crema-d dataset
 def train_test_rep_split5(raw_data, channel, sep_criteria):
