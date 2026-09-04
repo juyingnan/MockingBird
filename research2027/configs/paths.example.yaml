@@ -1,0 +1,4 @@
+# Copy to a local, ignored configuration and replace these example paths.
+paths:
+  ravdess_root: "C:\\path\\to\\Audio_Speech_Actors_01-24"
+  artifacts_root: "artifacts"
