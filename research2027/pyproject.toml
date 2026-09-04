@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mockingbird2027"
+version = "0.1.0"
+description = "Research scaffold for auditing speech representations"
+readme = "PLAN.md"
+requires-python = ">=3.9"
+dependencies = ["pyarrow>=14"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+wavlm = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "torch>=2.1",
+    "transformers>=4.38,<5",
+]
+
+[project.scripts]
+mockingbird2027 = "mockingbird2027.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

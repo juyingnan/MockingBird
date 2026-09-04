@@ -1,0 +1,7 @@
+model_id: microsoft/wavlm-base-plus
+revision: main
+sample_rate_hz: 16000
+frozen: true
+output_hidden_states: true
+pooling: attention_masked_mean
+storage_dtype: float16
