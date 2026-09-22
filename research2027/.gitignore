@@ -1,3 +1,4 @@
+.github/
 .venv/
 __pycache__/
 *.py[cod]
@@ -7,4 +8,3 @@ build/
 dist/
 artifacts/
 configs/paths.yaml
-
