@@ -1,0 +1,41 @@
+condition_id,target,layer,method,split_name,fold,n_train,n_test,training_target_classes,status,reason
+statement_L05_mp_repetition_shift_1_to_2_f0,statement,5,mp,repetition_shift_1_to_2,0,720,720,2,invalid,held-out target removal failed
+statement_L05_mp_lexical_shift_1_to_2_f0,statement,5,mp,lexical_shift_1_to_2,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+statement_L05_mp_lexical_shift_2_to_1_f0,statement,5,mp,lexical_shift_2_to_1,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+statement_L05_leace_repetition_shift_1_to_2_f0,statement,5,leace,repetition_shift_1_to_2,0,720,720,2,invalid,held-out target removal failed
+statement_L05_leace_lexical_shift_1_to_2_f0,statement,5,leace,lexical_shift_1_to_2,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+statement_L05_leace_lexical_shift_2_to_1_f0,statement,5,leace,lexical_shift_2_to_1,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+statement_L12_mp_repetition_shift_1_to_2_f0,statement,12,mp,repetition_shift_1_to_2,0,720,720,2,invalid,held-out target removal failed
+statement_L12_mp_lexical_shift_1_to_2_f0,statement,12,mp,lexical_shift_1_to_2,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+statement_L12_mp_lexical_shift_2_to_1_f0,statement,12,mp,lexical_shift_2_to_1,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+statement_L12_leace_repetition_shift_1_to_2_f0,statement,12,leace,repetition_shift_1_to_2,0,720,720,2,invalid,held-out target removal failed
+statement_L12_leace_lexical_shift_1_to_2_f0,statement,12,leace,lexical_shift_1_to_2,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+statement_L12_leace_lexical_shift_2_to_1_f0,statement,12,leace,lexical_shift_2_to_1,0,720,720,1,blocked_unidentifiable,one outer-training target label; no train-only contrast
+speaker_L01_mp_repetition_shift_1_to_2_f0,speaker,1,mp,repetition_shift_1_to_2,0,720,720,24,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f0,speaker,1,mp,speaker_shift,0,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f1,speaker,1,mp,speaker_shift,1,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f2,speaker,1,mp,speaker_shift,2,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f3,speaker,1,mp,speaker_shift,3,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f4,speaker,1,mp,speaker_shift,4,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f5,speaker,1,mp,speaker_shift,5,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_repetition_shift_1_to_2_f0,speaker,1,leace,repetition_shift_1_to_2,0,720,720,24,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f0,speaker,1,leace,speaker_shift,0,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f1,speaker,1,leace,speaker_shift,1,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f2,speaker,1,leace,speaker_shift,2,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f3,speaker,1,leace,speaker_shift,3,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f4,speaker,1,leace,speaker_shift,4,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f5,speaker,1,leace,speaker_shift,5,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_repetition_shift_1_to_2_f0,speaker,5,mp,repetition_shift_1_to_2,0,720,720,24,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f0,speaker,5,mp,speaker_shift,0,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f1,speaker,5,mp,speaker_shift,1,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f2,speaker,5,mp,speaker_shift,2,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f3,speaker,5,mp,speaker_shift,3,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f4,speaker,5,mp,speaker_shift,4,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f5,speaker,5,mp,speaker_shift,5,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_repetition_shift_1_to_2_f0,speaker,5,leace,repetition_shift_1_to_2,0,720,720,24,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f0,speaker,5,leace,speaker_shift,0,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f1,speaker,5,leace,speaker_shift,1,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f2,speaker,5,leace,speaker_shift,2,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f3,speaker,5,leace,speaker_shift,3,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f4,speaker,5,leace,speaker_shift,4,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f5,speaker,5,leace,speaker_shift,5,1200,240,20,blocked_statement_gate,no statement reference condition passed the frozen validity gate

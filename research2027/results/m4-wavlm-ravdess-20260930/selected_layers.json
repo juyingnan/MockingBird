@@ -1,0 +1,39 @@
+{
+  "selected_layers": {
+    "speaker": [
+      1,
+      5
+    ],
+    "statement": [
+      5,
+      12
+    ]
+  },
+  "selection_values": [
+    {
+      "layer": 5,
+      "mean_shift_gap": 0.07535856505377903,
+      "reference_macro_f1": 0.9051025240187633,
+      "target": "statement"
+    },
+    {
+      "layer": 12,
+      "mean_shift_gap": 0.20376218204580704,
+      "reference_macro_f1": 0.7908730735852958,
+      "target": "statement"
+    },
+    {
+      "layer": 1,
+      "mean_shift_gap": 0.20831989699940387,
+      "reference_macro_f1": 0.8331845243140246,
+      "target": "speaker"
+    },
+    {
+      "layer": 5,
+      "mean_shift_gap": 0.1485356278410141,
+      "reference_macro_f1": 0.9051025240187633,
+      "target": "speaker"
+    }
+  ],
+  "task_anchor": 5
+}

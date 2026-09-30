@@ -1,0 +1,14 @@
+{
+  "all_diagnostic_training_ids_exclude_their_evaluation_fold": true,
+  "all_eraser_training_ids_match_outer_train": true,
+  "all_m4b_conditions_validated_before_retraining": true,
+  "diagnostic_probe_fits": 360,
+  "maximum_probability_sum_error": 4.440892098500626e-16,
+  "maximum_recomputation_error": 8.881784197001252e-16,
+  "metric_rows": 208,
+  "planned_conditions": 40,
+  "prediction_rows": 149760,
+  "status": "pass",
+  "unchanged_original_heads": 4,
+  "verified_transforms": 84
+}

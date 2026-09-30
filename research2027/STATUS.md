@@ -139,8 +139,8 @@
 
 ## M4 — Reliance and harmful-under-shift experiments
 
-**Authorized by the user; protocol frozen, implementation tested, scientific
-run pending.**
+**Statement diagnostic block completed; scientific gate stopped expansion.
+The M4 causal chain is NOT complete.**
 
 - Frozen protocol commit: `0017c9cbb4d04763130958df386cf0345e3d8302`.
   [Protocol](M4_PROTOCOL.md) and
@@ -157,16 +157,30 @@ run pending.**
   verification, and table-derived figures.
 - All 54 M0-M4 tests, CLI smoke checks, `pip check`, and
   `stage2_intervene.ps1 -ValidateOnly` pass.
+- Run `m4-wavlm-ravdess-20260930` used implementation commit
+  `6d2fec6c526d0996b0b22a15236300162d6e9e3f`, seed `20260930`, and completed
+  its gated schedule in about 64 seconds on CPU, exit code 0.
+- MP/LEACE at statement layers 5/12 removed rank 1 and training
+  cross-covariance to numerical precision. Fresh held-out statement F1
+  remained 0.6124 / 0.6069 / 0.5833 / 0.5806, above the frozen 0.55 ceiling.
+  Thus all four conditions failed target-removal validity despite substantial
+  partial removal and small collateral effects.
+- All 80 random controls passed true-rank/training-RMS matching. Original
+  emotion heads stayed fixed and reproduced M3; targeted task changes ranged
+  from -0.0036 to +0.0033 macro-F1. These are not validated reliance claims.
+- The gate correctly blocked all 28 speaker conditions and every M4B fit.
+  The eight lexical OOD conditions remain unidentifiable. All 40 planned
+  conditions retain explicit statuses/reasons; none was hidden or imputed.
+- Saved 208 metric rows, 149,760 held-out predictions, 360 diagnostic fits,
+  84 transforms, figures, provenance and checksums. Independent confusion
+  matrices reproduced all scores; all 33 input and 125 output hashes match.
+- Full five-part handoff and limitations: [M4_RESULTS.md](M4_RESULTS.md).
+  No engineering/runtime failure remains, but intervention validity and the
+  lexical identifiability constraint scientifically block M4 completion.
 
 ## Next
 
-Commit the M4 implementation, then run the statement diagnostic block:
-
-```powershell
-.\scripts\stage2_intervene.ps1 -OutputDir "results\m4-wavlm-ravdess-20260930"
-```
-
-Only validated conditions may advance to M4B. Speaker work is gated on at
-least one valid statement intervention. Preserve all negative/blocked
-conditions and stop instead of adjusting the frozen protocol. No paper edits,
-encoder replication, CREMA-D, or cache extraction are authorized.
+Review M4's partial-removal diagnostics and approve a new intervention/
+lexical-identifiability protocol before continuing. Do not rerun or relax the
+frozen primary experiment, start speaker/M4B work past its failed gate, or
+begin encoder/CREMA-D replication. Keep M3 and the paper repository unchanged.

@@ -1,0 +1,41 @@
+condition_id,status,reason
+statement_L05_mp_repetition_shift_1_to_2_f0,blocked,held-out target removal failed
+statement_L05_mp_lexical_shift_1_to_2_f0,blocked,one outer-training target label; no train-only contrast
+statement_L05_mp_lexical_shift_2_to_1_f0,blocked,one outer-training target label; no train-only contrast
+statement_L05_leace_repetition_shift_1_to_2_f0,blocked,held-out target removal failed
+statement_L05_leace_lexical_shift_1_to_2_f0,blocked,one outer-training target label; no train-only contrast
+statement_L05_leace_lexical_shift_2_to_1_f0,blocked,one outer-training target label; no train-only contrast
+statement_L12_mp_repetition_shift_1_to_2_f0,blocked,held-out target removal failed
+statement_L12_mp_lexical_shift_1_to_2_f0,blocked,one outer-training target label; no train-only contrast
+statement_L12_mp_lexical_shift_2_to_1_f0,blocked,one outer-training target label; no train-only contrast
+statement_L12_leace_repetition_shift_1_to_2_f0,blocked,held-out target removal failed
+statement_L12_leace_lexical_shift_1_to_2_f0,blocked,one outer-training target label; no train-only contrast
+statement_L12_leace_lexical_shift_2_to_1_f0,blocked,one outer-training target label; no train-only contrast
+speaker_L01_mp_repetition_shift_1_to_2_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f1,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f2,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f3,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f4,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_mp_speaker_shift_f5,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_repetition_shift_1_to_2_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f1,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f2,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f3,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f4,blocked,no statement reference condition passed the frozen validity gate
+speaker_L01_leace_speaker_shift_f5,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_repetition_shift_1_to_2_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f1,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f2,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f3,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f4,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_mp_speaker_shift_f5,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_repetition_shift_1_to_2_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f0,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f1,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f2,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f3,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f4,blocked,no statement reference condition passed the frozen validity gate
+speaker_L05_leace_speaker_shift_f5,blocked,no statement reference condition passed the frozen validity gate

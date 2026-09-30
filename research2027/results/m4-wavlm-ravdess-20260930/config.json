@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "m3_run": "results\\m3-wavlm-ravdess-20260930",
+  "m3_results_commit": "8160bc8733cdbf2f03792ddee8cc4a6b1089dcff",
+  "m3_output_manifest_sha256": "7f82eac816dff29f3500a316a5d6125a8a2af90f95ac2556c85081aab00beb67",
+  "protocol_file": "M4_PROTOCOL.md",
+  "seed": 20260930,
+  "target_order": ["statement", "speaker"],
+  "methods": ["mp", "leace"],
+  "selected_layers": {"statement": [5, 12], "speaker": [1, 5]},
+  "selection_values": [
+    {"target": "statement", "layer": 5, "reference_macro_f1": 0.9051025240187633, "mean_shift_gap": 0.07535856505377903},
+    {"target": "statement", "layer": 12, "reference_macro_f1": 0.7908730735852958, "mean_shift_gap": 0.20376218204580704},
+    {"target": "speaker", "layer": 1, "reference_macro_f1": 0.8331845243140246, "mean_shift_gap": 0.20831989699940387},
+    {"target": "speaker", "layer": 5, "reference_macro_f1": 0.9051025240187633, "mean_shift_gap": 0.1485356278410141}
+  ],
+  "numerics": {
+    "covariance_rtol": 1e-10,
+    "rank_rtol": 1e-10,
+    "rank_atol": 1e-12,
+    "invariant_tolerance": 1e-7
+  },
+  "audit": {
+    "folds": 3,
+    "attributes": ["emotion", "statement", "speaker", "gender", "intensity"],
+    "scope": "fresh_crossfit_within_outer_test",
+    "regularization": "M3 grid selected on each original diagnostic training fold, then frozen for all transformations"
+  },
+  "controls": {
+    "draws": 20,
+    "power_bounds": [-4.0, 4.0],
+    "bisection_steps": 80,
+    "relative_rms_tolerance": 1e-5,
+    "minimum_operator_difference": 0.001,
+    "recipe": "seeded covariance-power random subspaces; true removed rank and training RMS matched; same MP or LEACE geometry"
+  },
+  "validity": {
+    "minimum_before_f1_excess_over_chance": 0.1,
+    "minimum_target_f1_drop": 0.1,
+    "maximum_after_f1_excess_over_chance": 0.05,
+    "maximum_after_accuracy_excess_over_chance": 0.05,
+    "maximum_emotion_f1_drop": 0.1,
+    "large_unrelated_f1_drop": 0.2,
+    "maximum_large_unrelated_losses": 1,
+    "speaker_nested_attributes": ["gender"]
+  },
+  "reliance": {
+    "effect": "after_minus_before",
+    "control_quantiles": [0.025, 0.975],
+    "minimum_excess_magnitude": 0.01,
+    "minimum_control_target_f1_advantage": 0.05
+  },
+  "m4b": {
+    "regularization": "freeze the corresponding original M3 emotion C",
+    "maximum_modest_id_loss": 0.05,
+    "minimum_ood_gain": 0.02,
+    "minimum_gap_reduction": 0.02,
+    "require_valid_reference": true,
+    "require_all_speaker_folds_for_aggregate": true
+  },
+  "single_training_label_policy": "blocked_unidentifiable_not_identity_or_zero_effect",
+  "speaker_gate": "at_least_one_valid_statement_reference_condition",
+  "no_replication": true
+}

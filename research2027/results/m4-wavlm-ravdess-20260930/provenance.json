@@ -1,0 +1,174 @@
+{
+  "cache_fingerprint": "d99979b610d68bef",
+  "command": ".\\.venv\\Scripts\\python.exe -m mockingbird2027 intervene --config \"configs\\experiments\\m4_wavlm_ravdess.json\" --output-dir \"results\\m4-wavlm-ravdess-20260930\"",
+  "compute": {
+    "device": "cpu",
+    "system": "Windows",
+    "threads": 1
+  },
+  "config": {
+    "audit": {
+      "attributes": [
+        "emotion",
+        "statement",
+        "speaker",
+        "gender",
+        "intensity"
+      ],
+      "folds": 3,
+      "regularization": "M3 grid selected on each original diagnostic training fold, then frozen for all transformations",
+      "scope": "fresh_crossfit_within_outer_test"
+    },
+    "controls": {
+      "bisection_steps": 80,
+      "draws": 20,
+      "minimum_operator_difference": 0.001,
+      "power_bounds": [
+        -4.0,
+        4.0
+      ],
+      "recipe": "seeded covariance-power random subspaces; true removed rank and training RMS matched; same MP or LEACE geometry",
+      "relative_rms_tolerance": 1e-05
+    },
+    "m3_output_manifest_sha256": "7f82eac816dff29f3500a316a5d6125a8a2af90f95ac2556c85081aab00beb67",
+    "m3_results_commit": "8160bc8733cdbf2f03792ddee8cc4a6b1089dcff",
+    "m3_run": "results\\m3-wavlm-ravdess-20260930",
+    "m4b": {
+      "maximum_modest_id_loss": 0.05,
+      "minimum_gap_reduction": 0.02,
+      "minimum_ood_gain": 0.02,
+      "regularization": "freeze the corresponding original M3 emotion C",
+      "require_all_speaker_folds_for_aggregate": true,
+      "require_valid_reference": true
+    },
+    "methods": [
+      "mp",
+      "leace"
+    ],
+    "no_replication": true,
+    "numerics": {
+      "covariance_rtol": 1e-10,
+      "invariant_tolerance": 1e-07,
+      "rank_atol": 1e-12,
+      "rank_rtol": 1e-10
+    },
+    "protocol_file": "M4_PROTOCOL.md",
+    "reliance": {
+      "control_quantiles": [
+        0.025,
+        0.975
+      ],
+      "effect": "after_minus_before",
+      "minimum_control_target_f1_advantage": 0.05,
+      "minimum_excess_magnitude": 0.01
+    },
+    "schema_version": 1,
+    "seed": 20260930,
+    "selected_layers": {
+      "speaker": [
+        1,
+        5
+      ],
+      "statement": [
+        5,
+        12
+      ]
+    },
+    "selection_values": [
+      {
+        "layer": 5,
+        "mean_shift_gap": 0.07535856505377903,
+        "reference_macro_f1": 0.9051025240187633,
+        "target": "statement"
+      },
+      {
+        "layer": 12,
+        "mean_shift_gap": 0.20376218204580704,
+        "reference_macro_f1": 0.7908730735852958,
+        "target": "statement"
+      },
+      {
+        "layer": 1,
+        "mean_shift_gap": 0.20831989699940387,
+        "reference_macro_f1": 0.8331845243140246,
+        "target": "speaker"
+      },
+      {
+        "layer": 5,
+        "mean_shift_gap": 0.1485356278410141,
+        "reference_macro_f1": 0.9051025240187633,
+        "target": "speaker"
+      }
+    ],
+    "single_training_label_policy": "blocked_unidentifiable_not_identity_or_zero_effect",
+    "speaker_gate": "at_least_one_valid_statement_reference_condition",
+    "target_order": [
+      "statement",
+      "speaker"
+    ],
+    "validity": {
+      "large_unrelated_f1_drop": 0.2,
+      "maximum_after_accuracy_excess_over_chance": 0.05,
+      "maximum_after_f1_excess_over_chance": 0.05,
+      "maximum_emotion_f1_drop": 0.1,
+      "maximum_large_unrelated_losses": 1,
+      "minimum_before_f1_excess_over_chance": 0.1,
+      "minimum_target_f1_drop": 0.1,
+      "speaker_nested_attributes": [
+        "gender"
+      ]
+    }
+  },
+  "config_sha256": "4c76ae70753b893c3b1e8fb5fb2b9858e82c13a483ffc1ebafe5c85e0482b2be",
+  "experiment_id": "m4-wavlm-ravdess-20260930",
+  "git_branch": "research2027/m4-wavlm-ravdess",
+  "git_commit": "6d2fec6c526d0996b0b22a15236300162d6e9e3f",
+  "input_sha256": {
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\ids.npy": "878f7bf8067d66c149f22fa225fd331780bfabb9f816233e10c1f8bfe5b18660",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_00.npy": "40debb8202298f4a307e75a718a56cdd52606d6116c999f9f5b514c07350aecc",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_01.npy": "ab7f75cc7167e162f8c17b2336e9d670605f7bf7b90155ad1bac088e3e37c94e",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_02.npy": "c233c303c6e2f97ba5405e28294687cf86a5b25e6507140cae43d89af08c7663",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_03.npy": "2530c9b9edb3cf7f827e2d2f2ea1c5a96cd3e69f99d5c4234266f8d42170c8b5",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_04.npy": "1a82c3cc217800208d2ddd0204ffa7253008999b126f1604ef131fdbac270af9",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_05.npy": "3f3ae76598f004dcff6df231f73da6e11105b5891c1811073ce3e0a3e8e77893",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_06.npy": "3a3eb888ed99805ee82c956fdd9ee36ac4ac90d7dae2359b6337bdb3ff991501",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_07.npy": "4a970b386d32da50a13b03b2fd1529ff8eb2c687c2eaa391fb14e7358a225f64",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_08.npy": "fe384d0d7e5e2a2edf38b0718ea15deb4a7eafa4d8a8ef765eb17066ff3c1505",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_09.npy": "3529ddba446717277d6bacd20c6a2116b8c320e539e8c87e5b84b3ebd1486022",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_10.npy": "5e32896a3c81dae62986d290ca3a4be4acb4c6d58a3501dee6546e34fd7d71c9",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_11.npy": "9379c06323433dfb024111df8364eb01ebe8cdaecc59fac977903aa315cc12f0",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_12.npy": "c2b5d5f499126dbdbba5536ac2ed983c165781bdcf89bcf19a9951d362bc25a9",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\metadata.json": "f809777cb7110276eae45b3544efcde67c125b7dbda7552e1cc72bbd39fe6d01",
+    "artifacts\\manifests\\ravdess.parquet": "530ac1a41ce16471ec1f89da1a9541480577298032402eee8b3429fb25da013e",
+    "artifacts\\manifests\\ravdess_splits.parquet": "98dc914381135a46b0d3830a010150a2b9804dc31c33eff8a9026100a96916a9",
+    "artifacts\\reports\\ravdess_manifest_report.json": "6bb5a2f83b2ab0d7480970a70e73afc6231559b1273d2267ffc3f2408c1e1764",
+    "results\\m3-wavlm-ravdess-20260930\\cv_results.csv": "2a1112b7518e69ec57791c17794a57ad3f15f32fd887306ea744e8a32fd8fc73",
+    "results\\m3-wavlm-ravdess-20260930\\emotion_generalization.pdf": "6f42e2f1befaf34523d2085a51a1fd36bca8a5f02e63dfbd2c8c710ecf0ce709",
+    "results\\m3-wavlm-ravdess-20260930\\emotion_generalization.png": "8056a79dd2d06dfacab33c04446cc8a228d7cd52df390873cd94ddf8318d16a8",
+    "results\\m3-wavlm-ravdess-20260930\\encoding_heatmap.pdf": "2a1572e322cb5cdef2c5d5c856a9c612941e616ccdba483457bdac2513b577b6",
+    "results\\m3-wavlm-ravdess-20260930\\encoding_heatmap.png": "9c9a9d4d8e2733611be5b64d4f068524c1e250e36355c5ca9f36bb6c370dcd80",
+    "results\\m3-wavlm-ravdess-20260930\\generalization.csv": "bc4a642dcfb3ad939c40d2aa33f069bc5e24716634f64833251384bacb8e554e",
+    "results\\m3-wavlm-ravdess-20260930\\output_sha256.json": "7f82eac816dff29f3500a316a5d6125a8a2af90f95ac2556c85081aab00beb67",
+    "results\\m3-wavlm-ravdess-20260930\\predictions.parquet": "6b38ae34dad5676dc291aa810a7fcbe84260cb44fd672aa6d0fe2e492fe873a7",
+    "results\\m3-wavlm-ravdess-20260930\\probes.csv": "fdae7f0f5d4a9342eb3eaf75bb969f0e05d79712e5b233708381d6eb36b5805e",
+    "results\\m3-wavlm-ravdess-20260930\\progress.jsonl": "06dfc26df0f21273ec5207dc55927140664fa61639d6dbf670edd8a6ee2e1b89",
+    "results\\m3-wavlm-ravdess-20260930\\provenance.json": "12acd39f8d63c98609b2ed054b7538d53b2751887054520fc729a707a5dbef45",
+    "results\\m3-wavlm-ravdess-20260930\\status.json": "9b4f15c2e858c84baa9547176d2ca4c95fe1d3cddc7e5011cad470e351c77331",
+    "results\\m3-wavlm-ravdess-20260930\\summary.json": "695d4ce7771b9a53fded467abddd46f4636c58697f188f19603068b72a89f9a2",
+    "results\\m3-wavlm-ravdess-20260930\\summary.md": "0ff87413625554338bec748958ce49a50bf1e069a0612a7d78af7dfa50aa5efc",
+    "results\\m3-wavlm-ravdess-20260930\\verification.json": "0be064312c0a50483588bf2212cd71ed7341bf604f46975cd1b2aa01a80988b4"
+  },
+  "model_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+  "packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.4.6",
+    "pyarrow": "25.0.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "protocol_commit": "0017c9cbb4d04763130958df386cf0345e3d8302",
+  "protocol_sha256": "7f7e913db05346ae449b1f4a4327186c2ef1f0d37959af6a35981fe57f342a1c",
+  "python_version": "3.11.9",
+  "timestamp_utc": "2026-09-30T08:23:40.796071+00:00"
+}

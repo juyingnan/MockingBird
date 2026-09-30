@@ -1,0 +1,907 @@
+{
+  "claim_boundary": "Encoding, fixed-head sensitivity, and harmful-under-shift learning effects remain distinct.",
+  "experiment_id": "m4-wavlm-ravdess-20260930",
+  "headline": "Statement information is encoded, but no statement intervention passed the predeclared removal/collateral/control validity gate. Fixed-head changes are diagnostics, not evidence of validated reliance. Harmful-under-shift inference is unavailable; speaker expansion and M4B were gated.",
+  "milestone_state": "gated_stop",
+  "null_and_contradictory_conditions": [
+    {
+      "condition_id": "statement_L05_mp_repetition_shift_1_to_2_f0",
+      "reason": "held-out target removal failed",
+      "status": "invalid"
+    },
+    {
+      "condition_id": "statement_L05_mp_lexical_shift_1_to_2_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "statement_L05_mp_lexical_shift_2_to_1_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "statement_L05_leace_repetition_shift_1_to_2_f0",
+      "reason": "held-out target removal failed",
+      "status": "invalid"
+    },
+    {
+      "condition_id": "statement_L05_leace_lexical_shift_1_to_2_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "statement_L05_leace_lexical_shift_2_to_1_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "statement_L12_mp_repetition_shift_1_to_2_f0",
+      "reason": "held-out target removal failed",
+      "status": "invalid"
+    },
+    {
+      "condition_id": "statement_L12_mp_lexical_shift_1_to_2_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "statement_L12_mp_lexical_shift_2_to_1_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "statement_L12_leace_repetition_shift_1_to_2_f0",
+      "reason": "held-out target removal failed",
+      "status": "invalid"
+    },
+    {
+      "condition_id": "statement_L12_leace_lexical_shift_1_to_2_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "statement_L12_leace_lexical_shift_2_to_1_f0",
+      "reason": "one outer-training target label; no train-only contrast",
+      "status": "blocked_unidentifiable"
+    },
+    {
+      "condition_id": "speaker_L01_mp_repetition_shift_1_to_2_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_mp_speaker_shift_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_mp_speaker_shift_f1",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_mp_speaker_shift_f2",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_mp_speaker_shift_f3",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_mp_speaker_shift_f4",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_mp_speaker_shift_f5",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_leace_repetition_shift_1_to_2_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_leace_speaker_shift_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_leace_speaker_shift_f1",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_leace_speaker_shift_f2",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_leace_speaker_shift_f3",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_leace_speaker_shift_f4",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L01_leace_speaker_shift_f5",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_mp_repetition_shift_1_to_2_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_mp_speaker_shift_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_mp_speaker_shift_f1",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_mp_speaker_shift_f2",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_mp_speaker_shift_f3",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_mp_speaker_shift_f4",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_mp_speaker_shift_f5",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_leace_repetition_shift_1_to_2_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_leace_speaker_shift_f0",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_leace_speaker_shift_f1",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_leace_speaker_shift_f2",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_leace_speaker_shift_f3",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_leace_speaker_shift_f4",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    },
+    {
+      "condition_id": "speaker_L05_leace_speaker_shift_f5",
+      "reason": "no statement reference condition passed the frozen validity gate",
+      "status": "blocked_statement_gate"
+    }
+  ],
+  "recommendation_reason": "Resolve failed intervention validity and the train-only lexical identifiability constraint in a newly approved protocol before any encoder/dataset replication. Do not adjust the frozen primary results.",
+  "replication_recommendation": "intervention debugging",
+  "speaker_retraining_comparisons": [
+    {
+      "layer": 1,
+      "method": "mp",
+      "required_folds": 6,
+      "status": "blocked_incomplete_valid_fold_set"
+    },
+    {
+      "layer": 1,
+      "method": "leace",
+      "required_folds": 6,
+      "status": "blocked_incomplete_valid_fold_set"
+    },
+    {
+      "layer": 5,
+      "method": "mp",
+      "required_folds": 6,
+      "status": "blocked_incomplete_valid_fold_set"
+    },
+    {
+      "layer": 5,
+      "method": "leace",
+      "required_folds": 6,
+      "status": "blocked_incomplete_valid_fold_set"
+    }
+  ],
+  "targets": {
+    "speaker": {
+      "conditions": [
+        {
+          "condition_id": "speaker_L01_mp_repetition_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "repetition_shift_1_to_2",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "24"
+        },
+        {
+          "condition_id": "speaker_L01_mp_speaker_shift_f0",
+          "fold": "0",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_mp_speaker_shift_f1",
+          "fold": "1",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_mp_speaker_shift_f2",
+          "fold": "2",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_mp_speaker_shift_f3",
+          "fold": "3",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_mp_speaker_shift_f4",
+          "fold": "4",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_mp_speaker_shift_f5",
+          "fold": "5",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_leace_repetition_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "repetition_shift_1_to_2",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "24"
+        },
+        {
+          "condition_id": "speaker_L01_leace_speaker_shift_f0",
+          "fold": "0",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_leace_speaker_shift_f1",
+          "fold": "1",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_leace_speaker_shift_f2",
+          "fold": "2",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_leace_speaker_shift_f3",
+          "fold": "3",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_leace_speaker_shift_f4",
+          "fold": "4",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L01_leace_speaker_shift_f5",
+          "fold": "5",
+          "layer": "1",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_mp_repetition_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "repetition_shift_1_to_2",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "24"
+        },
+        {
+          "condition_id": "speaker_L05_mp_speaker_shift_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_mp_speaker_shift_f1",
+          "fold": "1",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_mp_speaker_shift_f2",
+          "fold": "2",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_mp_speaker_shift_f3",
+          "fold": "3",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_mp_speaker_shift_f4",
+          "fold": "4",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_mp_speaker_shift_f5",
+          "fold": "5",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_leace_repetition_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "repetition_shift_1_to_2",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "24"
+        },
+        {
+          "condition_id": "speaker_L05_leace_speaker_shift_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_leace_speaker_shift_f1",
+          "fold": "1",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_leace_speaker_shift_f2",
+          "fold": "2",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_leace_speaker_shift_f3",
+          "fold": "3",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_leace_speaker_shift_f4",
+          "fold": "4",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        },
+        {
+          "condition_id": "speaker_L05_leace_speaker_shift_f5",
+          "fold": "5",
+          "layer": "5",
+          "m4b_reason": "no statement reference condition passed the frozen validity gate",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "240",
+          "n_train": "1200",
+          "reason": "no statement reference condition passed the frozen validity gate",
+          "split_name": "speaker_shift",
+          "status": "blocked_statement_gate",
+          "target": "speaker",
+          "training_target_classes": "20"
+        }
+      ],
+      "encoded_from_m3": true,
+      "m4b_completed": 0,
+      "selected_layers": [
+        1,
+        5
+      ],
+      "status_counts": {
+        "blocked_statement_gate": 28
+      },
+      "valid_conditions": 0
+    },
+    "statement": {
+      "conditions": [
+        {
+          "collateral_valid": true,
+          "condition_id": "statement_L05_mp_repetition_shift_1_to_2_f0",
+          "emotion_probe_f1_loss": 0.005575994391789463,
+          "fixed_head_effect": 0.003267894467905541,
+          "fixed_head_interpretation": "not interpretable: failed validity/matching gate",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "held-out target removal failed",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "held-out target removal failed",
+          "removed_rank": 1,
+          "split_name": "repetition_shift_1_to_2",
+          "status": "invalid",
+          "target": "statement",
+          "target_after_accuracy": 0.6125,
+          "target_after_macro_f1": 0.6124095323175356,
+          "target_before_macro_f1": 0.9986111084319221,
+          "target_removal_valid": false,
+          "targeted_minus_random": 0.012388756501522286,
+          "training_target_classes": "2"
+        },
+        {
+          "condition_id": "statement_L05_mp_lexical_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_1_to_2",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        },
+        {
+          "condition_id": "statement_L05_mp_lexical_shift_2_to_1_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_2_to_1",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        },
+        {
+          "collateral_valid": true,
+          "condition_id": "statement_L05_leace_repetition_shift_1_to_2_f0",
+          "emotion_probe_f1_loss": 0.004797539818405472,
+          "fixed_head_effect": 0.00011594727626373924,
+          "fixed_head_interpretation": "not interpretable: failed validity/matching gate",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "held-out target removal failed",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "held-out target removal failed",
+          "removed_rank": 1,
+          "split_name": "repetition_shift_1_to_2",
+          "status": "invalid",
+          "target": "statement",
+          "target_after_accuracy": 0.6069444444444444,
+          "target_after_macro_f1": 0.6068526797342744,
+          "target_before_macro_f1": 0.9986111084319221,
+          "target_removal_valid": false,
+          "targeted_minus_random": 0.01624465364019399,
+          "training_target_classes": "2"
+        },
+        {
+          "condition_id": "statement_L05_leace_lexical_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_1_to_2",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        },
+        {
+          "condition_id": "statement_L05_leace_lexical_shift_2_to_1_f0",
+          "fold": "0",
+          "layer": "5",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_2_to_1",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        },
+        {
+          "collateral_valid": true,
+          "condition_id": "statement_L12_mp_repetition_shift_1_to_2_f0",
+          "emotion_probe_f1_loss": -0.004691279742847443,
+          "fixed_head_effect": -0.0035896393328088694,
+          "fixed_head_interpretation": "not interpretable: failed validity/matching gate",
+          "fold": "0",
+          "layer": "12",
+          "m4b_reason": "held-out target removal failed",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "held-out target removal failed",
+          "removed_rank": 1,
+          "split_name": "repetition_shift_1_to_2",
+          "status": "invalid",
+          "target": "statement",
+          "target_after_accuracy": 0.5833333333333334,
+          "target_after_macro_f1": 0.5833301182879498,
+          "target_before_macro_f1": 1.0,
+          "target_removal_valid": false,
+          "targeted_minus_random": 0.03660978544700054,
+          "training_target_classes": "2"
+        },
+        {
+          "condition_id": "statement_L12_mp_lexical_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "12",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_1_to_2",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        },
+        {
+          "condition_id": "statement_L12_mp_lexical_shift_2_to_1_f0",
+          "fold": "0",
+          "layer": "12",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "mp",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_2_to_1",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        },
+        {
+          "collateral_valid": true,
+          "condition_id": "statement_L12_leace_repetition_shift_1_to_2_f0",
+          "emotion_probe_f1_loss": -0.00720584532633417,
+          "fixed_head_effect": -0.00045848479561261257,
+          "fixed_head_interpretation": "not interpretable: failed validity/matching gate",
+          "fold": "0",
+          "layer": "12",
+          "m4b_reason": "held-out target removal failed",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "held-out target removal failed",
+          "removed_rank": 1,
+          "split_name": "repetition_shift_1_to_2",
+          "status": "invalid",
+          "target": "statement",
+          "target_after_accuracy": 0.5805555555555556,
+          "target_after_macro_f1": 0.5805555555555556,
+          "target_before_macro_f1": 1.0,
+          "target_removal_valid": false,
+          "targeted_minus_random": 0.020135671362168494,
+          "training_target_classes": "2"
+        },
+        {
+          "condition_id": "statement_L12_leace_lexical_shift_1_to_2_f0",
+          "fold": "0",
+          "layer": "12",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_1_to_2",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        },
+        {
+          "condition_id": "statement_L12_leace_lexical_shift_2_to_1_f0",
+          "fold": "0",
+          "layer": "12",
+          "m4b_reason": "one outer-training target label; no train-only contrast",
+          "m4b_status": "blocked",
+          "method": "leace",
+          "n_test": "720",
+          "n_train": "720",
+          "reason": "one outer-training target label; no train-only contrast",
+          "split_name": "lexical_shift_2_to_1",
+          "status": "blocked_unidentifiable",
+          "target": "statement",
+          "training_target_classes": "1"
+        }
+      ],
+      "encoded_from_m3": true,
+      "m4b_completed": 0,
+      "selected_layers": [
+        5,
+        12
+      ],
+      "status_counts": {
+        "blocked_unidentifiable": 8,
+        "invalid": 4
+      },
+      "valid_conditions": 0
+    }
+  }
+}
