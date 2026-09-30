@@ -1,0 +1,353 @@
+{
+  "dataset": "ravdess",
+  "duration_seconds_total": 5328.957333,
+  "emotion_counts": {
+    "angry": 192,
+    "calm": 192,
+    "disgust": 192,
+    "fearful": 192,
+    "happy": 192,
+    "neutral": 96,
+    "sad": 192,
+    "surprised": 192
+  },
+  "gender_counts": {
+    "female": 720,
+    "male": 720
+  },
+  "intensity_counts": {
+    "normal": 768,
+    "strong": 672
+  },
+  "repetition_counts": {
+    "1": 720,
+    "2": 720
+  },
+  "sample_rate_counts": {
+    "48000": 1440
+  },
+  "speaker_count": 24,
+  "speaker_emotion_counts": {
+    "actor_01": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_02": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_03": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_04": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_05": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_06": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_07": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_08": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_09": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_10": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_11": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_12": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_13": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_14": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_15": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_16": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_17": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_18": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_19": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_20": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_21": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_22": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_23": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    },
+    "actor_24": {
+      "angry": 8,
+      "calm": 8,
+      "disgust": 8,
+      "fearful": 8,
+      "happy": 8,
+      "neutral": 4,
+      "sad": 8,
+      "surprised": 8
+    }
+  },
+  "speaker_utterance_counts": {
+    "actor_01": 60,
+    "actor_02": 60,
+    "actor_03": 60,
+    "actor_04": 60,
+    "actor_05": 60,
+    "actor_06": 60,
+    "actor_07": 60,
+    "actor_08": 60,
+    "actor_09": 60,
+    "actor_10": 60,
+    "actor_11": 60,
+    "actor_12": 60,
+    "actor_13": 60,
+    "actor_14": 60,
+    "actor_15": 60,
+    "actor_16": 60,
+    "actor_17": 60,
+    "actor_18": 60,
+    "actor_19": 60,
+    "actor_20": 60,
+    "actor_21": 60,
+    "actor_22": 60,
+    "actor_23": 60,
+    "actor_24": 60
+  },
+  "splits": {
+    "attribute_audit_repetition_1_to_2:fold_0": {
+      "test": 720,
+      "train": 720
+    },
+    "gender_shift_female_to_male:fold_0": {
+      "test": 720,
+      "train": 720
+    },
+    "gender_shift_male_to_female:fold_0": {
+      "test": 720,
+      "train": 720
+    },
+    "lexical_shift_1_to_2:fold_0": {
+      "test": 720,
+      "train": 720
+    },
+    "lexical_shift_2_to_1:fold_0": {
+      "test": 720,
+      "train": 720
+    },
+    "repetition_shift_1_to_2:fold_0": {
+      "test": 720,
+      "train": 720
+    },
+    "speaker_shift:fold_0": {
+      "test": 240,
+      "train": 1200
+    },
+    "speaker_shift:fold_1": {
+      "test": 240,
+      "train": 1200
+    },
+    "speaker_shift:fold_2": {
+      "test": 240,
+      "train": 1200
+    },
+    "speaker_shift:fold_3": {
+      "test": 240,
+      "train": 1200
+    },
+    "speaker_shift:fold_4": {
+      "test": 240,
+      "train": 1200
+    },
+    "speaker_shift:fold_5": {
+      "test": 240,
+      "train": 1200
+    }
+  },
+  "statement_counts": {
+    "1": 720,
+    "2": 720
+  },
+  "utterance_count": 1440
+}

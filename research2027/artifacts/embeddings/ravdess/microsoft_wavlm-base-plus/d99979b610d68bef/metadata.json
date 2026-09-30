@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-09-04T05:57:39.443192+00:00",
+  "dataset": "ravdess",
+  "extraction_mode": "full",
+  "fingerprint": "d99979b610d68bef",
+  "hidden_size": 768,
+  "layer_count": 13,
+  "manifest_hash": "5d2ccb3e0186171261b7db154b32ad4f5d3788d3eb10cab5f44bf16afe359e63",
+  "model_id": "microsoft/wavlm-base-plus",
+  "numpy_version": "2.4.6",
+  "pooling": {
+    "accumulation_dtype": "float32",
+    "mask": "model_feature_vector_attention_mask",
+    "type": "attention_masked_mean"
+  },
+  "preprocessing": {
+    "audio": "complete_utterance",
+    "channels": "mono_mean",
+    "processor": "model_default",
+    "processor_sampling_rate_hz": 16000,
+    "resampling": "scipy.signal.resample_poly",
+    "sample_rate_hz": 16000
+  },
+  "requested_revision": "main",
+  "resolved_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+  "schema_version": 1,
+  "status": "complete",
+  "storage_dtype": "float16",
+  "torch_version": "2.14.0+cpu",
+  "transformers_version": "4.57.6",
+  "utterance_count": 1440
+}
