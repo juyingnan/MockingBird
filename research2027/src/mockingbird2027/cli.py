@@ -72,6 +72,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     intervention_parser.add_argument("--output-dir", type=Path)
     intervention_parser.add_argument("--validate-only", action="store_true")
+    validity_parser = subparsers.add_parser(
+        "validity", help="run the frozen four-arm M4-V1 validity-only experiment"
+    )
+    validity_parser.add_argument(
+        "--config", type=Path,
+        default=Path("configs") / "experiments" / "m4_validity_v1.json",
+    )
+    validity_parser.add_argument("--output-dir", type=Path)
+    validity_parser.add_argument("--validate-only", action="store_true")
     return parser
 
 
@@ -129,6 +138,10 @@ def main(argv: list[str] | None = None) -> int:
         from .analysis.m4 import run_m4
 
         run_m4(args.config, args.output_dir, validate_only=args.validate_only)
+    elif args.command == "validity":
+        from .analysis.validity import run_validity
+
+        run_validity(args.config, args.output_dir, validate_only=args.validate_only)
     return 0
 
 

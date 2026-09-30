@@ -178,9 +178,33 @@ The M4 causal chain is NOT complete.**
   No engineering/runtime failure remains, but intervention validity and the
   lexical identifiability constraint scientifically block M4 completion.
 
+## M4-V1 — Approved bounded validity-repair follow-up
+
+**Protocol and split IDs frozen; implementation tested; scientific run pending.**
+
+- Approved scope: layer 5, statement identity, and four arms only:
+  original, full-dimensional LEACE, PCA-64, and PCA-64 + LEACE.
+- Protocol/split commit: `d9fdf6575da150d0c8ce0a0ebe7070a5207137d4`.
+  [Protocol](M4_VALIDITY_V1_PROTOCOL.md) and
+  [configuration](configs/experiments/m4_validity_v1.json) predate fitting.
+- Exact independent matched-cell roles: A 720 utterances for representation
+  fitting, B 360 for probe fitting/tuning, and C 360 for final evaluation.
+  Frozen B-only CV contains 1,800 assignments and keeps entire cells together.
+- All 24 linear/nonlinear diagnostic models are frozen before C scoring.
+  Statement precision uses 10,000 paired actor-cluster bootstrap draws.
+  The 0.55 ceilings and original collateral limits are not relaxed.
+- All 70 regression tests, CLI checks, dependency checks and frozen-input
+  preflight pass. M3/M4 inputs and result bundles remain unchanged.
+
 ## Next
 
-Review M4's partial-removal diagnostics and approve a new intervention/
-lexical-identifiability protocol before continuing. Do not rerun or relax the
-frozen primary experiment, start speaker/M4B work past its failed gate, or
-begin encoder/CREMA-D replication. Keep M3 and the paper repository unchanged.
+Commit the tested runner and execute the single frozen validity study:
+
+```powershell
+.\scripts\stage2_validity.ps1 -OutputDir "results\m4-validity-v1-wavlm-ravdess-20260930"
+```
+
+Stop for review afterward, even if the validity screen passes. Do not launch
+new M4A/M4B, speaker erasure, M5, another dataset, or an additional layer/
+dimension/seed search. Preserve the failed original M4 result and do not edit
+the paper repository.
