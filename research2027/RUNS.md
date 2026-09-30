@@ -7,6 +7,7 @@ Raw manifests and encoder caches remain in ignored `artifacts/`. Versioned
 |---|---|---|---|---|---|
 | [m3-wavlm-ravdess-20260930](results/m3-wavlm-ravdess-20260930/summary.md) | 2026-09-30 | M3A + M3B | `8a9e18fed6095b73ad7c29c9a0889c5a8a38802b` | 20260930 | Complete; PARTIAL / REVIEW NEEDED gate |
 | [m4-wavlm-ravdess-20260930](results/m4-wavlm-ravdess-20260930/summary.md) | 2026-09-30 | M4A statement diagnostics; later stages gated | `6d2fec6c526d0996b0b22a15236300162d6e9e3f` | 20260930 | Gated stop; causal chain incomplete |
+| [m4-validity-v1-wavlm-ravdess-20260930](results/m4-validity-v1-wavlm-ravdess-20260930/summary.md) | 2026-09-30 | Bounded M4 validity repair only | `db0a29638d9e7b2def50a9acd5b5431e29c82540` | 20260930 | Complete; FAIL_RESIDUAL_DECODABILITY |
 
 ## m3-wavlm-ravdess-20260930
 
@@ -108,3 +109,56 @@ confusion-matrix calculations reproduce all 208 metric rows. Original
 emotion heads are unchanged; all controls match rank and training RMS.
 Held-out residual target decodability still fails the scientific validity
 gate. Read [M4_RESULTS.md](M4_RESULTS.md) before approving new work.
+
+## m4-validity-v1-wavlm-ravdess-20260930
+
+- Branch: `research2027/m4-validity-v1`.
+- Protocol and exact split/CV IDs frozen at
+  `d9fdf6575da150d0c8ce0a0ebe7070a5207137d4`; scientific code commit
+  `db0a29638d9e7b2def50a9acd5b5431e29c82540`.
+- Existing cache `d99979b610d68bef`, layer 5 only. Four arms:
+  original, LEACE, PCA-64, PCA-64 + LEACE.
+- A/B/C are 720/360/360 utterances in disjoint complete matched cells.
+  All 24 diagnostic probes are frozen before C evaluation.
+- The candidate's linear/RBF statement F1 is 0.5829/0.6663; upper bounds
+  0.6292/0.7078. Both fail the frozen 0.55 ceiling despite passing
+  collateral checks. No follow-on causal or replication experiment ran.
+- [Protocol](results/m4-validity-v1-wavlm-ravdess-20260930/protocol.md),
+  [config](results/m4-validity-v1-wavlm-ravdess-20260930/config.json),
+  [roles](results/m4-validity-v1-wavlm-ravdess-20260930/roles.parquet),
+  [B-only CV](results/m4-validity-v1-wavlm-ravdess-20260930/probe_cv.parquet),
+  [provenance](results/m4-validity-v1-wavlm-ravdess-20260930/provenance.json).
+- [24 metric rows](results/m4-validity-v1-wavlm-ravdess-20260930/metrics.csv),
+  [8,640 predictions](results/m4-validity-v1-wavlm-ravdess-20260930/predictions.parquet),
+  [72 CV candidates](results/m4-validity-v1-wavlm-ravdess-20260930/cv_results.csv),
+  [collateral comparisons](results/m4-validity-v1-wavlm-ravdess-20260930/collateral.csv).
+- [80,000 bootstrap scores](results/m4-validity-v1-wavlm-ravdess-20260930/bootstrap_scores.parquet)
+  and [10,000 common actor-cluster draws](results/m4-validity-v1-wavlm-ravdess-20260930/bootstrap_clusters.npz).
+- [Model fits](results/m4-validity-v1-wavlm-ravdess-20260930/model_fits.csv),
+  [model parameters](results/m4-validity-v1-wavlm-ravdess-20260930/models/),
+  [frozen-before-C marker](results/m4-validity-v1-wavlm-ravdess-20260930/fit_complete.json),
+  [model integrity](results/m4-validity-v1-wavlm-ravdess-20260930/model_integrity.csv),
+  [phase times](results/m4-validity-v1-wavlm-ravdess-20260930/phase_times.json).
+- [Representation parameters](results/m4-validity-v1-wavlm-ravdess-20260930/representation_parameters.npz)
+  and [training covariance diagnostics](results/m4-validity-v1-wavlm-ravdess-20260930/transform_diagnostics.csv).
+  SVM snapshots store support-row indices and hashes, not copied embeddings.
+- Figures, each with a PDF counterpart:
+  [statement validity and upper bounds](results/m4-validity-v1-wavlm-ravdess-20260930/statement_validity.png),
+  [attribute information](results/m4-validity-v1-wavlm-ravdess-20260930/attribute_information.png).
+- [Decision](results/m4-validity-v1-wavlm-ravdess-20260930/decision.json),
+  [verification](results/m4-validity-v1-wavlm-ravdess-20260930/verification.json),
+  [completion marker](results/m4-validity-v1-wavlm-ravdess-20260930/status.json),
+  [checksums](results/m4-validity-v1-wavlm-ravdess-20260930/output_sha256.json).
+
+Exact launch from `research2027`:
+
+```powershell
+.\scripts\stage2_validity.ps1 -OutputDir "results\m4-validity-v1-wavlm-ravdess-20260930"
+```
+
+Runtime about 10 seconds on CPU; exit code 0. All 70 regression tests and
+preflight/dependency checks pass. Independent confusion-matrix and binary
+cluster-bootstrap calculations reproduce every published score/bound.
+All 164 input hashes and 49 output payload hashes match. M3/M4 remain
+unchanged. Read [M4_VALIDITY_V1_RESULTS.md](M4_VALIDITY_V1_RESULTS.md) for the
+failure interpretation and approved stopping recommendation.

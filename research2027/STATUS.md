@@ -180,7 +180,7 @@ The M4 causal chain is NOT complete.**
 
 ## M4-V1 — Approved bounded validity-repair follow-up
 
-**Protocol and split IDs frozen; implementation tested; scientific run pending.**
+**Complete. Decision: FAIL_RESIDUAL_DECODABILITY. No downstream expansion.**
 
 - Approved scope: layer 5, statement identity, and four arms only:
   original, full-dimensional LEACE, PCA-64, and PCA-64 + LEACE.
@@ -195,16 +195,31 @@ The M4 causal chain is NOT complete.**
   The 0.55 ceilings and original collateral limits are not relaxed.
 - All 70 regression tests, CLI checks, dependency checks and frozen-input
   preflight pass. M3/M4 inputs and result bundles remain unchanged.
+- Run `m4-validity-v1-wavlm-ravdess-20260930` used code commit
+  `db0a29638d9e7b2def50a9acd5b5431e29c82540`, completed all four arms and
+  24 models in about 10 seconds on CPU, and exited 0.
+- Primary PCA-64 + LEACE statement results on C: linear F1 0.5829,
+  accuracy 0.5833, upper bounds 0.6292/0.6306; RBF-SVM F1 0.6663,
+  accuracy 0.6667, upper bounds 0.7078/0.7083. Both point estimates and
+  upper bounds exceed the unchanged 0.55 ceiling.
+- Full-dimensional LEACE has linear/RBF F1 0.6580/0.7722; PCA-only
+  retains F1 0.9944/0.9917. The bottleneck helped but did not validate
+  held-out erasure. Its positive-support covariance condition is 85.33
+  versus about 5.37e7 in the full-dimensional training estimate.
+- All collateral checks pass; total emotion diagnostic F1 change is
+  -0.0353 versus the new split's original-representation probe.
+- Saved and verified 24 metric rows, 8,640 predictions, 72 CV candidates,
+  80,000 bootstrap score rows, model parameters, figures and hashes.
+  Independent calculations reproduce all metrics/bounds; all 164 input
+  and 49 output payload hashes match.
+- Full interpretation and boundaries:
+  [M4_VALIDITY_V1_RESULTS.md](M4_VALIDITY_V1_RESULTS.md).
 
 ## Next
 
-Commit the tested runner and execute the single frozen validity study:
-
-```powershell
-.\scripts\stage2_validity.ps1 -OutputDir "results\m4-validity-v1-wavlm-ravdess-20260930"
-```
-
-Stop for review afterward, even if the validity screen passes. Do not launch
-new M4A/M4B, speaker erasure, M5, another dataset, or an additional layer/
-dimension/seed search. Preserve the failed original M4 result and do not edit
-the paper repository.
+Stop the approved bounded experiment here. Consolidate the encoding/
+generalization audit and M4 validity-failure analysis for the October 12
+deadline rather than trying additional dimensions, layers, seeds or methods.
+Reliance and harmful use remain unresolved. New M4A/M4B, speaker erasure,
+M5 or another dataset require separately reviewed approval. Preserve all
+existing results; no paper edits are authorized by this execution.

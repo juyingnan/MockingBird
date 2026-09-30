@@ -1,0 +1,9 @@
+{
+  "downstream_experiments_started": false,
+  "exit_code": 0,
+  "finished_at_utc": "2026-09-30T17:21:52.882971+00:00",
+  "planned_models": 24,
+  "scope": "validity_only",
+  "status": "complete",
+  "validity_decision": "FAIL_RESIDUAL_DECODABILITY"
+}

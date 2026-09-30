@@ -1,0 +1,75 @@
+{
+  "claim_boundary": "Conditional decodability evidence for the specified probes on an explored corpus; not zero mutual information, original-M3-head reliance, harmful use, or unseen-speaker replication.",
+  "collateral": [
+    {
+      "after_arm": "pca64",
+      "before_arm": "original",
+      "delta_macro_f1": {
+        "emotion": -0.04106227562285092,
+        "gender": 0.0,
+        "intensity": -0.03722593630679971,
+        "speaker": -0.00478456859243559,
+        "statement": 0.0027778420786854774
+      },
+      "large_unrelated_losses": [],
+      "pass": true
+    },
+    {
+      "after_arm": "pca64_leace",
+      "before_arm": "pca64",
+      "delta_macro_f1": {
+        "emotion": 0.005744524055180555,
+        "gender": 0.0,
+        "intensity": 0.005149580826188993,
+        "speaker": 0.0032485079575597098,
+        "statement": -0.41157458904956123
+      },
+      "large_unrelated_losses": [],
+      "pass": true
+    },
+    {
+      "after_arm": "pca64_leace",
+      "before_arm": "original",
+      "delta_macro_f1": {
+        "emotion": -0.035317751567670363,
+        "gender": 0.0,
+        "intensity": -0.03207635548061072,
+        "speaker": -0.0015360606348758798,
+        "statement": -0.40879674697087576
+      },
+      "large_unrelated_losses": [],
+      "pass": true
+    }
+  ],
+  "decision": "FAIL_RESIDUAL_DECODABILITY",
+  "next_action": "Preserve this bounded result and consolidate M4 failure/limitation analysis; no additional dimension, layer, seed or method search.",
+  "nonlinear_veto": false,
+  "pca_alone_meets_absence_screen": false,
+  "primary_arm": "pca64_leace",
+  "probe_checks": {
+    "linear": {
+      "accuracy": 0.5833333333333334,
+      "accuracy_upper_95": 0.6305555555555555,
+      "drop_pass": true,
+      "macro_f1": 0.5828698553948832,
+      "macro_f1_upper_95": 0.6292368220183405,
+      "original_competent": true,
+      "pca_only_competent": true,
+      "point_pass": false,
+      "precision_pass": false,
+      "target_f1_drop": 0.41157458904956123
+    },
+    "rbf_svm": {
+      "accuracy": 0.6666666666666666,
+      "accuracy_upper_95": 0.7083333333333334,
+      "drop_pass": true,
+      "macro_f1": 0.6662958843159066,
+      "macro_f1_upper_95": 0.7077821625887923,
+      "original_competent": true,
+      "pca_only_competent": true,
+      "point_pass": false,
+      "precision_pass": false,
+      "target_f1_drop": 0.32537020360686586
+    }
+  }
+}

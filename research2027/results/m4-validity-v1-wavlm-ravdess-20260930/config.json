@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "study": "M4-V1 validity only; not reliance, retraining benefit, or replication",
+  "protocol_file": "M4_VALIDITY_V1_PROTOCOL.md",
+  "m3_run": "results\\m3-wavlm-ravdess-20260930",
+  "m3_output_manifest_sha256": "7f82eac816dff29f3500a316a5d6125a8a2af90f95ac2556c85081aab00beb67",
+  "m4_run": "results\\m4-wavlm-ravdess-20260930",
+  "m4_output_manifest_sha256": "7d5fd5b2a3f7b09aa25a69a37de346f8ea6254c83cf9c3ae987fea4136435022",
+  "cache_fingerprint": "d99979b610d68bef",
+  "layer": 5,
+  "target": "statement",
+  "seed": 20260930,
+  "roles_file": "configs\\experiments\\m4_validity_v1_roles.parquet",
+  "roles_sha256": "1dfed7b7f4725612bbd6b3f4d75cf9f5deae4cd025aa7e516cdcb4a933c4ddf5",
+  "cv_file": "configs\\experiments\\m4_validity_v1_cv.parquet",
+  "cv_sha256": "eca66d8287fc11d409fb9e60f1a9427091c169ec896d569c25e9c37fbffab26c",
+  "arms": ["original", "leace", "pca64", "pca64_leace"],
+  "attributes": ["emotion", "speaker", "statement", "gender", "intensity"],
+  "pca": {"components": 64, "svd_solver": "full", "whiten": false},
+  "linear_probe": {
+    "c_grid": [0.01, 0.1, 1.0],
+    "cv_folds": 3,
+    "seed": 20260930,
+    "max_iter": 2000,
+    "tol": 0.0001
+  },
+  "rbf_probe": {
+    "c_grid": [0.1, 1.0, 10.0],
+    "gamma_rule": "1 / input dimension after B-training-only StandardScaler",
+    "tol": 0.001,
+    "max_iter": 20000,
+    "probability": false
+  },
+  "numerics": {
+    "covariance_rtol": 1e-10,
+    "rank_rtol": 1e-10,
+    "rank_atol": 1e-12,
+    "invariant_tolerance": 1e-7
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed_sequence": [20260930, 4201],
+    "cluster": "speaker_id",
+    "quantile": 0.95,
+    "quantile_method": "linear",
+    "scope": "statement only; same cluster draws for all four arms and both probes; no refitting"
+  },
+  "validity": {
+    "before_min_macro_f1": 0.6,
+    "minimum_target_f1_drop": 0.1,
+    "after_max_macro_f1": 0.55,
+    "after_max_accuracy": 0.55,
+    "upper_confidence_ceiling": 0.55,
+    "maximum_emotion_f1_drop": 0.1,
+    "large_unrelated_f1_drop": 0.2,
+    "maximum_large_unrelated_losses": 1,
+    "collateral_comparisons": [
+      ["original", "pca64"],
+      ["pca64", "pca64_leace"],
+      ["original", "pca64_leace"]
+    ]
+  },
+  "primary_arm": "pca64_leace",
+  "incremental_reference": "pca64",
+  "fit_all_models_before_evaluating_C": true,
+  "no_downstream_expansion": true
+}

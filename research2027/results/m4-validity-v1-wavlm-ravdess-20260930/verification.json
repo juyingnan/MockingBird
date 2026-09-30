@@ -1,0 +1,14 @@
+{
+  "all_24_models_frozen_before_C": true,
+  "all_bootstrap_counts_and_scores_recomputed": true,
+  "all_grouped_roles_and_CV_verified": true,
+  "all_post_evaluation_model_hashes_unchanged": true,
+  "bootstrap_score_rows": 80000,
+  "cv_candidate_rows": 72,
+  "gate_recomputed_without_threshold_changes": true,
+  "maximum_probability_sum_error": 4.440892098500626e-16,
+  "maximum_score_or_bound_recomputation_error": 0.0,
+  "metric_rows": 24,
+  "prediction_rows": 8640,
+  "status": "pass"
+}

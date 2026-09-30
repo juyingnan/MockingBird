@@ -1,0 +1,3 @@
+arm,fit_role,n_fit,fit_ids_sha256,removed_rank,covariance_support_rank,covariance_min_positive_eigenvalue,covariance_max_eigenvalue,effective_covariance_condition,training_cross_covariance_residual
+leace,A,720,fe87aef3fc9d203150c7b144fa62a71b37a315f101981820be8f40efae0ee9aa,1,719,2.441168766216475e-06,131.08964919373634,53699543.84469285,4.251408636676156e-15
+pca64_leace,A,720,fe87aef3fc9d203150c7b144fa62a71b37a315f101981820be8f40efae0ee9aa,1,64,1.53628943674995,131.08964919373642,85.32874473905068,2.971818026924589e-15
