@@ -2,3 +2,4 @@
 results/** -text whitespace=cr-at-eol
 configs/experiments/m3_wavlm_ravdess.json text eol=crlf
 configs/experiments/m4_wavlm_ravdess.json text eol=crlf
+configs/experiments/m4_validity_v1.json text eol=crlf
