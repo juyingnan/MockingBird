@@ -1,0 +1,16 @@
+{
+  "manifest": "artifacts\\manifests\\ravdess.parquet",
+  "splits": "artifacts\\manifests\\ravdess_splits.parquet",
+  "manifest_report": "artifacts\\reports\\ravdess_manifest_report.json",
+  "cache": "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef",
+  "expected_fingerprint": "d99979b610d68bef",
+  "expected_splits_sha256": "98dc914381135a46b0d3830a010150a2b9804dc31c33eff8a9026100a96916a9",
+  "probe": {
+    "c_grid": [0.01, 0.1, 1.0],
+    "cv_folds": 3,
+    "seed": 20260930,
+    "max_iter": 2000,
+    "tol": 0.0001
+  },
+  "gate_policy": "Descriptive review only: no numerical meaningful-effect threshold was specified in the paper plan. Do not automatically authorize M4."
+}

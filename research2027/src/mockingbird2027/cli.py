@@ -51,6 +51,18 @@ def build_parser() -> argparse.ArgumentParser:
     wavlm_parser.add_argument(
         "--smoke-only", action="store_true", help="validate only the smoke cache"
     )
+    probe_parser = subparsers.add_parser(
+        "probe", help="run M3 only from the validated WavLM/RAVDESS cache"
+    )
+    probe_parser.add_argument(
+        "--config", type=Path,
+        default=Path("configs") / "experiments" / "m3_wavlm_ravdess.json",
+        help="predeclared M3 JSON configuration; run from research2027",
+    )
+    probe_parser.add_argument("--output-dir", type=Path, help="new results directory")
+    probe_parser.add_argument(
+        "--validate-only", action="store_true", help="check inputs without fitting probes"
+    )
     return parser
 
 
@@ -100,9 +112,12 @@ def main(argv: list[str] | None = None) -> int:
                 f"({full_result.layer_count} layers, "
                 f"{full_result.utterance_count}x{full_result.hidden_size})"
             )
+    elif args.command == "probe":
+        from .analysis.m3 import run_m3
+
+        run_m3(args.config, args.output_dir, validate_only=args.validate_only)
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

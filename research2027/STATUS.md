@@ -100,6 +100,26 @@
   that mixed attention-mask types are deprecated. Neither warning caused a
   validation failure.
 
+## M3 — Probe map and controlled OOD baseline
+
+**Implementation and synthetic checks ready; scientific run pending.**
+
+- Reused and validated the transferred M1/M2 bundle without audio access or
+  encoder inference: exact cache `d99979b610d68bef`, manifest identity,
+  1,440 utterances, 13 x 768 finite float16 states, and all 12 split groups.
+- Added training-only standardized logistic probes with a common small C grid,
+  deterministic inner CV, speaker-grouped tuning for speaker shifts, and
+  explicit failure on non-convergence.
+- Added complete result tables, saved predictions, CV scores, provenance,
+  table-driven figures, prediction/metric verification and review-only gate
+  reporting. Results cannot overwrite an existing run.
+- The pre-run [M3 protocol](M3_RESULTS.md) records seeds, selection conventions,
+  baseline/gap definitions and interpretation limits.
+- Validation: all 34 M0-M3 tests and CLI smoke checks pass; `pip check` passes.
+  The real-input `stage1_probe.ps1 -ValidateOnly` check also passes.
+
 ## Next
 
-M1 and M2 are complete. Stop here; M3 has not been started.
+Run the full M3 command from `M3_RESULTS.md` after the implementation is
+committed. Review M3A/M3B before any M4 work. The paper repository remains
+unchanged; no M3 scientific result has been claimed yet.

@@ -24,10 +24,9 @@ if ($LASTEXITCODE -ne 0) {
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
-& $python -m pip install --editable "$projectRoot[dev,wavlm]"
+& $python -m pip install --editable "$projectRoot[dev,wavlm,probes]"
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
 Write-Host "Environment ready: $venvPath"
-
