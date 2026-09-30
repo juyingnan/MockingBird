@@ -63,6 +63,15 @@ def build_parser() -> argparse.ArgumentParser:
     probe_parser.add_argument(
         "--validate-only", action="store_true", help="check inputs without fitting probes"
     )
+    intervention_parser = subparsers.add_parser(
+        "intervene", help="run frozen-protocol M4 with validity and identifiability gates"
+    )
+    intervention_parser.add_argument(
+        "--config", type=Path,
+        default=Path("configs") / "experiments" / "m4_wavlm_ravdess.json",
+    )
+    intervention_parser.add_argument("--output-dir", type=Path)
+    intervention_parser.add_argument("--validate-only", action="store_true")
     return parser
 
 
@@ -116,6 +125,10 @@ def main(argv: list[str] | None = None) -> int:
         from .analysis.m3 import run_m3
 
         run_m3(args.config, args.output_dir, validate_only=args.validate_only)
+    elif args.command == "intervene":
+        from .analysis.m4 import run_m4
+
+        run_m4(args.config, args.output_dir, validate_only=args.validate_only)
     return 0
 
 

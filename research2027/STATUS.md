@@ -137,9 +137,36 @@
   Artifact index: [RUNS.md](RUNS.md). No known missing M3 outputs or runtime
   failures remain.
 
+## M4 — Reliance and harmful-under-shift experiments
+
+**Authorized by the user; protocol frozen, implementation tested, scientific
+run pending.**
+
+- Frozen protocol commit: `0017c9cbb4d04763130958df386cf0345e3d8302`.
+  [Protocol](M4_PROTOCOL.md) and
+  [configuration](configs/experiments/m4_wavlm_ravdess.json) predate all
+  real-data interventions.
+- M3-only selected layers: statement 5/12, speaker 1/5. M3 inputs and all
+  result checksums have been revalidated and remain unchanged.
+- Eight lexical OOD conditions are unidentifiable: each original training
+  split contains only one statement label. They remain explicit blocked
+  conditions; no test-data eraser or alternate split is substituted.
+- Added reusable float64 MP/LEACE erasers, true-rank/RMS-matched random
+  controls, fresh cross-fitted held-out attribute diagnostics, immutable
+  fixed-head checks, separately gated retraining, saved predictions,
+  verification, and table-derived figures.
+- All 54 M0-M4 tests, CLI smoke checks, `pip check`, and
+  `stage2_intervene.ps1 -ValidateOnly` pass.
+
 ## Next
 
-Review the completed M3A/M3B tables, figures and gate with the user/advisor.
-Do not start M4, CREMA-D or another encoder without explicit approval.
-The paper repository is unchanged; ledger/claim synchronization waits for
-human review. Do not rerun extraction or overwrite the completed result bundle.
+Commit the M4 implementation, then run the statement diagnostic block:
+
+```powershell
+.\scripts\stage2_intervene.ps1 -OutputDir "results\m4-wavlm-ravdess-20260930"
+```
+
+Only validated conditions may advance to M4B. Speaker work is gated on at
+least one valid statement intervention. Preserve all negative/blocked
+conditions and stop instead of adjusting the frozen protocol. No paper edits,
+encoder replication, CREMA-D, or cache extraction are authorized.

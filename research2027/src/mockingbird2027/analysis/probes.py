@@ -75,20 +75,7 @@ def fit_probe(
     if features.ndim != 2 or len(features) != len(labels) or not np.isfinite(features).all():
         raise ValueError("probe features must be finite and aligned with training labels")
     folds = inner_splits(labels, config, groups)
-    pipeline = Pipeline(
-        [
-            ("standardize", StandardScaler()),
-            (
-                "classifier",
-                LogisticRegression(
-                    solver="lbfgs",
-                    max_iter=config.max_iter,
-                    tol=config.tol,
-                    random_state=config.seed,
-                ),
-            ),
-        ]
-    )
+    pipeline = make_probe_pipeline(config, c=1.0)
     search = GridSearchCV(
         pipeline,
         {"classifier__C": list(config.c_grid)},
@@ -105,6 +92,40 @@ def fit_probe(
         warnings.simplefilter("error", ConvergenceWarning)
         search.fit(np.asarray(features, dtype=np.float64), labels)
     return search
+
+
+def make_probe_pipeline(config: ProbeConfig, *, c: float) -> Pipeline:
+    if not np.isfinite(c) or c <= 0:
+        raise ValueError("probe C must be finite and positive")
+    return Pipeline(
+        [
+            ("standardize", StandardScaler()),
+            (
+                "classifier",
+                LogisticRegression(
+                    C=c,
+                    solver="lbfgs",
+                    max_iter=config.max_iter,
+                    tol=config.tol,
+                    random_state=config.seed,
+                ),
+            ),
+        ]
+    )
+
+
+def fit_fixed_probe(
+    features: np.ndarray, labels: np.ndarray, config: ProbeConfig, *, c: float
+) -> Pipeline:
+    if features.ndim != 2 or len(features) != len(labels) or not np.isfinite(features).all():
+        raise ValueError("probe features must be finite and aligned with training labels")
+    if len(np.unique(labels)) < 2:
+        raise ValueError("a probe requires at least two training classes")
+    pipeline = make_probe_pipeline(config, c=c)
+    with threadpool_limits(limits=1), warnings.catch_warnings():
+        warnings.simplefilter("error", ConvergenceWarning)
+        pipeline.fit(np.asarray(features, dtype=np.float64), labels)
+    return pipeline
 
 
 def classification_metrics(
