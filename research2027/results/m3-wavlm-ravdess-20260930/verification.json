@@ -1,0 +1,11 @@
+{
+  "cv_candidate_rows": 507,
+  "distinct_model_fits": 169,
+  "generalization_rows": 117,
+  "held_out_ids_and_gold_labels_match_persisted_inputs": true,
+  "maximum_metric_recomputation_error": 0.0,
+  "maximum_probability_sum_error": 5.551115123125783e-16,
+  "prediction_rows": 93600,
+  "probe_rows": 65,
+  "status": "pass"
+}

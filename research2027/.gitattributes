@@ -1,0 +1,3 @@
+# Preserve the bytes covered by the run's SHA-256 provenance.
+results/** -text whitespace=cr-at-eol
+configs/experiments/m3_wavlm_ravdess.json text eol=crlf

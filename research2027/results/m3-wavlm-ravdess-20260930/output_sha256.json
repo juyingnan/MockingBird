@@ -1,0 +1,15 @@
+{
+  "cv_results.csv": "2a1112b7518e69ec57791c17794a57ad3f15f32fd887306ea744e8a32fd8fc73",
+  "emotion_generalization.pdf": "6f42e2f1befaf34523d2085a51a1fd36bca8a5f02e63dfbd2c8c710ecf0ce709",
+  "emotion_generalization.png": "8056a79dd2d06dfacab33c04446cc8a228d7cd52df390873cd94ddf8318d16a8",
+  "encoding_heatmap.pdf": "2a1572e322cb5cdef2c5d5c856a9c612941e616ccdba483457bdac2513b577b6",
+  "encoding_heatmap.png": "9c9a9d4d8e2733611be5b64d4f068524c1e250e36355c5ca9f36bb6c370dcd80",
+  "generalization.csv": "bc4a642dcfb3ad939c40d2aa33f069bc5e24716634f64833251384bacb8e554e",
+  "predictions.parquet": "6b38ae34dad5676dc291aa810a7fcbe84260cb44fd672aa6d0fe2e492fe873a7",
+  "probes.csv": "fdae7f0f5d4a9342eb3eaf75bb969f0e05d79712e5b233708381d6eb36b5805e",
+  "progress.jsonl": "06dfc26df0f21273ec5207dc55927140664fa61639d6dbf670edd8a6ee2e1b89",
+  "provenance.json": "12acd39f8d63c98609b2ed054b7538d53b2751887054520fc729a707a5dbef45",
+  "summary.json": "695d4ce7771b9a53fded467abddd46f4636c58697f188f19603068b72a89f9a2",
+  "summary.md": "0ff87413625554338bec748958ce49a50bf1e069a0612a7d78af7dfa50aa5efc",
+  "verification.json": "0be064312c0a50483588bf2212cd71ed7341bf604f46975cd1b2aa01a80988b4"
+}

@@ -1,0 +1,98 @@
+{
+  "cache_metadata": {
+    "created_at_utc": "2026-09-04T05:57:39.443192+00:00",
+    "dataset": "ravdess",
+    "extraction_mode": "full",
+    "fingerprint": "d99979b610d68bef",
+    "hidden_size": 768,
+    "layer_count": 13,
+    "manifest_hash": "5d2ccb3e0186171261b7db154b32ad4f5d3788d3eb10cab5f44bf16afe359e63",
+    "model_id": "microsoft/wavlm-base-plus",
+    "numpy_version": "2.4.6",
+    "pooling": {
+      "accumulation_dtype": "float32",
+      "mask": "model_feature_vector_attention_mask",
+      "type": "attention_masked_mean"
+    },
+    "preprocessing": {
+      "audio": "complete_utterance",
+      "channels": "mono_mean",
+      "processor": "model_default",
+      "processor_sampling_rate_hz": 16000,
+      "resampling": "scipy.signal.resample_poly",
+      "sample_rate_hz": 16000
+    },
+    "requested_revision": "main",
+    "resolved_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "schema_version": 1,
+    "status": "complete",
+    "storage_dtype": "float16",
+    "torch_version": "2.14.0+cpu",
+    "transformers_version": "4.57.6",
+    "utterance_count": 1440
+  },
+  "command": ".\\.venv\\Scripts\\python.exe -m mockingbird2027 probe --config \"configs\\experiments\\m3_wavlm_ravdess.json\" --output-dir \"results\\m3-wavlm-ravdess-20260930\"",
+  "compute": {
+    "architecture": "AMD64",
+    "device": "cpu",
+    "fit_threads": 1,
+    "system": "Windows"
+  },
+  "config": {
+    "cache": "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef",
+    "expected_fingerprint": "d99979b610d68bef",
+    "expected_splits_sha256": "98dc914381135a46b0d3830a010150a2b9804dc31c33eff8a9026100a96916a9",
+    "gate_policy": "Descriptive review only: no numerical meaningful-effect threshold was specified in the paper plan. Do not automatically authorize M4.",
+    "manifest": "artifacts\\manifests\\ravdess.parquet",
+    "manifest_report": "artifacts\\reports\\ravdess_manifest_report.json",
+    "probe": {
+      "c_grid": [
+        0.01,
+        0.1,
+        1.0
+      ],
+      "cv_folds": 3,
+      "max_iter": 2000,
+      "seed": 20260930,
+      "tol": 0.0001
+    },
+    "splits": "artifacts\\manifests\\ravdess_splits.parquet"
+  },
+  "config_sha256": "4d5252e496632fb616648c226de1803b927be52fcc3a9777ec3f60b03d796bb6",
+  "experiment_id": "m3-wavlm-ravdess-20260930",
+  "git_branch": "research2027/m3-wavlm-ravdess",
+  "git_commit": "8a9e18fed6095b73ad7c29c9a0889c5a8a38802b",
+  "input_sha256": {
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\ids.npy": "878f7bf8067d66c149f22fa225fd331780bfabb9f816233e10c1f8bfe5b18660",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_00.npy": "40debb8202298f4a307e75a718a56cdd52606d6116c999f9f5b514c07350aecc",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_01.npy": "ab7f75cc7167e162f8c17b2336e9d670605f7bf7b90155ad1bac088e3e37c94e",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_02.npy": "c233c303c6e2f97ba5405e28294687cf86a5b25e6507140cae43d89af08c7663",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_03.npy": "2530c9b9edb3cf7f827e2d2f2ea1c5a96cd3e69f99d5c4234266f8d42170c8b5",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_04.npy": "1a82c3cc217800208d2ddd0204ffa7253008999b126f1604ef131fdbac270af9",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_05.npy": "3f3ae76598f004dcff6df231f73da6e11105b5891c1811073ce3e0a3e8e77893",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_06.npy": "3a3eb888ed99805ee82c956fdd9ee36ac4ac90d7dae2359b6337bdb3ff991501",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_07.npy": "4a970b386d32da50a13b03b2fd1529ff8eb2c687c2eaa391fb14e7358a225f64",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_08.npy": "fe384d0d7e5e2a2edf38b0718ea15deb4a7eafa4d8a8ef765eb17066ff3c1505",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_09.npy": "3529ddba446717277d6bacd20c6a2116b8c320e539e8c87e5b84b3ebd1486022",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_10.npy": "5e32896a3c81dae62986d290ca3a4be4acb4c6d58a3501dee6546e34fd7d71c9",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_11.npy": "9379c06323433dfb024111df8364eb01ebe8cdaecc59fac977903aa315cc12f0",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\layer_12.npy": "c2b5d5f499126dbdbba5536ac2ed983c165781bdcf89bcf19a9951d362bc25a9",
+    "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef\\metadata.json": "f809777cb7110276eae45b3544efcde67c125b7dbda7552e1cc72bbd39fe6d01",
+    "artifacts\\manifests\\ravdess.parquet": "530ac1a41ce16471ec1f89da1a9541480577298032402eee8b3429fb25da013e",
+    "artifacts\\manifests\\ravdess_splits.parquet": "98dc914381135a46b0d3830a010150a2b9804dc31c33eff8a9026100a96916a9",
+    "artifacts\\reports\\ravdess_manifest_report.json": "6bb5a2f83b2ab0d7480970a70e73afc6231559b1273d2267ffc3f2408c1e1764"
+  },
+  "packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.4.6",
+    "pyarrow": "25.0.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0",
+    "torch": "2.14.0",
+    "transformers": "4.57.6"
+  },
+  "python_version": "3.11.9",
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-30T07:04:43.830876+00:00"
+}

@@ -102,7 +102,7 @@
 
 ## M3 — Probe map and controlled OOD baseline
 
-**Implementation and synthetic checks ready; scientific run pending.**
+**Complete; gate is PARTIAL / REVIEW NEEDED. M4 has not started.**
 
 - Reused and validated the transferred M1/M2 bundle without audio access or
   encoder inference: exact cache `d99979b610d68bef`, manifest identity,
@@ -117,9 +117,29 @@
   baseline/gap definitions and interpretation limits.
 - Validation: all 34 M0-M3 tests and CLI smoke checks pass; `pip check` passes.
   The real-input `stage1_probe.ps1 -ValidateOnly` check also passes.
+- Completed run `m3-wavlm-ravdess-20260930` from code commit
+  `8a9e18fed6095b73ad7c29c9a0889c5a8a38802b`, seed `20260930`, in about
+  319 seconds on CPU. All 13 layers finished with exit code 0.
+- Saved 65 audit rows, 117 generalization rows, 507 CV-candidate rows,
+  93,600 held-out prediction records, PNG/PDF figures and complete provenance.
+  Every saved score was recomputed against persisted test IDs; all input and
+  output checksums match.
+- Best emotion reference: layer 5, macro-F1 0.9051. Speaker encoding peaks
+  at layer 4 (0.9958); statement encoding first reaches 1.0000 at layer 3.
+- At layer 5, lexical macro-F1 is 0.8156 / 0.8439 (gaps +0.0895 / +0.0612);
+  speaker-fold mean is 0.7566 (gap +0.1485; fold range 0.6891-0.8088).
+  Speaker-shift mean peaks at layer 6 (0.7666). Both lexical directions and
+  the speaker mean have positive gaps at every layer.
+- The directional gate screens have supporting descriptive evidence, but no
+  numerical meaningful-effect threshold was predeclared. Human review remains
+  required; these results do not establish reliance or harmful use.
+- Full results, caveats and commands: [M3_RESULTS.md](M3_RESULTS.md).
+  Artifact index: [RUNS.md](RUNS.md). No known missing M3 outputs or runtime
+  failures remain.
 
 ## Next
 
-Run the full M3 command from `M3_RESULTS.md` after the implementation is
-committed. Review M3A/M3B before any M4 work. The paper repository remains
-unchanged; no M3 scientific result has been claimed yet.
+Review the completed M3A/M3B tables, figures and gate with the user/advisor.
+Do not start M4, CREMA-D or another encoder without explicit approval.
+The paper repository is unchanged; ledger/claim synchronization waits for
+human review. Do not rerun extraction or overwrite the completed result bundle.
