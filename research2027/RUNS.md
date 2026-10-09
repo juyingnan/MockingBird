@@ -8,7 +8,7 @@ Raw manifests and encoder caches remain in ignored `artifacts/`. Versioned
 | [m3-wavlm-ravdess-20260930](results/m3-wavlm-ravdess-20260930/summary.md) | 2026-09-30 | M3A + M3B | `8a9e18fed6095b73ad7c29c9a0889c5a8a38802b` | 20260930 | Complete; PARTIAL / REVIEW NEEDED gate |
 | [m4-wavlm-ravdess-20260930](results/m4-wavlm-ravdess-20260930/summary.md) | 2026-09-30 | M4A statement diagnostics; later stages gated | `6d2fec6c526d0996b0b22a15236300162d6e9e3f` | 20260930 | Gated stop; causal chain incomplete |
 | [m4-validity-v1-wavlm-ravdess-20260930](results/m4-validity-v1-wavlm-ravdess-20260930/summary.md) | 2026-09-30 | Bounded M4 validity repair only | `db0a29638d9e7b2def50a9acd5b5431e29c82540` | 20260930 | Complete; FAIL_RESIDUAL_DECODABILITY |
-| [das-statement-wavlm-ravdess-20261008](results/das-statement-wavlm-ravdess-20261008/summary.md) | 2026-10-09 | Exploratory post-freeze DAS validity only | `f3e4b22d36dd8f4974610b5d851059b2855f2032` | 20261008 / 20261009 | Complete; FAIL_RESIDUAL_DECODABILITY; local publication handoff |
+| [das-statement-wavlm-ravdess-20261008](results/das-statement-wavlm-ravdess-20261008/summary.md) | 2026-10-09 | Exploratory post-freeze DAS validity only | `f3e4b22d36dd8f4974610b5d851059b2855f2032` | 20261008 / 20261009 | Complete; FAIL_RESIDUAL_DECODABILITY; published upstream |
 
 ## m3-wavlm-ravdess-20260930
 

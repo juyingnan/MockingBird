@@ -257,8 +257,12 @@ existing results; no paper edits are authorized by this execution.
   4.03 s, CPU with one numerical thread. All 30 metrics, 10,800 predictions
   and 100,000 bootstrap scores recompute with error zero; 212 input hashes
   checked. The original cached representations and bundles are unchanged.
-- Local commits are available; the attempted push to the requested fork
-  was rejected for lack of write permission. Do not claim remote publication.
+- Published to the authoritative upstream on
+  [research2027/das-statement-subspace](https://github.com/juyingnan/MockingBird/tree/research2027/das-statement-subspace).
+  Scientific result commit: `62b3e97a4f6178671235c7261c4df6262cb5eb42`.
+  The frozen run summary records the earlier fork-permission failure;
+  that publishing limitation was resolved through authorized upstream
+  access. No scientific payload was changed or C evaluation repeated.
 - [Compact result and reproduction commands](results/das-statement-wavlm-ravdess-20261008/summary.md).
   Stop here. This is successful readout steering without validated erasure,
   not an explanation of LEACE's failure or evidence of emotion reliance.
