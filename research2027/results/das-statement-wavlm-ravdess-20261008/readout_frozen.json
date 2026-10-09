@@ -1,0 +1,8 @@
+{
+  "accuracy": 1.0,
+  "checkpoint": 200,
+  "cross_entropy": 0.004813869227016211,
+  "parameter_hash": "34357e59f6bc9596472fc3a786e7a0faff0fca65c669d4f37a08d9abfa316c36",
+  "selection_role": "A_val",
+  "training_role": "A_train"
+}

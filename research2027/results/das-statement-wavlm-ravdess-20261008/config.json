@@ -1,0 +1,136 @@
+{
+  "a_split": {
+    "train_utterances": 480,
+    "validation_utterances": 240
+  },
+  "ablation": "mean_A_train_in_standardized_feature_space",
+  "arbitrary_control": {
+    "mapping": "balanced source-label flips per complete cell independently in A_train and A_val",
+    "seed": 20262008
+  },
+  "attributes": [
+    "emotion",
+    "speaker",
+    "statement",
+    "gender",
+    "intensity"
+  ],
+  "bootstrap": {
+    "draws": 10000,
+    "quantile": 0.95,
+    "quantile_method": "linear",
+    "seed_sequence": [
+      20260930,
+      4201
+    ]
+  },
+  "cache": "artifacts\\embeddings\\ravdess\\microsoft_wavlm-base-plus\\d99979b610d68bef",
+  "cache_fingerprint": "d99979b610d68bef",
+  "compute": {
+    "device": "cpu",
+    "dtype": "float64",
+    "threads": 1
+  },
+  "cv_file": "configs\\experiments\\m4_validity_v1_cv.parquet",
+  "cv_sha256": "eca66d8287fc11d409fb9e60f1a9427091c169ec896d569c25e9c37fbffab26c",
+  "das": {
+    "dimensions": [
+      1,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "evaluation_interval": 10,
+    "implementation": "feature-level-dii-v1; torch orthogonal Householder parametrization",
+    "learning_rate": 0.01,
+    "minimum_validation_iia": 0.9,
+    "orthogonal_map": "householder",
+    "seeds": [
+      20261008,
+      20261009
+    ],
+    "steps": 200,
+    "use_trivialization": false
+  },
+  "experiment_id": "das-statement-wavlm-ravdess-20261008",
+  "implementation_references": {
+    "causalgym_commit": "0f3129ff3b6c5c8264892f30a25be25150ae9179",
+    "pyvene_reviewed_commit": "9e333904dcf9e597ca76170010d17f4d4580de8d",
+    "pyvene_vendored_or_required": false
+  },
+  "layer": 5,
+  "linear_probe": {
+    "c_grid": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "cv_folds": 3,
+    "max_iter": 2000,
+    "seed": 20260930,
+    "tol": 0.0001
+  },
+  "manifest": "artifacts\\manifests\\ravdess.parquet",
+  "no_downstream_expansion": true,
+  "parent_commit": "24607d4bf5bb739546b945156f36a26b5c0d1c03",
+  "protocol_file": "DAS_FOLLOWUP_PLAN.md",
+  "random_controls": {
+    "count": 3,
+    "pool_size": 32,
+    "relative_rms_tolerance": 0.05,
+    "seed": 20263008,
+    "selection": "closest A_train RMS relative to DAS; no label/outcome selection"
+  },
+  "rbf_probe": {
+    "c_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "max_iter": 20000,
+    "probability": false,
+    "tol": 0.001
+  },
+  "readout": {
+    "activation": "tanh",
+    "evaluation_interval": 10,
+    "hidden_size": 128,
+    "learning_rate": 0.001,
+    "minimum_validation_accuracy": 0.9,
+    "seed": 20261008,
+    "steps": 200,
+    "weight_decay": 0.0001
+  },
+  "role_seed": 20260930,
+  "roles_file": "configs\\experiments\\m4_validity_v1_roles.parquet",
+  "roles_sha256": "1dfed7b7f4725612bbd6b3f4d75cf9f5deae4cd025aa7e516cdcb4a933c4ddf5",
+  "schema_version": 1,
+  "seed": 20261008,
+  "selection": {
+    "eligible": "A_val IIA >= 0.90 and A_val collateral limits pass",
+    "no_eligible_policy": "freeze explicitly labeled diagnostic candidate; do not call discovery successful",
+    "ranking": [
+      "minimum_max_linear_rbf_statement_f1",
+      "minimum_mean_linear_rbf_statement_f1",
+      "smaller_dimension",
+      "lower_seed"
+    ],
+    "refit_after_selection": false
+  },
+  "split_file": "configs\\experiments\\das_statement_splits.json",
+  "study": "Exploratory post-freeze readout-mediated DAS erasure validity only",
+  "target": "statement",
+  "validity": {
+    "after_max_accuracy": 0.55,
+    "after_max_macro_f1": 0.55,
+    "before_min_macro_f1": 0.6,
+    "large_unrelated_f1_drop": 0.2,
+    "maximum_emotion_f1_drop": 0.1,
+    "maximum_large_unrelated_losses": 1,
+    "minimum_target_f1_drop": 0.1,
+    "upper_confidence_ceiling": 0.55
+  }
+}

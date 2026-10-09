@@ -1,0 +1,40 @@
+{
+  "B_or_C_used_for_selection": false,
+  "ablation": "mean_A_train_in_standardized_feature_space",
+  "fitting_role": "A_train",
+  "layer": 5,
+  "readout_parameter_hash": "34357e59f6bc9596472fc3a786e7a0faff0fca65c669d4f37a08d9abfa316c36",
+  "selected": {
+    "candidate_id": "k032_seed20261009",
+    "checkpoint": 200,
+    "collateral_pass": true,
+    "dimension": 32,
+    "eligible": true,
+    "emotion_f1_delta": 0.00832071659830258,
+    "evaluation_role": "A_val",
+    "interchange_accuracy": 1.0,
+    "interchange_cross_entropy": 0.002920370592571203,
+    "linear_statement_f1": 0.9541658709352594,
+    "orthogonality_error": 2.677153414945582e-15,
+    "rbf_statement_f1": 0.9040317112606269,
+    "runtime_seconds": 14.206671399995685,
+    "seed": 20261009,
+    "selected": true,
+    "train_rms": 7.196273252397896
+  },
+  "selected_parameters_sha256": "25443ebdcf903df608de006d7c8af25ecee675598873394ab1966e4add186881",
+  "selection_role": "A_val",
+  "selection_rule": {
+    "eligible": "A_val IIA >= 0.90 and A_val collateral limits pass",
+    "no_eligible_policy": "freeze explicitly labeled diagnostic candidate; do not call discovery successful",
+    "ranking": [
+      "minimum_max_linear_rbf_statement_f1",
+      "minimum_mean_linear_rbf_statement_f1",
+      "smaller_dimension",
+      "lower_seed"
+    ],
+    "refit_after_selection": false
+  },
+  "selection_status": "ELIGIBLE_A_CANDIDATE",
+  "timestamp_utc": "2026-10-09T04:30:10.885202+00:00"
+}

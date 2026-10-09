@@ -1,0 +1,20 @@
+[
+  {
+    "count": 480,
+    "ids_sha256": "df12224b90f3d74241e2d94846c7483c1ef46af03d3e60b3ab8d3e21669b14cf",
+    "role": "A_train",
+    "timestamp_utc": "2026-10-09T04:25:47.669756+00:00"
+  },
+  {
+    "count": 240,
+    "ids_sha256": "4c9627671638dca920e6eff856dd0b5168b82e768880d6f19fff92c799fe4de6",
+    "role": "A_val",
+    "timestamp_utc": "2026-10-09T04:25:47.671817+00:00"
+  },
+  {
+    "count": 360,
+    "ids_sha256": "c840fa34ce326cc2a308723613d66f27b3b8d1307adb3aa0c67b0ae2490792e1",
+    "role": "B",
+    "timestamp_utc": "2026-10-09T04:30:23.898297+00:00"
+  }
+]

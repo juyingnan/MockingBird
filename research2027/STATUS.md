@@ -226,7 +226,7 @@ existing results; no paper edits are authorized by this execution.
 
 ## DAS exploratory follow-up (authorized 2026-10-08)
 
-**Implementation and synthetic preflight; C has not been opened.**
+**A-only selection and all B diagnostics frozen; C has not been opened.**
 
 - New, explicitly authorized post-freeze experiment; no changes to the paper
   or M3/M4/M4-V1 bundles. Upstream parent: `24607d4`.
@@ -237,7 +237,17 @@ existing results; no paper edits are authorized by this execution.
 - Persisted A-train/A-val/B/C metadata has 480/240/360/360 utterances with
   complete cells kept together. The staged CLI prevents C use before the
   candidate and all B models are frozen and committed.
-- Targeted synthetic DAS/split/statistics/smoke checks and reused
-  validity/erasure tests pass; dependencies and immutable-input checks pass.
-- Next: commit this protocol/implementation, run `das fit`, commit its
-  frozen bundle, then evaluate C once. Stop regardless of outcome.
+- Code/protocol commit: `f3e4b22d36dd8f4974610b5d851059b2855f2032`.
+  All 44 targeted synthetic/shared-helper tests, dependency checks and
+  immutable-input checks pass.
+- The predeclared 14-candidate A-only search selected rank 32, seed
+  20261009, checkpoint 200. A-val interchange accuracy is 1.0, but fresh
+  A-val statement F1 remains 0.9542 linear / 0.9040 RBF. These are
+  development results, not the locked result or evidence of erasure.
+- All 30 independent B diagnostic models are frozen. The fit took
+  289.63 seconds on CPU with one numerical thread; feature access was
+  A-train, A-val and B only. No C metrics or predictions exist yet.
+- Local commits are available; the attempted push to the requested fork
+  was rejected for lack of write permission. Do not claim remote publication.
+- Next: commit this frozen fit bundle, then evaluate C exactly once and
+  stop regardless of outcome.

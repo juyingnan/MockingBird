@@ -1,0 +1,7212 @@
+{
+  "assignments": [
+    {
+      "cell_id": "actor_01|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|neutral|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-01-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|neutral|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-01-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|neutral|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-01-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|neutral|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-01-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|calm|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|calm|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|calm|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|calm|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|calm|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-02-02-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|calm|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-02-02-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|calm|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-02-02-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|calm|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-02-02-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|happy|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|happy|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|happy|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|happy|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|happy|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-03-02-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|happy|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-03-02-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|happy|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-03-02-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|happy|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-03-02-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|sad|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|sad|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|sad|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|sad|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|sad|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-04-02-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|sad|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-04-02-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|sad|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-04-02-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|sad|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-04-02-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|angry|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|angry|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|angry|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|angry|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|angry|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-05-02-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|angry|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-05-02-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|angry|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-05-02-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|angry|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-05-02-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|fearful|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-06-02-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|fearful|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-06-02-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|fearful|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-06-02-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|fearful|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-06-02-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|disgust|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-07-02-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|disgust|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-07-02-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|disgust|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-07-02-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|disgust|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-07-02-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|normal",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-01-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|normal",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-01-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|normal",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-01-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|normal",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-01-02-02-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-01-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-01-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-01-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-01-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-01-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-01-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-01-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-01-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-01-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-01-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-01-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-01-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-01-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-01-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-01-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-01-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-01-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-02-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-02-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-02-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-02-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-02-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-02-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-02-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-02-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-02-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-02-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-02-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-02-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-01-02-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-01-02-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-02-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-01-02-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-01-02-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-01-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-01-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-01-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-01-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-01-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-01-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-01-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-01-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-01-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-01-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-01-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-01-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-01-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-01-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-01-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-01-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-01-24"
+    },
+    {
+      "cell_id": "actor_01|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-02-01"
+    },
+    {
+      "cell_id": "actor_02|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-02"
+    },
+    {
+      "cell_id": "actor_03|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-02-03"
+    },
+    {
+      "cell_id": "actor_04|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-02-04"
+    },
+    {
+      "cell_id": "actor_05|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-02-05"
+    },
+    {
+      "cell_id": "actor_06|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-02-06"
+    },
+    {
+      "cell_id": "actor_07|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-02-07"
+    },
+    {
+      "cell_id": "actor_08|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-02-08"
+    },
+    {
+      "cell_id": "actor_09|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-09"
+    },
+    {
+      "cell_id": "actor_10|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-10"
+    },
+    {
+      "cell_id": "actor_11|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-02-11"
+    },
+    {
+      "cell_id": "actor_12|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-02-12"
+    },
+    {
+      "cell_id": "actor_13|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-13"
+    },
+    {
+      "cell_id": "actor_14|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-02-14"
+    },
+    {
+      "cell_id": "actor_15|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-02-15"
+    },
+    {
+      "cell_id": "actor_16|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-16"
+    },
+    {
+      "cell_id": "actor_17|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-02-17"
+    },
+    {
+      "cell_id": "actor_18|surprised|strong",
+      "role": "B",
+      "utterance_id": "ravdess:03-01-08-02-02-02-18"
+    },
+    {
+      "cell_id": "actor_19|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-19"
+    },
+    {
+      "cell_id": "actor_20|surprised|strong",
+      "role": "C",
+      "utterance_id": "ravdess:03-01-08-02-02-02-20"
+    },
+    {
+      "cell_id": "actor_21|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-02-21"
+    },
+    {
+      "cell_id": "actor_22|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-22"
+    },
+    {
+      "cell_id": "actor_23|surprised|strong",
+      "role": "A_train",
+      "utterance_id": "ravdess:03-01-08-02-02-02-23"
+    },
+    {
+      "cell_id": "actor_24|surprised|strong",
+      "role": "A_val",
+      "utterance_id": "ravdess:03-01-08-02-02-02-24"
+    }
+  ],
+  "ids_sha256": {
+    "A_train": "df12224b90f3d74241e2d94846c7483c1ef46af03d3e60b3ab8d3e21669b14cf",
+    "A_val": "4c9627671638dca920e6eff856dd0b5168b82e768880d6f19fff92c799fe4de6",
+    "B": "c840fa34ce326cc2a308723613d66f27b3b8d1307adb3aa0c67b0ae2490792e1",
+    "C": "dbcf14919e01974c11f27eda2d6f4ecb38c777ca2614f45237e6e61e8bcb5885"
+  },
+  "parent_roles_sha256": "1dfed7b7f4725612bbd6b3f4d75cf9f5deae4cd025aa7e516cdcb4a933c4ddf5",
+  "seed": 20261008
+}
