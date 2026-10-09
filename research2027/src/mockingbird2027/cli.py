@@ -81,6 +81,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     validity_parser.add_argument("--output-dir", type=Path)
     validity_parser.add_argument("--validate-only", action="store_true")
+    das_parser = subparsers.add_parser(
+        "das", help="exploratory matched-pair DAS discovery and locked erasure validation",
+    )
+    das_parser.add_argument("phase", choices=("prepare", "fit", "evaluate", "verify"))
+    das_parser.add_argument(
+        "--config", type=Path, default=Path("configs") / "experiments" / "das_statement.json",
+    )
+    das_parser.add_argument("--output-dir", type=Path)
     return parser
 
 
@@ -142,6 +150,10 @@ def main(argv: list[str] | None = None) -> int:
         from .analysis.validity import run_validity
 
         run_validity(args.config, args.output_dir, validate_only=args.validate_only)
+    elif args.command == "das":
+        from .analysis.das_experiment import run_das
+
+        run_das(args.phase, args.config, args.output_dir)
     return 0
 
 

@@ -223,3 +223,21 @@ deadline rather than trying additional dimensions, layers, seeds or methods.
 Reliance and harmful use remain unresolved. New M4A/M4B, speaker erasure,
 M5 or another dataset require separately reviewed approval. Preserve all
 existing results; no paper edits are authorized by this execution.
+
+## DAS exploratory follow-up (authorized 2026-10-08)
+
+**Implementation and synthetic preflight; C has not been opened.**
+
+- New, explicitly authorized post-freeze experiment; no changes to the paper
+  or M3/M4/M4-V1 bundles. Upstream parent: `24607d4`.
+- [Design and stop rules](DAS_FOLLOWUP_PLAN.md) distinguish readout-mediated
+  matched-pair DAS from native model interpretation and independent erasure.
+  Fixed layer 5/cache; 14 A-only dimension/seed candidates, mean ablation,
+  fresh B diagnostics, arbitrary-mapping and limited random-subspace controls.
+- Persisted A-train/A-val/B/C metadata has 480/240/360/360 utterances with
+  complete cells kept together. The staged CLI prevents C use before the
+  candidate and all B models are frozen and committed.
+- Targeted synthetic DAS/split/statistics/smoke checks and reused
+  validity/erasure tests pass; dependencies and immutable-input checks pass.
+- Next: commit this protocol/implementation, run `das fit`, commit its
+  frozen bundle, then evaluate C once. Stop regardless of outcome.

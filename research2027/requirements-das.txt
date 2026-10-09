@@ -1,0 +1,9 @@
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.1
+torch==2.14.1
+pyarrow==25.0.1
+joblib==1.6.0
+matplotlib==3.11.2
+threadpoolctl==3.7.0
+pytest==9.1.1
