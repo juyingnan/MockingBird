@@ -1,7 +1,9 @@
 {
-  "C_opened": false,
+  "C_opened": true,
   "downstream_experiments_started": false,
+  "evaluation_finished_utc": "2026-10-09T04:32:23.402958+00:00",
+  "evaluation_runtime_seconds": 4.025071499869227,
   "fit_finished_utc": "2026-10-09T04:30:36.300795+00:00",
   "fit_runtime_seconds": 290.76921629998833,
-  "status": "frozen_awaiting_C"
+  "status": "complete"
 }

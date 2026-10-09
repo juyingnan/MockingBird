@@ -1,0 +1,41 @@
+{
+  "claim_boundary": "Exploratory validity of mean ablation under specified probes on an already explored corpus; not zero information, native-WavLM causal alignment, emotion-classifier reliance, harmful generalization, or an explanation of LEACE's failure.",
+  "collateral": {
+    "delta_macro_f1": {
+      "emotion": 0.009835975034275135,
+      "gender": 0.002777799211413634,
+      "intensity": -0.002920559877625739,
+      "speaker": -0.012675148255774205
+    },
+    "large_unrelated_losses": [],
+    "pass": true
+  },
+  "decision": "FAIL_RESIDUAL_DECODABILITY",
+  "primary_arm": "das_mean",
+  "probe_checks": {
+    "linear": {
+      "accuracy": 0.9305555555555556,
+      "accuracy_upper_95": 0.9592391304347826,
+      "before_competent": true,
+      "macro_f1": 0.9304648809017932,
+      "macro_f1_upper_95": 0.9591882000665409,
+      "point_pass": false,
+      "precision_pass": false,
+      "reduction_pass": false,
+      "target_f1_reduction": 0.06120172146396574
+    },
+    "rbf_svm": {
+      "accuracy": 0.8972222222222223,
+      "accuracy_upper_95": 0.9289772727272727,
+      "before_competent": true,
+      "macro_f1": 0.897088023734654,
+      "macro_f1_upper_95": 0.928972342784779,
+      "point_pass": false,
+      "precision_pass": false,
+      "reduction_pass": false,
+      "target_f1_reduction": 0.08346738178545021
+    }
+  },
+  "reliance_experiment_run": false,
+  "stop": true
+}

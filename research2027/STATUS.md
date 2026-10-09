@@ -226,7 +226,7 @@ existing results; no paper edits are authorized by this execution.
 
 ## DAS exploratory follow-up (authorized 2026-10-08)
 
-**A-only selection and all B diagnostics frozen; C has not been opened.**
+**Complete. FAIL_RESIDUAL_DECODABILITY; no downstream or rescue experiment.**
 
 - New, explicitly authorized post-freeze experiment; no changes to the paper
   or M3/M4/M4-V1 bundles. Upstream parent: `24607d4`.
@@ -244,10 +244,21 @@ existing results; no paper edits are authorized by this execution.
   20261009, checkpoint 200. A-val interchange accuracy is 1.0, but fresh
   A-val statement F1 remains 0.9542 linear / 0.9040 RBF. These are
   development results, not the locked result or evidence of erasure.
-- All 30 independent B diagnostic models are frozen. The fit took
-  289.63 seconds on CPU with one numerical thread; feature access was
-  A-train, A-val and B only. No C metrics or predictions exist yet.
+- Pre-C freeze commit: `166baadb38aafc6562db73cb832097013c6372b9`.
+  All 30 independent B diagnostic models were frozen and committed before
+  C was opened exactly once.
+- Locked-C statement macro-F1/accuracy: linear 0.9305/0.9306,
+  RBF 0.8971/0.8972. Corresponding upper bounds are
+  0.9592/0.9592 and 0.9290/0.9290; all exceed 0.55. Both F1 reductions
+  also fail the 0.10 minimum. Collateral limits pass.
+- Three rank-matched random controls miss the intended RMS tolerance;
+  they remain explicitly unmatched, not stronger causal controls.
+- Recorded phases: fitting/selection/B 290.77 s; C/verification/plots
+  4.03 s, CPU with one numerical thread. All 30 metrics, 10,800 predictions
+  and 100,000 bootstrap scores recompute with error zero; 212 input hashes
+  checked. The original cached representations and bundles are unchanged.
 - Local commits are available; the attempted push to the requested fork
   was rejected for lack of write permission. Do not claim remote publication.
-- Next: commit this frozen fit bundle, then evaluate C exactly once and
-  stop regardless of outcome.
+- [Compact result and reproduction commands](results/das-statement-wavlm-ravdess-20261008/summary.md).
+  Stop here. This is successful readout steering without validated erasure,
+  not an explanation of LEACE's failure or evidence of emotion reliance.
